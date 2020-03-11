@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'fonts';
+@import 'customSelect';
+* {
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    padding: 10px 1.65%;
+    padding: 0.591rem 3.047rem;
+}
+
+@import 'header';
+@import 'footer';
+@import 'social_widget';

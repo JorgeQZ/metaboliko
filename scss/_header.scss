@@ -1,0 +1,190 @@
+header {
+    // display: none;
+}
+
+// @media screen and (min-width: 320px) {
+//     header {
+//         width: 100%;
+//         z-index: 100;
+//         position: fixed;
+//         padding: 1rem 2rem;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         .brand-logo {
+//             width: 200px;
+//             img {
+//                 width: 100%;
+//                 max-width: 200px;
+//             }
+//         }
+//         .menu-header-container {
+//             margin-right: 30px;
+//             >.menu {
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: flex-end;
+//                 padding: 0;
+//                 margin: 0;
+//                 >li {
+//                     padding: 10px 15px;
+//                     list-style: none;
+//                     position: relative;
+//                     text-align: center;
+//                     font-size: 14px;
+//                     line-height: 14px;
+//                     display: flex;
+//                     align-items: center;
+//                     justify-content: center;
+//                     >a {
+//                         text-transform: uppercase;
+//                         color: white;
+//                         position: relative;
+//                     }
+//                     &.menu-item-has-children {
+//                         padding-right: 25px;
+//                         >a {
+//                             &:before {
+//                                 position: absolute;
+//                                 content: '';
+//                                 width: 10px;
+//                                 height: 5px;
+//                                 right: -12px;
+//                                 top: 4px;
+//                                 background-position: center;
+//                                 background-size: cover;
+//                                 background-image: url(../img/drop-down-arrow-white.png);
+//                             }
+//                         }
+//                     }
+//                     &:last-child {
+//                         padding-right: 0;
+//                     }
+//                     &:hover {
+//                         .sub-menu {
+//                             max-height: 1000px;
+//                             opacity: 1;
+//                         }
+//                     }
+//                     >.sub-menu {
+//                         max-height: 0;
+//                         min-width: 120px;
+//                         max-width: 300px;
+//                         overflow: hidden;
+//                         position: absolute;
+//                         padding: 0;
+//                         opacity: 0;
+//                         left: 0;
+//                         top: 100%;
+//                         transition: max-height 500ms, opacity 100ms;
+//                         li {
+//                             list-style: none;
+//                             font-size: 14px;
+//                             text-align: left;
+//                             line-height: 14px;
+//                             padding: 3px 0;
+//                             padding-left: 15px;
+//                             >a {
+//                                 text-transform: uppercase;
+//                                 color: white;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+@media screen and (min-width: 1280px) {
+    header {
+        width: 100%;
+        z-index: 100;
+        position: fixed;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .brand-logo {
+            width: 200px;
+            img {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+        .menu-header-container {
+            margin-right: 30px;
+            >.menu {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 0;
+                margin: 0;
+                >li {
+                    padding: 10px 15px;
+                    list-style: none;
+                    position: relative;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    >a {
+                        text-transform: uppercase;
+                        color: white;
+                        position: relative;
+                    }
+                    &.menu-item-has-children {
+                        padding-right: 25px;
+                        >a {
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                width: 10px;
+                                height: 5px;
+                                right: -12px;
+                                top: 4px;
+                                background-position: center;
+                                background-size: cover;
+                                background-image: url(../img/drop-down-arrow-white.png);
+                            }
+                        }
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                    &:hover {
+                        .sub-menu {
+                            max-height: 1000px;
+                            opacity: 1;
+                        }
+                    }
+                    >.sub-menu {
+                        max-height: 0;
+                        min-width: 120px;
+                        max-width: 300px;
+                        overflow: hidden;
+                        position: absolute;
+                        padding: 0;
+                        opacity: 0;
+                        left: 0;
+                        top: 100%;
+                        transition: max-height 500ms, opacity 100ms;
+                        li {
+                            list-style: none;
+                            font-size: 14px;
+                            text-align: left;
+                            line-height: 14px;
+                            padding: 3px 0;
+                            padding-left: 15px;
+                            >a {
+                                text-transform: uppercase;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

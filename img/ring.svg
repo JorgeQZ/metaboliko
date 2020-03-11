@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1102" height="1102" viewBox="0 0 1102 1102">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: blue;
+        stroke: #fff;
+        stroke-width: 40.16px;
+        opacity: 0.34;
+        mix-blend-mode: overlay;
+      }
+    </style>
+  </defs>
+  <circle id="Simbolo_Logo" data-name="Simbolo Logo" class="cls-1" cx="551" cy="551" r="551"/>
+</svg>
