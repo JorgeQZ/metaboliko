@@ -12,6 +12,7 @@
         align-items: center;
         transition: all 0.2s;
         justify-content: space-between;
+        background: transparent;
         &.bg {
             background: rgba(0, 202, 226, 1);
         }

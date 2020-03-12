@@ -22,6 +22,18 @@ header {
         border: 1px solid white;
         padding: 15px 30px;
     }
+    .content_text {
+        width: 90%;
+        padding: 0rem;
+        color: white;
+        font-size: 35px;
+        line-height: 35px;
+        font-weight: 100;
+        strong {
+            font-size: 45px;
+            line-height: 45px;
+        }
+    }
     .social-media {
         position: absolute;
         right: 0;
