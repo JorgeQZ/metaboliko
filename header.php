@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?> >
     <?php wp_body_open(); ?>
 
     <header class="<?php if ( is_user_logged_in() ){ echo 'mt';} ?>">
@@ -21,3 +21,4 @@
         </div>
         <?php wp_nav_menu( array( 'theme_location' => 'header', ) ); ?>
     </header>
+    

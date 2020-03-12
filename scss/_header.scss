@@ -1,10 +1,6 @@
-.mt {
-    top: 46px
-}
-
 @media screen and (min-width: 320px) {
-    .bg {
-        background: rgba(0, 202, 226, 1);
+    .mt {
+        top: 46px
     }
     header {
         width: 100%;
@@ -16,6 +12,9 @@
         align-items: center;
         transition: all 0.2s;
         justify-content: space-between;
+        &.bg {
+            background: rgba(0, 202, 226, 1);
+        }
         .brand-logo {
             width: 200px;
             position: relative;
@@ -121,11 +120,13 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
-    .bg {
-        background: rgb(0, 202, 226);
-        background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
+@media screen and (min-width: 782px) {
+    .mt {
+        top: 30px;
     }
+}
+
+@media screen and (min-width: 1280px) {
     header {
         width: 100%;
         z-index: 100;
@@ -134,7 +135,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        transition: all 0.2s;
+        transition: all 0.3s;
+        &.bg {
+            background: rgb(0, 202, 226);
+            background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
+        }
         .brand-logo {
             width: 200px;
             img {
@@ -209,6 +214,7 @@
                         padding: 0;
                         opacity: 0;
                         left: 0;
+                        margin-top: 0;
                         top: 100%;
                         transition: max-height 500ms, opacity 100ms;
                         li {

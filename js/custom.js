@@ -11,15 +11,19 @@ $(window).resize(function() {
     screen_width = $(window).width();
 });
 
-
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
+    console.info(screen_width);
     if (screen_width <= 600) {
         if (scroll >= 46) {
-            $('header').css({ 'top': '0' }).addClass('bg');
+            if (document.body.classList.contains('logged-in')) { $('header').css({ 'top': '0' }); }
+            $('header').addClass('bg');
         } else {
-            var top = 46 - scroll;
-            $('header').css({ 'top': top + 'px' }).removeClass('bg');
+            if (document.body.classList.contains('logged-in')) {
+                var top = 46 - scroll;
+                $('header').css({ 'top': top + 'px' });
+            }
+            $('header').removeClass('bg');
         }
     } else {
         if (scroll >= 100) {
