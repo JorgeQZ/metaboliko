@@ -13,14 +13,28 @@ $(window).resize(function() {
 
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    console.info(screen_width);
     if (screen_width <= 600) {
         if (scroll >= 46) {
-            if (document.body.classList.contains('logged-in')) { $('header').css({ 'top': '0' }); }
+            if (document.body.classList.contains('logged-in')) {
+                $('header').css({ 'top': '0' });
+            }
             $('header').addClass('bg');
         } else {
             if (document.body.classList.contains('logged-in')) {
                 var top = 46 - scroll;
+                $('header').css({ 'top': top + 'px' });
+            }
+            $('header').removeClass('bg');
+        }
+    } else if (screen_width >= 783) {
+        if (scroll >= 30) {
+            if (document.body.classList.contains('logged-in')) {
+                $('header').css({ 'top': '30px' });
+            }
+            $('header').addClass('bg');
+        } else {
+            if (document.body.classList.contains('logged-in')) {
+                var top = 30 - scroll;
                 $('header').css({ 'top': top + 'px' });
             }
             $('header').removeClass('bg');

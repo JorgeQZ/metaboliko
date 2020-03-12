@@ -41,14 +41,14 @@
                     <option value="Cirugías para Bajar de Peso">Cirugías para Bajar de Peso</option>
                     <option value="Cirugía Antirreflujo por Laparoscopia">Cirugía Antirreflujo por Laparoscopia</option>
                     <option value="Colecistectomía por Laparoscopía">Colecistectomía por Laparoscopía</option>
-                    <option>Hernia Abdominal por Laparoscopia</option>
-                    <option>Hernia Inguinal por Laparoscopia</option>
-                    <option>Laparoscopia Avanzada</option>
-                    <option>Minilaparoscopia</option>
-                    <option>Apendicectomía por Laparoscopia</option>
-                    <option>Cirugía Metabolica</option>
-                    <option>Cirugía para Diabetes</option>
-                    <option>Cirugía Bariátrica</option> -->
+                    <option value="Hernia Abdominal por Laparoscopia">Hernia Abdominal por Laparoscopia</option>
+                    <option value="Hernia Inguinal por Laparoscopia">Hernia Inguinal por Laparoscopia</option>
+                    <option value="Laparoscopia Avanzada">Laparoscopia Avanzada</option>
+                    <option value="Minilaparoscopia">Minilaparoscopia</option>
+                    <option value="Apendicectomía por Laparoscopia">Apendicectomía por Laparoscopia</option>
+                    <option value="Cirugía Metabolica">Cirugía Metabolica</option>
+                    <option vaue="Cirugía para Diabetes">Cirugía para Diabetes</option>
+                    <option value="Cirugía Bariátrica">Cirugía Bariátrica</option>
                 </select>
             </div>
             <div class="form-control full">

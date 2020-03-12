@@ -21,6 +21,7 @@ header {
         line-height: 60px;
         border: 1px solid white;
         padding: 15px 30px;
+        max-width: 80%;
     }
     .content_text {
         width: 90%;
@@ -32,6 +33,93 @@ header {
         strong {
             font-size: 45px;
             line-height: 45px;
+        }
+    }
+    .content_text_contactform {
+        display: flex;
+        width: 90%;
+        .col {
+            width: 50%;
+            padding: 2rem 1rem;
+            display: flex;
+            align-items: center;
+            color: white;
+            h1 {
+                font-size: 40px;
+                line-height: 40px;
+                padding: 0;
+                margin: 15px 0;
+            }
+            p {
+                padding: 0;
+                margin: 15px 0;
+                font-size: 30px;
+                line-height: 30px;
+                font-weight: 100;
+            }
+        }
+        .contact-form {
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: flex-start;
+            color: white;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            .form {
+                .form-control {
+                    float: left;
+                    margin-bottom: 20px;
+                    padding: 0;
+                    label {
+                        font-size: 16px;
+                        line-height: 18px;
+                        font-weight: bold;
+                        display: block;
+                    }
+                    input {
+                        width: 100%;
+                        border: none;
+                        font-size: 16px;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        background-color: #fefdfd;
+                        &[type=submit] {
+                            width: auto;
+                            background-color: #000;
+                            color: white;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            padding: 5px 25px;
+                            font-size: 25px;
+                            cursor: pointer;
+                            &:hover {
+                                color: black;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    &.full {
+                        width: 100%;
+                    }
+                    &.half {
+                        width: 47.5%;
+                        margin-right: 5%;
+                        &:nth-of-type(2n + 1) {
+                            margin-right: 0;
+                        }
+                    }
+                    &.third {
+                        width: 30%;
+                        margin-right: 5%;
+                        &:nth-of-type(3n) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
         }
     }
     .social-media {
@@ -99,3 +187,5 @@ header {
     padding: 2rem;
     padding-bottom: 4rem;
 }
+
+@import 'variables';
