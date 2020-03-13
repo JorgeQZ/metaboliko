@@ -177,114 +177,11 @@
 </div><!-- Quien es el DR Fraga -->
 
 <!-- Direccion -->
-<div class="address-container">
-    <div class="col">
-        <div class="title">
-            <small>Ciudad</small> <br> <strong>de México</strong>
-        </div>
-        <div class="desc">
-            <div class="subcol">
-                <img src="<?php echo get_template_directory_uri().'/img/pin.png'?>" alt="">
-            </div>
-            <div class="subcol">
-                <strong>Hospital Angeles Acoxpa</strong><br>
-                Calzada Acoxpa No.430 <br>
-
-                Col. Ex Hacienda Coapa Alcaldía Tlalpan <br>
-
-                Ciudad de México, entre Guadalupe y Ejido <br>
-
-                Torre de consultorios tercer piso consultorio no. 395 <br>
-                <strong>WhatsApp</strong> <a href="tel:55 2967 8057" target="_top">55 2967 8057</a>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="title">
-            <br><strong>Monterrey</strong>
-        </div>
-        <div class="desc">
-            <div class="subcol">
-                <img src="<?php echo get_template_directory_uri().'/img/pin.png'?>" alt="">
-            </div>
-            <div class="subcol">
-                <strong>Hospital Swiss</strong> <br>
-
-                Río San Juan No. 200<br>
-
-                Col. Miravalle<br>
-
-                Monterrey, Nuevo León<br>
-
-                Tercer piso consultorio no. 300.<br>
-
-                <strong>WhatsApp</strong> <a href="tel:81 2038 4031" target="_top">81 2038 4031</a>
-            </div>
-        </div>
-    </div>
-</div><!-- Direccion -->
+<?php get_template_part('template-parts/content', 'address')?><!-- Direccion -->
 
 <!-- Contacto -->
-<div class="contact-container">
-    <div class="col">
-        <div class="content">
-            <strong>En Metabóliko</strong> estamos comprometidos contigo y queremos darte la mejor atención.
-        </div>
-    </div>
-
-    <div class="col">
-        <div class="form">
-            <div class="form-control full">
-                <label for="">Nombre</label>
-                <input type="text" placeholder="Nombre">
-            </div>
-
-            <div class="form-control half">
-                <label for="">Email</label>
-                <input type="text" placeholder="Email">
-            </div>
-            <div class="form-control half">
-                <label for="">Teléfono</label>
-                <input type="text" placeholder="Teléfono">
-            </div>
-
-
-            <div class="form-control third">
-                <label for="">Edad</label>
-                <input type="text" placeholder="Edad">
-            </div>
-            <div class="form-control third">
-                <label for="">Peso</label>
-                <input type="text" placeholder="Peso">
-            </div>
-            <div class="form-control third">
-                <label for="">Estatura</label>
-                <input type="text" placeholder="Estatura">
-            </div>
-            <div class="form-control full">
-                <label for="">Tratamiento de interés</label>
-                <select name="Tratamientos" id="Tratamientos" class="select-custom">
-                    <option value="Cirugías para Bajar de Peso">Cirugías para Bajar de Peso</option>
-                    <option value="Cirugía Antirreflujo por Laparoscopia">Cirugía Antirreflujo por Laparoscopia</option>
-                    <option value="Colecistectomía por Laparoscopía">Colecistectomía por Laparoscopía</option>
-                    <option>Hernia Abdominal por Laparoscopia</option>
-                    <option>Hernia Inguinal por Laparoscopia</option>
-                    <option>Laparoscopia Avanzada</option>
-                    <option>Minilaparoscopia</option>
-                    <option>Apendicectomía por Laparoscopia</option>
-                    <option>Cirugía Metabolica</option>
-                    <option>Cirugía para Diabetes</option>
-                    <option>Cirugía Bariátrica</option> -->
-                </select>
-            </div>
-            <div class="form-control full">
-                <center>
-                    <input type="submit" value="Enviar">
-                </center>
-            </div>
-        </div>
-    </div>
-</div><!-- Contacto -->
+<?php get_template_part('template-parts/content', 'contact')?>
+<!-- Contacto -->
 
 
 
@@ -301,9 +198,6 @@
 ?>
 <script>
 $('#hero-select').CustomSelect(
-    'Cirugía para perder peso'
-);
-$('#Tratamientos').CustomSelect(
     'Cirugía para perder peso'
 );
 

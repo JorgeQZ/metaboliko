@@ -1,100 +1,137 @@
-header {
-    // display: none;
+@media screen and (min-width: 320px) {
+    .mt {
+        top: 46px
+    }
+    header {
+        width: 100%;
+        z-index: 100;
+        position: fixed;
+        padding: 1rem 2rem;
+        display: flex;
+        top: 0;
+        align-items: center;
+        transition: all 0.2s;
+        justify-content: space-between;
+        background: transparent;
+        &.bg {
+            background: rgba(0, 202, 226, 1);
+        }
+        .brand-logo {
+            width: 200px;
+            position: relative;
+            z-index: 200;
+            img {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+        .menu-button {
+            border: 1px solid white;
+            height: 28px;
+            width: 28px;
+            border-radius: 4px;
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1px;
+            background: transparent;
+            transition: all 0.3s;
+            span {
+                margin: 4px;
+                width: 80%;
+                height: 1px;
+                background-color: #fff;
+                transition: all 0.2s;
+            }
+            &.active {
+                background: rgba(0, 202, 226, 1);
+                background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
+                span {
+                    width: 25px;
+                    &:first-of-type {
+                        transform: rotateZ(45deg) translate(3px, 3.5px);
+                    }
+                    &:last-of-type {
+                        transform: rotateZ(-45deg) translate(3px, -3.5px);
+                    }
+                }
+            }
+        }
+        .menu-header-container {
+            position: absolute;
+            padding-top: 68px;
+            top: 0;
+            left: 100%;
+            height: 100vh;
+            width: 100%;
+            background: rgba(0, 202, 226, 1);
+            background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
+            transition: all 250ms ease;
+            &.active {
+                left: 0;
+            }
+            >.menu {
+                display: block;
+                padding: 0 10px;
+                margin: 0;
+                >li {
+                    border-right: 1px solid rgba(white, 0.2);
+                    padding: 5px 15px;
+                    margin: 15px 0;
+                    list-style: none;
+                    position: relative;
+                    text-align: right;
+                    font-size: 25px;
+                    line-height: 25px;
+                    >a {
+                        text-transform: uppercase;
+                        color: white;
+                        position: relative;
+                    }
+                    &.menu-item-has-children {
+                        padding-right: 25px;
+                        >a {
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                width: 10px;
+                                height: 5px;
+                                right: -12px;
+                                top: 8px;
+                                background-position: center;
+                                background-size: cover;
+                                background-image: url(../img/drop-down-arrow-white.png);
+                            }
+                        }
+                    }
+                    >.sub-menu {
+                        margin-top: 10px;
+                        li {
+                            list-style: none;
+                            font-size: 14px;
+                            text-align: right;
+                            line-height: 14px;
+                            padding: 3px 0;
+                            >a {
+                                text-transform: uppercase;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-// @media screen and (min-width: 320px) {
-//     header {
-//         width: 100%;
-//         z-index: 100;
-//         position: fixed;
-//         padding: 1rem 2rem;
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         .brand-logo {
-//             width: 200px;
-//             img {
-//                 width: 100%;
-//                 max-width: 200px;
-//             }
-//         }
-//         .menu-header-container {
-//             margin-right: 30px;
-//             >.menu {
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: flex-end;
-//                 padding: 0;
-//                 margin: 0;
-//                 >li {
-//                     padding: 10px 15px;
-//                     list-style: none;
-//                     position: relative;
-//                     text-align: center;
-//                     font-size: 14px;
-//                     line-height: 14px;
-//                     display: flex;
-//                     align-items: center;
-//                     justify-content: center;
-//                     >a {
-//                         text-transform: uppercase;
-//                         color: white;
-//                         position: relative;
-//                     }
-//                     &.menu-item-has-children {
-//                         padding-right: 25px;
-//                         >a {
-//                             &:before {
-//                                 position: absolute;
-//                                 content: '';
-//                                 width: 10px;
-//                                 height: 5px;
-//                                 right: -12px;
-//                                 top: 4px;
-//                                 background-position: center;
-//                                 background-size: cover;
-//                                 background-image: url(../img/drop-down-arrow-white.png);
-//                             }
-//                         }
-//                     }
-//                     &:last-child {
-//                         padding-right: 0;
-//                     }
-//                     &:hover {
-//                         .sub-menu {
-//                             max-height: 1000px;
-//                             opacity: 1;
-//                         }
-//                     }
-//                     >.sub-menu {
-//                         max-height: 0;
-//                         min-width: 120px;
-//                         max-width: 300px;
-//                         overflow: hidden;
-//                         position: absolute;
-//                         padding: 0;
-//                         opacity: 0;
-//                         left: 0;
-//                         top: 100%;
-//                         transition: max-height 500ms, opacity 100ms;
-//                         li {
-//                             list-style: none;
-//                             font-size: 14px;
-//                             text-align: left;
-//                             line-height: 14px;
-//                             padding: 3px 0;
-//                             padding-left: 15px;
-//                             >a {
-//                                 text-transform: uppercase;
-//                                 color: white;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+@media screen and (min-width: 782px) {
+    .mt {
+        top: 30px;
+    }
+}
+
 @media screen and (min-width: 1280px) {
     header {
         width: 100%;
@@ -104,6 +141,12 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        transition: all 0.3s;
+        background: transparent;
+        &.bg {
+            background: rgb(0, 202, 226);
+            background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
+        }
         .brand-logo {
             width: 200px;
             img {
@@ -111,8 +154,17 @@ header {
                 max-width: 200px;
             }
         }
+        .menu-button {
+            display: none;
+        }
         .menu-header-container {
             margin-right: 30px;
+            display: block;
+            height: auto;
+            position: relative;
+            left: 0;
+            padding-top: 0;
+            background: transparent;
             >.menu {
                 display: flex;
                 align-items: center;
@@ -121,6 +173,7 @@ header {
                 margin: 0;
                 >li {
                     padding: 10px 15px;
+                    border: none;
                     list-style: none;
                     position: relative;
                     text-align: center;
@@ -168,6 +221,7 @@ header {
                         padding: 0;
                         opacity: 0;
                         left: 0;
+                        margin-top: 0;
                         top: 100%;
                         transition: max-height 500ms, opacity 100ms;
                         li {

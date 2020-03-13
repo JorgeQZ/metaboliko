@@ -20,7 +20,7 @@ $.fn.CustomSelect = function(placeholder, attrContainer, attrUl, attrLi) {
             disabled: true,
             type: "hidden",
             name: NameCustomSelect,
-            id: "Input-" + IdCustomSelect,
+            id: IdCustomSelect,
             placeholder: InputPlaceholder
         })
         .prependTo($("#" + IdContainer));
@@ -73,7 +73,7 @@ $.fn.CustomSelect = function(placeholder, attrContainer, attrUl, attrLi) {
     $(".LiOption").click(function() {
         $("." + IdContainer).removeClass('spinArrow');
 
-        $("#Input-" + IdCustomSelect).val($(this).attr("value"));
+        $("#I" + IdCustomSelect).val($(this).attr("value"));
         $("#Span-" + IdCustomSelect).text($(this).attr("value"));
     });
 };

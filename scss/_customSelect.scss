@@ -45,14 +45,16 @@
         width: calc(100% - 0px);
         left: 0;
         top: 100%;
+        z-index: 1;
         .LiOption {
             height: 20px;
-            margin: 5px;
+            margin: 2px;
             display: flex;
             align-items: center;
             cursor: pointer;
             transition: 0.1s;
             padding: 10px;
+            font-size: 15px;
             border-bottom: 1px solid #fefdfd;
             transition: $time-transition;
             &:hover {
@@ -114,6 +116,7 @@
             top: 100%;
             background-color: rgba(black, 0.6);
             mix-blend-mode: overlay;
+            z-index: 1;
             .LiOption {
                 height: 40px;
                 margin: 5px;

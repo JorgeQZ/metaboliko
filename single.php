@@ -1,33 +1,7 @@
 <?php 
 get_header(); 
-$img_featured = get_the_post_thumbnail_url();
+get_template_part('template-parts/banner', 'hero');
 ?>
-<div class="hero-banner" style="background-image: url(<?php echo $img_featured; ?>">
-    <!-- Titulo -->
-    <div class="title">
-        <?php the_title(); ?>
-    </div><!-- Titulo -->
-
-       <!-- social-media -->
-       <div class="social-media">
-        <div class="links">
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/facebook-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/twitter-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/linkedin-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/instagram-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/youtube-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/pinterest-white.png'; ?>" alt=""></a>
-        </div>
-    </div><!-- social-media -->
-</div>
-
-
 <div class="single-wrapper">
 <?php 
 if ( have_posts() ) :
@@ -37,4 +11,8 @@ if ( have_posts() ) :
 endif;
 ?>
 </div>
-<?php get_footer(); ?>
+
+<?php 
+get_template_part('template-parts/content', 'blog');
+get_footer(); 
+?>

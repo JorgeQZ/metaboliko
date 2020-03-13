@@ -1,61 +1,395 @@
-header {
-    position: relative;
-    background-color: #000;
-}
-
-.blog-container {
-    display: flex;
-    height: calc(100vh - 155px - 68.2px - 30px);
-    .col {
-        background: red;
-        width: 50%;
-        .post-carousel {
-            height: calc(100vh - 155px - 68.2px - 30px);
-            position: relative;
-            .owl-nav {
-                position: absolute;
-                top: 50%;
-                width: 100%;
+@media screen and (min-width: 320px) {
+    .mt {
+        top: 0;
+    }
+    .blog {
+        &.logged_in {
+            .blog-container {
+                height: calc(100vh);
             }
-            .owl-dots {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-            }
-            .item {
-                height: calc(100vh - 155px - 68.2px - 30px);
-                background-position: center;
-                background-size: cover;
-                .overlay {
+        }
+    }
+    .blog-container {
+        .col {
+            display: block;
+            .post-carousel {
+                height: calc(100vh - 68.2031px);
+                position: relative;
+                .owl-nav {
+                    button {
+                        position: absolute;
+                        top: calc(50% - 13px);
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 20px;
+                            opacity: 0.6;
+                            transition: all 0.1s linear;
+                        }
+                        &.owl-prev {
+                            left: 10px;
+                            transform: rotateZ(180deg);
+                        }
+                        &.owl-next {
+                            right: 10px;
+                        }
+                        &:hover {
+                            background-color: transparent;
+                            img {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .owl-dots {
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    bottom: 0;
                     width: 100%;
-                    height: 100%;
-                    background-color: rgba(black, 0.5);
+                    button {
+                        span {
+                            background: transparent;
+                            border: 1px solid white;
+                        }
+                        &.active {
+                            span {
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+                .item {
+                    height: calc(100vh);
+                    background-position: center;
+                    background-size: cover;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(black, 0.55);
+                        mix-blend-mode: darken;
+                        box-shadow: inset 0px 0px 20px 5px rgba(black, 0.7);
+                    }
+                    .content {
+                        position: relative;
+                        .title {
+                            width: 80%;
+                            font-size: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            margin: 0 auto;
+                            font-weight: bold;
+                            color: white;
+                        }
+                        .vermas {
+                            margin: 0 auto;
+                            margin-top: 10px;
+                            padding: 7px 10px;
+                            padding-right: 15px;
+                            width: 120px;
+                            border: 1px solid white;
+                            text-align: center;
+                            a {
+                                color: white;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                font-size: 12px;
+                            }
+                            span {
+                                position: relative;
+                                &:before {
+                                    content: '';
+                                    width: 7px;
+                                    height: 9px;
+                                    background-image: url(../img/arrow.png);
+                                    background-size: cover;
+                                    position: absolute;
+                                    top: 4px;
+                                    right: -12px;
+                                    transition: all 0.1s linear;
+                                }
+                                &:hover {
+                                    &:before {
+                                        right: -15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .grid {
+                display: flex;
+                height: calc(100vh);
+                width: 100%;
+                background-color: #000;
+                flex-wrap: wrap;
+                .item {
+                    flex: 1 0 50%;
+                    position: relative;
+                    padding: 1.5rem;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    background-size: cover;
+                    background-position: center;
+                    box-sizing: border-box;
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(black, 0.6);
+                        mix-blend-mode: darken;
+                    }
+                    .content {
+                        position: relative;
+                        color: white;
+                        .title {
+                            font-weight: bold;
+                            font-size: 20px;
+                            line-height: 20px;
+                            width: 70%;
+                        }
+                        .vermas {
+                            position: relative;
+                            width: 70px;
+                            height: 19px;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            box-sizing: border-box;
+                            margin-top: 10px;
+                            a {
+                                font-size: 13px;
+                                color: white;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                            }
+                            &:before {
+                                content: '';
+                                width: 8px;
+                                height: 11px;
+                                background-image: url(../img/arrow.png);
+                                background-size: cover;
+                                position: absolute;
+                                top: 3px;
+                                right: 5px;
+                                transition: all 0.1s linear;
+                            }
+                            &:hover {
+                                &:before {
+                                    right: 3px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-        .grid {
-            display: flex;
-            height: 100%;
-            width: 100%;
-            background-color: #000;
-            flex-wrap: wrap;
-            .item {
-                flex: 1 0 50%;
-                background-color: #fff;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        position: relative;
+        background: rgb(0, 202, 226);
+        background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
+    }
+    .logged_in {
+        .mt {
+            top: 30px;
+        }
+    }
+    .blog-container {
+        display: flex;
+        height: calc(100vh - 155px - 68.2px - 30px);
+        .col {
+            width: 50%;
+            .post-carousel {
+                height: calc(100vh - 155px - 68.2px - 30px);
                 position: relative;
-                &:nth-child(odd) {
-                    background-color: blue;
+                .owl-nav {
+                    button {
+                        position: absolute;
+                        top: calc(50% - 13px);
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 20px;
+                            opacity: 0.6;
+                            transition: all 0.1s linear;
+                        }
+                        &.owl-prev {
+                            left: 10px;
+                            transform: rotateZ(180deg);
+                        }
+                        &.owl-next {
+                            right: 10px;
+                        }
+                        &:hover {
+                            background-color: transparent;
+                            img {
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
-                .overlay {
+                .owl-dots {
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    bottom: 0;
                     width: 100%;
-                    height: 100%;
-                    background-color: rgba(black, 0.5);
+                    button {
+                        span {
+                            background: transparent;
+                            border: 1px solid white;
+                        }
+                        &.active {
+                            span {
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+                .item {
+                    height: calc(100vh - 155px - 68.2px - 30px);
+                    background-position: center;
+                    background-size: cover;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(black, 0.55);
+                        mix-blend-mode: darken;
+                        box-shadow: inset 0px 0px 20px 5px rgba(black, 0.7);
+                    }
+                    .content {
+                        position: relative;
+                        .title {
+                            width: 80%;
+                            font-size: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            margin: 0 auto;
+                            font-weight: bold;
+                            color: white;
+                        }
+                        .vermas {
+                            margin: 0 auto;
+                            margin-top: 10px;
+                            padding: 7px 10px;
+                            padding-right: 15px;
+                            width: 120px;
+                            border: 1px solid white;
+                            text-align: center;
+                            a {
+                                color: white;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                font-size: 12px;
+                            }
+                            span {
+                                position: relative;
+                                &:before {
+                                    content: '';
+                                    width: 7px;
+                                    height: 9px;
+                                    background-image: url(../img/arrow.png);
+                                    background-size: cover;
+                                    position: absolute;
+                                    top: 4px;
+                                    right: -12px;
+                                    transition: all 0.1s linear;
+                                }
+                                &:hover {
+                                    &:before {
+                                        right: -15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .grid {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                background-color: #000;
+                flex-wrap: wrap;
+                .item {
+                    flex: 1 0 50%;
+                    position: relative;
+                    padding: 1.5rem;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    background-size: cover;
+                    background-position: center;
+                    box-sizing: border-box;
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(black, 0.6);
+                        mix-blend-mode: darken;
+                    }
+                    .content {
+                        position: relative;
+                        color: white;
+                        .title {
+                            font-weight: bold;
+                            font-size: 20px;
+                            line-height: 20px;
+                            width: 70%;
+                        }
+                        .vermas {
+                            position: relative;
+                            width: 70px;
+                            height: 19px;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            box-sizing: border-box;
+                            margin-top: 10px;
+                            a {
+                                font-size: 13px;
+                                color: white;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                            }
+                            &:before {
+                                content: '';
+                                width: 8px;
+                                height: 11px;
+                                background-image: url(../img/arrow.png);
+                                background-size: cover;
+                                position: absolute;
+                                top: 3px;
+                                right: 5px;
+                                transition: all 0.1s linear;
+                            }
+                            &:hover {
+                                &:before {
+                                    right: 3px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
