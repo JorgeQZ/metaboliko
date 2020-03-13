@@ -1,1 +1,80 @@
-header{position:relative;background-color:#000}.blog-container{display:-webkit-box;display:-ms-flexbox;display:flex;height:calc(100vh - 155px - 68.2px - 30px)}.blog-container .col{background:red;width:50%}.blog-container .col .post-carousel{height:calc(100vh - 155px - 68.2px - 30px);position:relative}.blog-container .col .post-carousel .owl-nav{position:absolute;top:50%;width:100%}.blog-container .col .post-carousel .owl-dots{position:absolute;bottom:0;width:100%}.blog-container .col .post-carousel .item{height:calc(100vh - 155px - 68.2px - 30px);background-position:center;background-size:cover}.blog-container .col .post-carousel .item .overlay{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5)}.blog-container .col .grid{display:-webkit-box;display:-ms-flexbox;display:flex;height:100%;width:100%;background-color:#000;-ms-flex-wrap:wrap;flex-wrap:wrap}.blog-container .col .grid .item{-webkit-box-flex:1;-ms-flex:1 0 50%;flex:1 0 50%;background-color:#fff;position:relative}.blog-container .col .grid .item:nth-child(odd){background-color:blue}.blog-container .col .grid .item .overlay{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5)}
+header {
+  position: relative;
+  background-color: #000;
+}
+
+.blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100vh - 155px - 68.2px - 30px);
+}
+
+.blog-container .col {
+  background: red;
+  width: 50%;
+}
+
+.blog-container .col .post-carousel {
+  height: calc(100vh - 155px - 68.2px - 30px);
+  position: relative;
+}
+
+.blog-container .col .post-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.blog-container .col .post-carousel .owl-dots {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.blog-container .col .post-carousel .item {
+  height: calc(100vh - 155px - 68.2px - 30px);
+  background-position: center;
+  background-size: cover;
+}
+
+.blog-container .col .post-carousel .item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.blog-container .col .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blog-container .col .grid .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  background-color: #fff;
+  position: relative;
+}
+
+.blog-container .col .grid .item:nth-child(odd) {
+  background-color: blue;
+}
+
+.blog-container .col .grid .item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
