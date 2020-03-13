@@ -7,7 +7,7 @@ add_action( 'widgets_init', 'mtblko_contact_widget' );
 // Creating the widget
 class mtblko_widget_contact extends WP_Widget {
     function __construct() {
-        parent::__construct('mtblko_widget_contact',__('Metaboliko Contacto', 'mtblko_widget_contact_domain'),array( 'description' => __( 'Botones de redes sociales.', 'mtblko_widget_contact_domain' ), ));
+        parent::__construct('mtblko_widget_contact',__('Metaboliko Contacto', 'mtblko_widget_contact_domain'),array( 'description' => __( 'Correo, dirección y teléfono.', 'mtblko_widget_contact_domain' ), ));
     }
     
     public function widget( $args, $instance ) {

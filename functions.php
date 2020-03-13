@@ -22,7 +22,7 @@ function add_theme_scripts() {
     }
 
     // Blog Post
-    if(is_singular() && !is_front_page() && !is_home()){
+    if(is_singular() && !is_front_page() && !is_home() && !is_page()){
         wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css', array(), '1.1', 'all');
         wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', array(), '1.1', 'all');
 
@@ -39,6 +39,19 @@ function add_theme_scripts() {
         wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
     }
 
+    // Page 
+    if(is_page()){
+        wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', array(), '1.1', 'all');
+    }
+    // Conocenos
+    if (is_page_template('page-conocenos.php') ) {
+        wp_enqueue_style( 'conocenos', get_template_directory_uri() . '/css/conocenos.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.green.min', get_template_directory_uri() . '/css/owl.theme.green.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel', get_template_directory_uri().'/js/owl.carousel.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('video', get_template_directory_uri().'/js/video.js', array('jquery'),'1.1', true);
+    }
     wp_enqueue_script('custom', get_template_directory_uri().'/js/custom.js', array('jquery'),'1.1', false);
 
 }
@@ -53,8 +66,27 @@ add_action( 'init', 'mtblko_menu' );
 
 
 function wpb_widgets_init() {
+
     register_sidebar( array(
-        'name' => __( 'Footer Column 1', 'wpb' ),
+        'name' => __( 'Contacto Columna 1', 'wpb' ),
+        'id' => 'ccolumn-1',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Contacto Columna 2', 'wpb' ),
+        'id' => 'ccolumn-2',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Footer Columna 1', 'wpb' ),
         'id' => 'fcolumn-1',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -63,7 +95,7 @@ function wpb_widgets_init() {
     ) );
  
     register_sidebar( array(
-        'name' =>__( 'Footer Column 2', 'wpb'),
+        'name' =>__( 'Footer Columna 2', 'wpb'),
         'id' => 'fcolumn-2',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -72,7 +104,7 @@ function wpb_widgets_init() {
     ) );
     
     register_sidebar( array(
-        'name' =>__( 'Footer Column 3', 'wpb'),
+        'name' =>__( 'Footer Columna 3', 'wpb'),
         'id' => 'fcolumn-3',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -81,7 +113,7 @@ function wpb_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' =>__( 'Footer Column 4', 'wpb'),
+        'name' =>__( 'Footer Columna 4', 'wpb'),
         'id' => 'fcolumn-4',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -89,6 +121,15 @@ function wpb_widgets_init() {
         'after_title' => '</h3>',
     ) );
 
+
+    register_sidebar( array(
+        'name' =>__( 'Footer Columna 5', 'wpb'),
+        'id' => 'fcolumn-5',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
 
 
     register_sidebar( array(
