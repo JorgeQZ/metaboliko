@@ -35,6 +35,69 @@ header {
             line-height: 45px;
         }
     }
+    .image_texto {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .col {
+            &:first-child {
+                width: 42%;
+            }
+            &:last-child {
+                width: 58%;
+                padding-right: 4rem;
+            }
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                margin: 0 auto;
+                width: 80%;
+                max-width: 400px;
+            }
+            h1 {
+                font-size: 60px;
+                line-height: 1;
+                margin: 0;
+                margin-bottom: 10px;
+                small {
+                    font-size: 30px;
+                }
+            }
+            p {
+                margin-top: 0;
+                font-size: 20px;
+            }
+            a {
+                width: 250px;
+                padding: 10px;
+                padding-right: 40px;
+                padding-left: 30px;
+                border: 1px solid white;
+                color: white;
+                font-size: 12px;
+                transition: all 0.2s;
+                &:hover {
+                    background-color: #00a0a8;
+                }
+                span {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        width: 7px;
+                        height: 9px;
+                        background-image: url(../img/arrow.png);
+                        background-size: cover;
+                        position: absolute;
+                        top: 4px;
+                        right: -12px;
+                        transition: all 0.1s linear;
+                    }
+                }
+            }
+        }
+    }
     .content_text_contactform {
         display: flex;
         width: 90%;

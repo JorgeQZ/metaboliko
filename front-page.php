@@ -19,12 +19,7 @@
         </select>
     </div><!-- content -->
 
-    <!-- whatsapp button -->
-    <div class="button-whatsapp">
-        <a href="#" target="_blank">
-            <img src="<?php echo get_template_directory_uri().'/img/whatsapp-button.png'; ?>" alt="">
-        </a>
-    </div><!-- whatasapp button-->
+   
 
     <!-- social-media -->
     <div class="social-media">

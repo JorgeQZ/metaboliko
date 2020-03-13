@@ -43,6 +43,18 @@ span.wpcf7-not-valid-tip {
     line-height: 12px;
 }
 
+.button-whatsapp {
+    position: fixed;
+    bottom: 80px;
+    z-index: 100;
+    right: 30px;
+    a {
+        img {
+            width: 60px;
+        }
+    }
+}
+
 @import 'variables';
 @import 'bascule_mediaqueries';
 @import 'header';

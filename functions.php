@@ -52,6 +52,11 @@ function add_theme_scripts() {
         wp_enqueue_script('owl.carousel', get_template_directory_uri().'/js/owl.carousel.js', array('jquery'),'1.1', true);
         wp_enqueue_script('video', get_template_directory_uri().'/js/video.js', array('jquery'),'1.1', true);
     }
+     // Conocenos
+    if (is_page_template('page-doctor.php') ) {
+        wp_enqueue_style( 'doctor', get_template_directory_uri() . '/css/doctor.css', array(), '1.1', 'all');
+
+    }
     wp_enqueue_script('custom', get_template_directory_uri().'/js/custom.js', array('jquery'),'1.1', false);
 
     if(is_page_template('page-testimonios.php')){

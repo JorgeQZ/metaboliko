@@ -8,9 +8,15 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
+<body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-
+    <!-- whatsapp button -->
+    <div class="button-whatsapp">
+        <a href="#" target="_blank">
+            <img src="<?php echo get_template_directory_uri().'/img/whatsapp-button.png'; ?>" alt="">
+        </a>
+    </div><!-- whatasapp button-->
+    
     <header class="<?php if ( is_user_logged_in() ){ echo 'mt';} ?>">
         <a href="#" class="brand-logo">
             <img src="<?php echo get_template_directory_uri().'/img/logo-header.png'; ?>" alt="">
@@ -21,4 +27,3 @@
         </div>
         <?php wp_nav_menu( array( 'theme_location' => 'header', ) ); ?>
     </header>
-    

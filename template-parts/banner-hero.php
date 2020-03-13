@@ -31,8 +31,20 @@
                 <?php  
                 break;
 
-        case "Imagen y Texto":
-                break;
+        case "Imagen y Texto": ?>
+                        <?php $img_text = get_field('imagen_y_texto'); ?>
+                        <!-- Imagen y Texto -->
+                        <div class="image_texto">
+                                <div class="col">
+                                        <img src="<?php echo $img_text['imagen']; ?>">
+                                </div>
+                                <div class="col">
+                                        <div>
+                                        <?php echo $img_text['texto']; ?>
+                                        </div>
+                                </div>
+                        </div><!-- Imagen y Texto -->
+                <?php break;
 
         case "Texto y Forma de contacto": 
                 ?>
@@ -76,5 +88,3 @@
         </div>
     </div><!-- social-media -->
 </div>
-
-<!-- [select* tratamientos id:Tratamientos class:select-custom "Cirugías para Bajar de Peso" "Cirugía Antirreflujo por Laparoscopia" "Colecistectomía por Laparoscopía" "Hernia Abdominal por Laparoscopia" "Hernia Inguinal por Laparoscopia" "Laparoscopia Avanzada" "Minilaparoscopia" "Apendicectomía por Laparoscopia" "Cirugía Metabolica" "Cirugía para Diabetes" "Cirugía Bariátrica"] -->
