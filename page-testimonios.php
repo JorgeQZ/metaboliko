@@ -6,71 +6,9 @@
 ?>
 <?php get_header(); ?>
 
-<!-- Hero Banner -->
-<div class="hero-banner">
-    <!-- hero title -->
-    <div class="hero-title">#RecuperaTuVida</div><!-- hero title -->
-
-    <!-- ring-overlay -->
-    <!--
-    <div class="ring-overlay"></div>
-    ring-overlay 
--->
-
-    <!-- content -->
-<!--
-    <div class="content">
-        <div class="title">Quiero...</div>
-        <select name="hero-select" id="hero-select" class="select-custom">
-            <option value="Cirugías para Bajar de Peso">Cirugías para Bajar de Peso</option>
-            <option value="Cirugía Antirreflujo por Laparoscopia">Cirugía Antirreflujo por Laparoscopia</option>
-            <option value="Colecistectomía por Laparoscopía">Colecistectomía por Laparoscopía</option>
-            <option>Hernia Abdominal por Laparoscopia</option>
-            <option>Hernia Inguinal por Laparoscopia</option>
-        </select>
-    </div>
--->
-    <!-- content -->
-
-    <!-- whatsapp button -->
-<!--
-    <div class="button-whatsapp">
-        <a href="#" target="_blank">
-            <img src="<?php echo get_template_directory_uri().'/img/whatsapp-button.png'; ?>" alt="">
-        </a>
-    </div>
--->    
-    <!-- whatasapp button-->
-
-    <!-- social-media -->
-    <div class="social-media">
-        <div class="links">
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/facebook-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/twitter-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/linkedin-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/instagram-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/youtube-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/pinterest-white.png'; ?>" alt=""></a>
-        </div>
-    </div><!-- social-media -->
-    <!-- carousel -->
-    <div class="banner-carousel owl-carousel owl-theme">
-        <div class="item"
-            style="background-image: url(<?php echo get_template_directory_uri().'/img/banner-testimonios.jpg'; ?>)">
-            <!-- overlay -->
-            <div class="overlay"></div>
-            <!-- overlay -->
-        </div>
-    </div><!-- carousel -->
-
-</div><!-- Hero Banner -->
-
+<!-- Hero -->
+<?php get_template_part('template-parts/banner','hero') ?>
+<!-- Hero -->
 
 <div class="contenedor-general-cirugias">
     <div class="cont-cirugias">
