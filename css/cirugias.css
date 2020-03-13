@@ -241,3 +241,77 @@
   top: 35%;
   right: 0;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc {
+    font-size: 55px;
+    line-height: 45px;
+    margin-bottom: 20px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc small {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc span {
+    font-size: 90px;
+    line-height: 80px;
+    top: -55px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc span small {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .contenedor-general-video .contenedor-video {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contenedor-general-cirugias .slider-cirugias {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-img {
+    width: 100%;
+    margin: 70px 0 50px;
+    padding: 7%;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info {
+    width: 100%;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc {
+    font-size: 45px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc small {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc span {
+    font-size: 76px;
+    line-height: 66px;
+    top: -42px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc span small {
+    font-size: 50px;
+    line-height: 40px;
+  }
+  .contenedor-items-global .contenedor-items-slider {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contenedor-items-global .contenedor-items-slider .item-slider {
+    width: 120px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  .contenedor-general-video .contenedor-video {
+    width: 95%;
+  }
+  .contenedor-general-video .contenedor-video .cont-item .media {
+    margin-bottom: 30px;
+  }
+}
