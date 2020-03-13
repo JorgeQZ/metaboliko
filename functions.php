@@ -54,6 +54,30 @@ function add_theme_scripts() {
     }
     wp_enqueue_script('custom', get_template_directory_uri().'/js/custom.js', array('jquery'),'1.1', false);
 
+    if(is_page_template('page-testimonios.php')){
+        wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'testimonios', get_template_directory_uri() . '/css/testimonios.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
+    }
+
+    if(is_page_template('page-cirugias.php')){
+        wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'cirugias', get_template_directory_uri() . '/css/cirugias.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
+    }
+
+    if(is_page_template('page-sistema.php')){
+        wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'sistema', get_template_directory_uri() . '/css/sistema.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 

@@ -1,0 +1,211 @@
+.hero-banner {
+    .overlay{
+        mix-blend-mode: lighten;
+    }
+}
+
+.contenedor-items-global{
+    position: relative;
+    .contenedor-item-global{
+        display: none;
+
+        &.active{
+            display: block;
+        }
+    }
+    .contenedor-items-slider{
+        position: absolute;
+        top: -65px;
+        right: 0;
+        padding: 0 30px;
+        display: flex;
+        z-index: 99;
+        .item-slider{
+            width: 127px;
+            height: 127px;
+            background-size: cover;
+            background-position: center;
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+            p{
+                color: white;
+                font-size: 17px;
+                line-height: 17px;
+                margin: 0;
+                span{
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.contenedor-general-cirugias{
+    width: 100%;
+    min-height: 100vh;
+    padding: 75px 0;
+    background-image: url(../img/fondo-cirugias.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    .slider-cirugias{
+        width: 85%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        .cont-img{
+            width: 52%;
+            height: 100%;
+            padding-left: 2%;
+            padding-right: 15%;
+            .img{
+                position: relative;
+                width: auto;
+                display: inline-block;
+                img{
+                    width: 100%;
+                    display: block;
+                    position: relative;
+                    z-index: 1;
+                }
+                &::before{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: -15px;
+                    left: -15px;
+                    background: #0b7175;
+                }
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    bottom: -15px;
+                    right: -15px;
+                    background: white;
+                }
+            }
+        }
+        .cont-info{
+            width: 48%;
+            p.enc{
+                color: white;
+                font-size: 66px;
+                line-height: 60px;
+                margin: 0;
+                position: relative;
+                margin-bottom: 50px;
+                font-weight: bold;
+                small{
+                    font-weight: normal;
+                    font-size: 45px;
+                    line-height: 45px;
+                }
+                span{
+                    position: absolute;
+                    left: -12px;
+                    top: -89px;
+                    font-size: 130px;
+                    line-height: 120px;
+                    color: transparent;
+                    -webkit-text-stroke-width: .5px;
+                    -webkit-text-stroke-color: white;
+                    small{
+                        font-size: 90px;
+                        line-height: 90px;
+                    }
+    
+                }
+            }
+            p.desc{
+                color: white;
+                font-size: 14px;
+                line-height: 24px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+
+.contenedor-general-video{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/fondo-cirugias-video.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+
+    .contenedor-video{
+        width: 73%;
+        margin: 0 auto;
+        background-image: url(../img/cinta-metrica.png);
+        background-size: 91%;
+        background-position: top;
+        background-repeat: no-repeat;
+        .cont-item{
+            width: 73%;
+            margin: 0 auto;
+            .media{
+                border: 8px solid #0ac4cb;
+                border-radius: 25px;
+                overflow: hidden;
+                margin-bottom: 55px;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .info{
+                p{
+                    color: #282828;
+                    font-size: 15px;
+                    line-height: 24px;
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+        }
+
+        .owl-nav{
+            button{
+                outline: none;
+                img{
+                    width: 22px;
+                    display: block;
+                }
+                &:hover{
+                    background: transparent;
+                }
+
+                &.owl-prev {
+                    position: absolute;
+                    top: 35%;
+                    left: 0;
+                }
+        
+                &.owl-next {
+                    position: absolute;
+                    top: 35%;
+                    right: 0;
+                }
+            }
+        }
+
+
+    }
+}
