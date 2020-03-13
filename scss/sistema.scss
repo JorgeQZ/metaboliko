@@ -224,3 +224,188 @@
         }
     }
 }
+
+
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+
+    .contenedor-items-global{
+        width: 63%;
+    }
+
+    .contenedor-general-tenedor{ 
+        .contenedor-info{
+            padding: 0 4%;
+            p.desc{
+                line-height: 20px;
+            }
+        }
+        .contenedor-general-videos{
+            .contenedor-video{
+                .cont-item{
+                    width: 80%;
+                    .media{
+                        margin-bottom: 10px;
+                    }
+                    .info{
+                        p{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    .contenedor-items-global{
+        width: 65%;
+    }
+
+    .contenedor-general-tenedor{ 
+        .contenedor-info{
+            padding: 0 3%;
+            p.enc{ 
+                font-size: 55px;
+                line-height: 45px;
+                margin-bottom: 20px;
+                small{
+                    font-size: 35px;
+                    line-height: 35px;
+                }
+                span{
+                    font-size: 90px;
+                    line-height: 80px;
+                    top: -55px;
+                    small{
+                        font-size: 60px;
+                        line-height: 60px;
+                    }
+                }
+            }
+            p.desc{
+                font-size: 12px;
+                line-height: 13px;
+            }
+        }
+
+        .contenedor-general-videos{
+            .contenedor-video{
+                .cont-item{
+                    width: 80%;
+                    .media{
+                        margin-bottom: 10px;
+                    }
+                    .info{
+                        p{
+                            font-size: 11px;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+
+    .contenedor-items-global{
+        position: relative;
+        width: 100%;
+    }
+
+    .contenedor-general-tenedor{
+
+        img{
+            display: none;
+        }
+
+        .contenedor-items-slider{
+            flex-wrap: wrap;
+            .item-slider{
+                width: 120px;
+                height: 90px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .contenedor-info{
+            padding: 150px 5% 50px;
+            p.enc{ 
+                font-size: 45px;
+                line-height: 40px;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                small{
+                    font-size: 30px;
+                    line-height: 30px;
+                }
+                span{
+                    font-size: 66px;
+                    line-height: 70px;
+                    top: -47px;
+                    letter-spacing: -3px;
+                    small{
+                        font-size: 50px;
+                        line-height: 40px;
+                    }
+                }
+            }
+            p.desc{
+                font-size: 12px;
+                line-height: 13px;
+            }
+        }
+        .contenedor-general-videos{
+            .contenedor-video{
+                padding: 50px 0;
+                .cont-item{
+                    width: 75%;
+                    .media{
+                        margin-bottom: 10px;
+                    }
+                    .info{
+                        p{
+                            font-size: 11px;
+                            line-height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .contenedor-general-galeria{
+        padding: 30px 0; 
+        p.enc{
+            font-size: 52px; 
+            span{
+                top: -22px;
+                left: -22%;
+                font-size: 74px;
+            }
+        }
+        .cont-galeria{
+            margin-top: 10px;
+            .cont-slide{
+                justify-content: space-evenly;
+                .cont-img{
+                    width: 31%;
+                    margin: 5px 0;
+                }
+            }
+            .owl-dots{
+                margin-top: 5px !important;
+            }
+        }
+    }
+
+}

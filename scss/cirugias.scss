@@ -209,3 +209,103 @@
 
     }
 }
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+    .contenedor-general-cirugias{ 
+        .slider-cirugias{ 
+            .cont-info{ 
+                p.enc{ 
+                    font-size: 55px;
+                    line-height: 45px;
+                    margin-bottom: 20px;
+                    small{
+                        font-size: 35px;
+                        line-height: 35px;
+                    }
+                    span{
+                        font-size: 90px;
+                        line-height: 80px;
+                        top: -55px;
+                        small{
+                            font-size: 60px;
+                            line-height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .contenedor-general-video{ 
+        .contenedor-video{
+            width: 85%;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+
+    .contenedor-general-cirugias{
+        .slider-cirugias{
+            flex-direction: column; 
+            .cont-img{
+                width: 100%;
+                margin: 70px 0 50px;
+                padding: 7%;
+            }
+            .cont-info{
+                width: 100%;
+                p.enc{ 
+                    font-size: 45px;
+                    line-height: 40px;
+                    margin-bottom: 20px;
+                    small{
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
+                    span{
+                        font-size: 66px;
+                        line-height: 70px;
+                        top: -47px;
+                        letter-spacing: -3px;
+                        small{
+                            font-size: 50px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contenedor-items-global{
+        .contenedor-items-slider{
+            flex-wrap: wrap;
+            .item-slider{
+                width: 120px;
+                height: 90px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+    .contenedor-general-video {
+        .contenedor-video{
+            width: 95%;
+            .cont-item{
+                .media{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+}
