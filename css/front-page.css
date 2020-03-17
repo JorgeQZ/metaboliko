@@ -611,31 +611,42 @@
     margin-top: auto;
     position: relative;
     padding: .5rem 1rem;
+    width: 100%;
+    height: 100%;
   }
   .posts-container .col a .text .title {
     font-size: 24px;
     line-height: 24px;
     text-transform: uppercase;
-    -webkit-transition: all 100ms linear;
-    transition: all 100ms linear;
+    -webkit-transition: all .3s;
+    transition: all .3s;
     margin-bottom: 10px;
     opacity: 1;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 2rem);
+    padding-bottom: .5rem;
   }
   .posts-container .col a .text .desc {
     font-size: 18px;
     line-height: 18px;
-    max-height: 0;
     overflow: hidden;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     opacity: 0;
+    max-height: none;
+    position: absolute;
+    width: calc(100% - 2rem);
+    bottom: -30%;
+    padding-bottom: .5rem;
   }
   .posts-container .col a:hover .text .title {
     opacity: 0;
+    bottom: 30%;
   }
   .posts-container .col a:hover .text .desc {
     opacity: 1;
-    max-height: 200px;
+    bottom: 0%;
   }
   .who-is-container {
     background-image: url(../img/dr-fraga-bg.jpg);
@@ -868,31 +879,42 @@
     margin-top: auto;
     position: relative;
     padding: .5rem 1rem;
+    width: 100%;
+    height: 100%;
   }
   .posts-container .col a .text .title {
     font-size: 24px;
     line-height: 24px;
     text-transform: uppercase;
-    -webkit-transition: all 100ms linear;
-    transition: all 100ms linear;
+    -webkit-transition: all .3s;
+    transition: all .3s;
     margin-bottom: 10px;
     opacity: 1;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 2rem);
+    padding-bottom: .5rem;
   }
   .posts-container .col a .text .desc {
     font-size: 18px;
     line-height: 18px;
-    max-height: 0;
     overflow: hidden;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     opacity: 0;
+    max-height: none;
+    position: absolute;
+    width: calc(100% - 2rem);
+    bottom: -30%;
+    padding-bottom: .5rem;
   }
   .posts-container .col a:hover .text .title {
     opacity: 0;
+    bottom: 30%;
   }
   .posts-container .col a:hover .text .desc {
     opacity: 1;
-    max-height: 200px;
+    bottom: 0%;
   }
   .who-is-container {
     background-image: url(../img/dr-fraga-bg.jpg);
