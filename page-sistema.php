@@ -118,6 +118,110 @@
             </div>
         </div>
     </div>
+    <div class="contenedor-item-global">
+        <div class="contenedor-info">
+            <p class="enc">
+                    <small>Mejora de</small> <br> Imagen
+                    <span>
+                        <small>Mejora de</small> <br> Imagen
+                    </span>
+                </p>
+            <p class="desc">
+                La masa muscular es un tratamiento médico estricto, en el cual los pacientes 
+                entran en un estado metabólico controlado bajo estricta supervisión médica, 
+                logrando que su cuerpo gaste la GRASA almacenada en su cuerpo como fuente de energía. 
+                <br> <br>
+                Este cambio metabólico tiene como fin que el paciente pierda peso sin tener hambre, 
+                pero lo más importante viene después, ya que el paciente debe aprender a comer en 
+                forma intuitiva, es decir, en base a lo que haga en su día a día y en este proceso 
+                subir masa muscular con el fin de que el músculo le permita quemar más calorías 
+                y sea mas facíl mantener su peso ideal.
+            </p>
+        </div>
+        
+        <div class="contenedor-general-videos">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-item-global">
+        <div class="contenedor-info">
+            <p class="enc">
+                    <small>Definición</small> <br> Muscular
+                    <span>
+                        <small>Definición</small> <br> Muscular
+                    </span>
+                </p>
+            <p class="desc">
+                La masa muscular es un tratamiento médico estricto, en el cual los pacientes 
+                entran en un estado metabólico controlado bajo estricta supervisión médica, 
+                logrando que su cuerpo gaste la GRASA almacenada en su cuerpo como fuente de energía. 
+                <br> <br>
+                Este cambio metabólico tiene como fin que el paciente pierda peso sin tener hambre, 
+                pero lo más importante viene después, ya que el paciente debe aprender a comer en 
+                forma intuitiva, es decir, en base a lo que haga en su día a día y en este proceso 
+                subir masa muscular con el fin de que el músculo le permita quemar más calorías 
+                y sea mas facíl mantener su peso ideal.
+            </p>
+        </div>
+        
+        <div class="contenedor-general-videos">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
     <div class="contenedor-items-slider">

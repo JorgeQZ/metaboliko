@@ -175,6 +175,7 @@
           align-items: center;
   padding: 5px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .contenedor-general-tenedor .contenedor-items-slider .item-slider p {

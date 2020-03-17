@@ -37,6 +37,16 @@
     line-height: 35px;
     z-index: 10;
   }
+  .hero-banner .hero-title p {
+    font-weight: normal;
+    margin: 0;
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .hero-banner .hero-title p strong {
+    font-size: 35px;
+    line-height: 35px;
+  }
   .hero-banner .ring-overlay {
     width: 400px;
     height: 400px;
@@ -425,6 +435,16 @@
     font-size: 70px;
     line-height: 70px;
     z-index: 10;
+  }
+  .hero-banner .hero-title p {
+    font-weight: normal;
+    margin: 0;
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .hero-banner .hero-title p strong {
+    font-size: 70px;
+    line-height: 70px;
   }
   .hero-banner .ring-overlay {
     width: 500px;

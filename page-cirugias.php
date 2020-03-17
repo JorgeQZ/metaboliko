@@ -166,6 +166,137 @@
             </div>
         </div>
     </div>
+
+    <div class="contenedor-item-global">
+        <div class="contenedor-general-cirugias">
+            <div class="slider-cirugias">
+                <div class="cont-img">
+                    <div class="img">
+                        <img src="<?php echo get_template_directory_uri().'/img/img-cirugia.jpg'; ?>" alt="">
+                    </div>
+                </div>
+                <div class="cont-info">
+                    <p class="enc">
+                        <small>Bypass</small> <br> Gástrico
+                        <span>
+                            <small>Bypass</small> <br> Gástrico
+                        </span>
+                    </p>
+                    <p class="desc">
+                    Es una cirugía sencilla, segura, que hace que el paciente coma poco, se llene rápido y pierda peso. 
+                    En la acutalidad no es una cirugía que se haga constantemente, pero tiene algunas indiciaciones. 
+                    Es importante saber que los pacientes que estan operados de Banga Gástrica deben estar evaluados, 
+                    tener seguimiento y estudios por ejemplo endoscopia pues el riesgo de reflujo es alto y 
+                    con esto vienen algunos otros problemas.
+                    <br> <br>
+                    El bypass gástrico por laparoscopia es una cirugía para bajar de peso que se lleva a cabo mediante tres 
+                    incisiones en el abdomen mediante los cuales se realiza la disección del estómago y se coloca la 
+                    banda gástrica, la cual rodea la parte superior de todo el estómago.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contenedor-general-video">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/cirugias-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            El bypass gástrico por laparoscopia es una cirugía para bajar de peso 
+                            que se lleva a cabo mediante tres incisiones en el abdomen mediante 
+                            los cuales se realiza la disección del estómago y se coloca la banda 
+                            gástrica, la cual rodea la parte superior de todo el estómago.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/cirugias-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            El bypass gástrico por laparoscopia es una cirugía para bajar de peso 
+                            que se lleva a cabo mediante tres incisiones en el abdomen mediante 
+                            los cuales se realiza la disección del estómago y se coloca la banda 
+                            gástrica, la cual rodea la parte superior de todo el estómago.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-item-global">
+        <div class="contenedor-general-cirugias">
+            <div class="slider-cirugias">
+                <div class="cont-img">
+                    <div class="img">
+                        <img src="<?php echo get_template_directory_uri().'/img/img-cirugia.jpg'; ?>" alt="">
+                    </div>
+                </div>
+                <div class="cont-info">
+                    <p class="enc">
+                        <small>Cirugía de </small> <br> Revisión
+                        <span>
+                            <small>Cirugía de</small> <br> Revisión
+                        </span>
+                    </p>
+                    <p class="desc">
+                    Es una cirugía sencilla, segura, que hace que el paciente coma poco, se llene rápido y pierda peso. 
+                    En la acutalidad no es una cirugía que se haga constantemente, pero tiene algunas indiciaciones. 
+                    Es importante saber que los pacientes que estan operados de Banga Gástrica deben estar evaluados, 
+                    tener seguimiento y estudios por ejemplo endoscopia pues el riesgo de reflujo es alto y 
+                    con esto vienen algunos otros problemas.
+                    <br> <br>
+                    La cirugía de revisión por laparoscopia es una cirugía para bajar de peso que se lleva a cabo mediante tres 
+                    incisiones en el abdomen mediante los cuales se realiza la disección del estómago y se coloca la 
+                    banda gástrica, la cual rodea la parte superior de todo el estómago.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contenedor-general-video">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/cirugias-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            La cirugía de revisión por laparoscopia es una cirugía para bajar de peso 
+                            que se lleva a cabo mediante tres incisiones en el abdomen mediante 
+                            los cuales se realiza la disección del estómago y se coloca la banda 
+                            gástrica, la cual rodea la parte superior de todo el estómago.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/cirugias-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            La cirugía de revisión por laparoscopia es una cirugía para bajar de peso 
+                            que se lleva a cabo mediante tres incisiones en el abdomen mediante 
+                            los cuales se realiza la disección del estómago y se coloca la banda 
+                            gástrica, la cual rodea la parte superior de todo el estómago.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
