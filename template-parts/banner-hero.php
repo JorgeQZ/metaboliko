@@ -72,18 +72,18 @@
 
     <!-- social-media -->
     <div class="social-media">
-        <div class="links">
-            <a href="#" target="_blank"><img
+    <div class="links">
+            <a href="https://www.facebook.com/clinicametabolikO/" target="_blank"><img
                     src="<?php echo get_template_directory_uri().'/img/icons/facebook-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
+            <a href="https://twitter.com/metaboliko" target="_blank"><img
                     src="<?php echo get_template_directory_uri().'/img/icons/twitter-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
+            <a href="https://mx.linkedin.com/company/cl%C3%ADnica-metaboliko" target="_blank"><img
                     src="<?php echo get_template_directory_uri().'/img/icons/linkedin-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
+            <a href="https://www.instagram.com/clinicametaboliko/" target="_blank"><img
                     src="<?php echo get_template_directory_uri().'/img/icons/instagram-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
+            <a href="https://www.youtube.com/channel/UCV7KykfT6_opfuXtW8TWtZA" target="_blank"><img
                     src="<?php echo get_template_directory_uri().'/img/icons/youtube-white.png'; ?>" alt=""></a>
-            <a href="#" target="_blank"><img
+            <a href="https://www.pinterest.com.mx/metaboliko/" target="_blank"><img
                     src="<?php echo get_template_directory_uri().'/img/icons/pinterest-white.png'; ?>" alt=""></a>
         </div>
     </div><!-- social-media -->

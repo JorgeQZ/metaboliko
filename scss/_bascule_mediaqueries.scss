@@ -65,6 +65,25 @@
     }
 }
 
+.text-option {
+    .title {
+        display: none;
+        transition: all 0.3s;
+    }
+    .desc {
+        display: none;
+        transition: all 0.3s;
+    }
+    &.active {
+        .title {
+            display: block;
+        }
+        .desc {
+            display: block;
+        }
+    }
+}
+
 @media screen and (min-width: 320px) {
     .shape-blue {
         width: 90%;
@@ -84,6 +103,7 @@
                     z-index: 10;
                     font-size: 15px;
                     line-height: 15px;
+                    margin-top: 15px;
                 }
                 .desc {
                     padding-top: 10px;
@@ -683,6 +703,7 @@
                     z-index: 10;
                     font-size: 35px;
                     line-height: 35px;
+                    margin-top: 35px;
                 }
                 .desc {
                     padding-top: 20px;
@@ -885,8 +906,9 @@
             .text {
                 .title {
                     z-index: 10;
-                    font-size: 45px;
-                    line-height: 45px;
+                    font-size: 40px;
+                    line-height: 40px;
+                    margin-top: 50px;
                 }
                 .desc {
                     padding-top: 20px;
@@ -894,9 +916,10 @@
                     line-height: 22px;
                     li {
                         margin-bottom: 6px;
+                        height: 20px;
                         span {
-                            font-size: 23px;
-                            line-height: 28px;
+                            font-size: 20px;
+                            line-height: 20px;
                             margin-left: 15px;
                             &:before {
                                 content: '';
@@ -1088,8 +1111,6 @@
             .text {
                 .title {
                     z-index: 10;
-                    font-size: 45px;
-                    line-height: 45px;
                 }
                 .desc {
                     padding-top: 20px;
@@ -1098,8 +1119,8 @@
                     li {
                         margin-bottom: 6px;
                         span {
-                            font-size: 20px;
-                            line-height: 20px;
+                            // font-size: 20px;
+                            // line-height: 20px;
                             margin-left: 15px;
                             &:before {
                                 content: '';
@@ -1361,8 +1382,8 @@
                     li {
                         margin-bottom: 6px;
                         span {
-                            font-size: 35px;
-                            line-height: 40px;
+                            // font-size: 35px;
+                            // line-height: 40px;
                             margin-left: 15px;
                             &:before {
                                 content: '';
