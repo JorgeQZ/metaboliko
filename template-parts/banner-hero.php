@@ -64,6 +64,13 @@
                 </div><!-- Text & Contact Form -->
         <?php
         break;
+        case "Encabezado Inferior": 
+                ?>
+                <div class="hero-title">
+                        <?php echo get_field('encabezado_inferior'); ?>
+                </div>
+                <?php
+                break;
     endswitch; 
     ?>
 

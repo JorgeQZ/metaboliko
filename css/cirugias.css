@@ -34,9 +34,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
   border-radius: 15px;
   cursor: pointer;
@@ -49,7 +53,7 @@
   margin: 0;
 }
 
-.contenedor-items-global .contenedor-items-slider .item-slider p span {
+.contenedor-items-global .contenedor-items-slider .item-slider p strong {
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
@@ -130,39 +134,45 @@
   width: 48%;
 }
 
-.contenedor-general-cirugias .slider-cirugias .cont-info p.enc {
-  color: white;
-  font-size: 66px;
-  line-height: 60px;
-  margin: 0;
+.contenedor-general-cirugias .slider-cirugias .cont-info .enc {
   position: relative;
   margin-bottom: 50px;
-  font-weight: bold;
 }
 
-.contenedor-general-cirugias .slider-cirugias .cont-info p.enc small {
+.contenedor-general-cirugias .slider-cirugias .cont-info .enc p {
+  color: white;
+  margin: 0;
   font-weight: normal;
   font-size: 45px;
   line-height: 45px;
 }
 
-.contenedor-general-cirugias .slider-cirugias .cont-info p.enc span {
+.contenedor-general-cirugias .slider-cirugias .cont-info .enc p strong {
+  font-size: 66px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.contenedor-general-cirugias .slider-cirugias .cont-info .enc span {
   position: absolute;
   left: -12px;
-  top: -89px;
-  font-size: 130px;
-  line-height: 120px;
+  top: -74px;
+}
+
+.contenedor-general-cirugias .slider-cirugias .cont-info .enc span p {
   color: transparent;
   -webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: white;
-}
-
-.contenedor-general-cirugias .slider-cirugias .cont-info p.enc span small {
   font-size: 90px;
   line-height: 90px;
 }
 
-.contenedor-general-cirugias .slider-cirugias .cont-info p.desc {
+.contenedor-general-cirugias .slider-cirugias .cont-info .enc span p strong {
+  font-size: 130px;
+  line-height: 120px;
+}
+
+.contenedor-general-cirugias .slider-cirugias .cont-info .desc p {
   color: white;
   font-size: 14px;
   line-height: 24px;
@@ -243,23 +253,27 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc {
-    font-size: 55px;
-    line-height: 45px;
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc {
     margin-bottom: 20px;
   }
-  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc small {
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc p {
     font-size: 35px;
     line-height: 35px;
   }
-  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc span {
-    font-size: 90px;
-    line-height: 80px;
-    top: -55px;
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc p strong {
+    font-size: 55px;
+    line-height: 45px;
   }
-  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc span small {
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc span {
+    top: -49px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc span p {
     font-size: 60px;
     line-height: 60px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc span p strong {
+    font-size: 90px;
+    line-height: 80px;
   }
   .contenedor-general-video .contenedor-video {
     width: 85%;
@@ -281,24 +295,27 @@
   .contenedor-general-cirugias .slider-cirugias .cont-info {
     width: 100%;
   }
-  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc {
-    font-size: 45px;
-    line-height: 40px;
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc {
     margin-bottom: 20px;
   }
-  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc small {
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc p {
     font-size: 30px;
     line-height: 30px;
   }
-  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc span {
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc p strong {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc span {
+    top: -30px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc span p {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  .contenedor-general-cirugias .slider-cirugias .cont-info .enc span p strong {
     font-size: 66px;
     line-height: 70px;
-    top: -47px;
-    letter-spacing: -3px;
-  }
-  .contenedor-general-cirugias .slider-cirugias .cont-info p.enc span small {
-    font-size: 50px;
-    line-height: 40px;
   }
   .contenedor-items-global .contenedor-items-slider {
     -ms-flex-wrap: wrap;
