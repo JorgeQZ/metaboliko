@@ -30,20 +30,17 @@
             font-size: 35px;
             line-height: 35px;
             z-index: 10;
-<<<<<<< HEAD
-            p{
+            p {
                 font-weight: normal;
                 margin: 0;
                 font-size: 25px;
                 line-height: 25px;
-                strong{
+                strong {
                     font-size: 35px;
                     line-height: 35px;
                 }
             }
-=======
             border: none;
->>>>>>> Bascula
         }
         .ring-overlay {
             // display: none;
@@ -407,12 +404,12 @@
             font-size: 70px;
             line-height: 70px;
             z-index: 10;
-            p{
+            p {
                 font-weight: normal;
                 margin: 0;
                 font-size: 50px;
                 line-height: 50px;
-                strong{
+                strong {
                     font-size: 70px;
                     line-height: 70px;
                 }
@@ -567,7 +564,6 @@
                         transition: all .3s;
                         margin-bottom: 10px;
                         opacity: 1;
-
                         position: absolute;
                         bottom: 0;
                         width: calc(100% - 2rem);
@@ -580,7 +576,6 @@
                         overflow: hidden;
                         transition: all 0.3s;
                         opacity: 0;
-
                         max-height: none;
                         position: absolute;
                         width: calc(100% - 2rem);
@@ -593,14 +588,11 @@
                         .title {
                             opacity: 0;
                             bottom: 30%;
-
                         }
                         .desc {
                             opacity: 1;
                             //max-height: 200px;
-
                             bottom: 0%;
-
                         }
                     }
                 }
@@ -833,7 +825,6 @@
                         transition: all .3s;
                         margin-bottom: 10px;
                         opacity: 1;
-
                         position: absolute;
                         bottom: 0;
                         width: calc(100% - 2rem);
@@ -846,7 +837,6 @@
                         overflow: hidden;
                         transition: all 0.3s;
                         opacity: 0;
-
                         max-height: none;
                         position: absolute;
                         width: calc(100% - 2rem);
