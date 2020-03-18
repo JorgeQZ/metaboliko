@@ -45,8 +45,8 @@ span.wpcf7-not-valid-tip {
 
 .button-whatsapp {
     position: fixed;
-    bottom: 80px;
-    z-index: 100;
+    bottom: 20px;
+    z-index: 1000;
     right: 30px;
     a {
         img {
@@ -56,7 +56,6 @@ span.wpcf7-not-valid-tip {
 }
 
 @import 'variables';
-@import 'bascule_mediaqueries';
 @import 'header';
 @import 'address_styles';
 @import 'contact_styles';

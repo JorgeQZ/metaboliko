@@ -65,18 +65,624 @@
     }
 }
 
-@media screen and (max-width: 767px) {
-    .shape-blue {
+.text-option {
+    .title {
         display: none;
+        transition: all 0.3s;
     }
-    .bascule-container {
+    .desc {
         display: none;
+        transition: all 0.3s;
+    }
+    &.active {
+        .title {
+            display: block;
+        }
+        .desc {
+            display: block;
+        }
     }
 }
 
-// Ipad
-// Portrait
-@media screen and (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+@media screen and (min-width: 320px) {
+    .shape-blue {
+        width: 90%;
+    }
+    .bascule-container {
+        height: 500px;
+        .content-behinde {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            .shape {
+                shape-outside: polygon(0px 2px, 98.15% 1.6%, 14.05% 1.6%, 24.7% 19.8%, 33.75% 32.2%, 43.15% 40%, 53.45% 45.6%, 66.9% 48%, 76.9% 48.2%, 84.05% 49.6%, 91.55% 49.2%, 95.65% 49.6%, 100% 49%, 100% 99%, 0% 99.2%);
+                clip-path: polygon(0px 2px, 98.15% 1.6%, 14.05% 1.6%, 24.7% 19.8%, 33.75% 32.2%, 43.15% 40%, 53.45% 45.6%, 66.9% 48%, 76.9% 48.2%, 84.05% 49.6%, 91.55% 49.2%, 95.65% 49.6%, 100% 49%, 100% 99%, 0% 99.2%);
+            }
+            .text {
+                .title {
+                    z-index: 10;
+                    font-size: 15px;
+                    line-height: 15px;
+                    margin-top: 15px;
+                }
+                .desc {
+                    padding-top: 10px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    li {
+                        margin-bottom: 6px;
+                        span {
+                            font-size: 12px;
+                            line-height: 12px;
+                            margin-left: 12px;
+                            &:before {
+                                content: '';
+                                width: 10px;
+                                height: 10px;
+                                left: -14px;
+                                top: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-front {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .options {
+                position: relative;
+                max-width: 1280px;
+                height: 100%;
+                z-index: 10;
+                .option {
+                    max-width: 143px;
+                    padding: 3px;
+                    padding-left: 7px;
+                    padding-right: 10px;
+                    padding-bottom: 7px;
+                    border: none;
+                    background: transparent;
+                    color: black;
+                    font-size: 12px;
+                    line-height: 1.1;
+                    text-align: left;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-bottom: 4px solid #33a7c9;
+                    position: absolute;
+                    transform: scale(.6);
+                    &:focus {
+                        outline: unset;
+                    }
+                    &:hover {
+                        .shape-line {
+                            opacity: 1;
+                        }
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: -15px;
+                        width: 4px;
+                        height: 40px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                    }
+                    .shape-line-bottom {
+                        position: absolute;
+                        top: calc(100% - 4px);
+                        right: -17px;
+                        width: 4px;
+                        height: 45px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                        img {
+                            top: calc(100% - 5px);
+                            right: -9px;
+                            position: absolute;
+                            width: 28px;
+                        }
+                    }
+                    &#option1 {
+                        top: 200px;
+                        left: 0%;
+                    }
+                    &#option2 {
+                        top: 250px;
+                        left: 0%;
+                    }
+                    &#option3 {
+                        top: 320px;
+                        left: 0%;
+                    }
+                    &#option4 {
+                        top: 250px;
+                        left: 50%;
+                        .shape-line {
+                            left: calc(100% - 50px);
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: -30.5px;
+                                left: calc(100% + 10px);
+                                width: 3px;
+                                height: 35px;
+                                background-color: #33a7c9;
+                                -webkit-transform: rotateZ(-45deg);
+                                transform: rotateZ(-45deg);
+                            }
+                        }
+                    }
+                    &#option5 {
+                        top: 310px;
+                        left: 50%;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -36px;
+                            left: -15px;
+                            width: 4px;
+                            height: 40px;
+                            transform: rotateZ(45deg);
+                            background-color: #33a7c9;
+                        }
+                        .shape-line-bottom {
+                            top: calc(100% - 36px);
+                            transform: rotateZ(45deg);
+                        }
+                        .shape-line {
+                            left: calc(100% - 40px);
+                            &:before {
+                                height: 40px;
+                                bottom: -7px;
+                                left: calc(100% + 12px);
+                                transform: rotateZ(45deg);
+                            }
+                        }
+                    }
+                    .shape-line {
+                        opacity: 0;
+                        position: inherit;
+                        width: 45px;
+                        height: 3px;
+                        left: -3px;
+                        bottom: -12px;
+                        border-bottom: 3px solid #33a7c9;
+                        transition: all 0.1s;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -6px;
+                            left: -11px;
+                            width: 3px;
+                            height: 30px;
+                            background-color: #33a7c9;
+                            transform: rotateZ(-45deg);
+                        }
+                    }
+                }
+            }
+            .woman {
+                bottom: -4%;
+                width: 38%;
+                left: 23%;
+                img {
+                    width: 100%;
+                }
+            }
+            .bascule {
+                bottom: 0;
+                width: 70%;
+                left: 25%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .shape-blue {
+        width: 92%;
+    }
+    .bascule-container {
+        height: 650px;
+        .content-behinde {
+            .shape {
+                shape-outside: polygon(0px 2px, 98.15% 1.6%, 14.05% 1.6%, 24.7% 19.8%, 33.75% 32.2%, 43.15% 40%, 53.45% 45.6%, 66.9% 48%, 76.9% 48.2%, 84.05% 49.6%, 91.55% 49.2%, 95.65% 49.6%, 100% 49%, 100% 99%, 0% 99.2%);
+                clip-path: polygon(0px 2px, 98.15% 1.6%, 14.05% 1.6%, 24.7% 19.8%, 33.75% 32.2%, 43.15% 40%, 53.45% 45.6%, 66.9% 48%, 76.9% 48.2%, 84.05% 49.6%, 91.55% 49.2%, 95.65% 49.6%, 100% 49%, 100% 99%, 0% 99.2%);
+            }
+            .text {
+                .title {
+                    z-index: 10;
+                    font-size: 15px;
+                    line-height: 15px;
+                }
+                .desc {
+                    padding-top: 10px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    li {
+                        margin-bottom: 6px;
+                        span {
+                            font-size: 12px;
+                            line-height: 12px;
+                            margin-left: 12px;
+                            &:before {
+                                content: '';
+                                width: 10px;
+                                height: 10px;
+                                left: -14px;
+                                top: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-front {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .options {
+                position: relative;
+                max-width: 1280px;
+                height: 100%;
+                z-index: 10;
+                .option {
+                    max-width: 143px;
+                    padding: 3px;
+                    padding-left: 7px;
+                    padding-right: 10px;
+                    padding-bottom: 7px;
+                    border: none;
+                    background: transparent;
+                    color: black;
+                    font-size: 12px;
+                    line-height: 1.1;
+                    text-align: left;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-bottom: 4px solid #33a7c9;
+                    position: absolute;
+                    transform: scale(.6);
+                    &:focus {
+                        outline: unset;
+                    }
+                    &:hover {
+                        .shape-line {
+                            opacity: 1;
+                        }
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: -15px;
+                        width: 4px;
+                        height: 40px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                    }
+                    .shape-line-bottom {
+                        position: absolute;
+                        top: calc(100% - 4px);
+                        right: -17px;
+                        width: 4px;
+                        height: 45px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                        img {
+                            top: calc(100% - 5px);
+                            right: -9px;
+                            position: absolute;
+                            width: 28px;
+                        }
+                    }
+                    &#option1 {
+                        top: 250px;
+                        left: 5%;
+                    }
+                    &#option2 {
+                        top: 310px;
+                        left: 5%;
+                    }
+                    &#option3 {
+                        top: 380px;
+                        left: 0%;
+                    }
+                    &#option4 {
+                        top: 310px;
+                        left: 53%;
+                        .shape-line {
+                            left: calc(100% - 50px);
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: -30.5px;
+                                left: calc(100% + 10px);
+                                width: 3px;
+                                height: 35px;
+                                background-color: #33a7c9;
+                                -webkit-transform: rotateZ(-45deg);
+                                transform: rotateZ(-45deg);
+                            }
+                        }
+                    }
+                    &#option5 {
+                        top: 380px;
+                        left: 53%;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -36px;
+                            left: -15px;
+                            width: 4px;
+                            height: 40px;
+                            transform: rotateZ(45deg);
+                            background-color: #33a7c9;
+                        }
+                        .shape-line-bottom {
+                            top: calc(100% - 36px);
+                            transform: rotateZ(45deg);
+                        }
+                        .shape-line {
+                            left: calc(100% - 40px);
+                            &:before {
+                                height: 40px;
+                                bottom: -7px;
+                                left: calc(100% + 12px);
+                                transform: rotateZ(45deg);
+                            }
+                        }
+                    }
+                    .shape-line {
+                        opacity: 0;
+                        position: inherit;
+                        width: 45px;
+                        height: 3px;
+                        left: -3px;
+                        bottom: -12px;
+                        border-bottom: 3px solid #33a7c9;
+                        transition: all 0.1s;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -6px;
+                            left: -11px;
+                            width: 3px;
+                            height: 30px;
+                            background-color: #33a7c9;
+                            transform: rotateZ(-45deg);
+                        }
+                    }
+                }
+            }
+            .woman {
+                bottom: -4%;
+                width: 43%;
+                left: 23%;
+                img {
+                    width: 100%;
+                }
+            }
+            .bascule {
+                bottom: 0;
+                width: 70%;
+                left: 25%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .shape-blue {
+        width: 92%;
+    }
+    .bascule-container {
+        height: 700px;
+        .content-behinde {
+            .shape {
+                shape-outside: polygon(0px 2px, 98.15% 1.6%, 14.05% 1.6%, 24.7% 19.8%, 33.75% 32.2%, 43.15% 40%, 53.45% 45.6%, 66.9% 48%, 76.9% 48.2%, 84.05% 49.6%, 91.55% 49.2%, 95.65% 49.6%, 100% 49%, 100% 99%, 0% 99.2%);
+                clip-path: polygon(0px 2px, 98.15% 1.6%, 14.05% 1.6%, 24.7% 19.8%, 33.75% 32.2%, 43.15% 40%, 53.45% 45.6%, 66.9% 48%, 76.9% 48.2%, 84.05% 49.6%, 91.55% 49.2%, 95.65% 49.6%, 100% 49%, 100% 99%, 0% 99.2%);
+            }
+            .text {
+                .title {
+                    z-index: 10;
+                    font-size: 15px;
+                    line-height: 15px;
+                }
+                .desc {
+                    padding-top: 10px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    li {
+                        margin-bottom: 6px;
+                        span {
+                            font-size: 12px;
+                            line-height: 12px;
+                            margin-left: 12px;
+                            &:before {
+                                content: '';
+                                width: 10px;
+                                height: 10px;
+                                left: -14px;
+                                top: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-front {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .options {
+                position: relative;
+                max-width: 1280px;
+                height: 100%;
+                z-index: 10;
+                .option {
+                    max-width: 143px;
+                    padding: 3px;
+                    padding-left: 7px;
+                    padding-right: 10px;
+                    padding-bottom: 7px;
+                    border: none;
+                    background: transparent;
+                    color: black;
+                    font-size: 12px;
+                    line-height: 1.1;
+                    text-align: left;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-bottom: 4px solid #33a7c9;
+                    position: absolute;
+                    transform: scale(.6);
+                    &:focus {
+                        outline: unset;
+                    }
+                    &:hover {
+                        .shape-line {
+                            opacity: 1;
+                        }
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: -15px;
+                        width: 4px;
+                        height: 40px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                    }
+                    .shape-line-bottom {
+                        position: absolute;
+                        top: calc(100% - 4px);
+                        right: -17px;
+                        width: 4px;
+                        height: 45px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                        img {
+                            top: calc(100% - 5px);
+                            right: -9px;
+                            position: absolute;
+                            width: 28px;
+                        }
+                    }
+                    &#option1 {
+                        top: 290px;
+                        left: 4%;
+                    }
+                    &#option2 {
+                        top: 340px;
+                        left: 5%;
+                    }
+                    &#option3 {
+                        top: 410px;
+                        left: 2%;
+                    }
+                    &#option4 {
+                        top: 350px;
+                        left: 53%;
+                        .shape-line {
+                            left: calc(100% - 50px);
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: -30.5px;
+                                left: calc(100% + 10px);
+                                width: 3px;
+                                height: 35px;
+                                background-color: #33a7c9;
+                                -webkit-transform: rotateZ(-45deg);
+                                transform: rotateZ(-45deg);
+                            }
+                        }
+                    }
+                    &#option5 {
+                        top: 430px;
+                        left: 53%;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -36px;
+                            left: -15px;
+                            width: 4px;
+                            height: 40px;
+                            transform: rotateZ(45deg);
+                            background-color: #33a7c9;
+                        }
+                        .shape-line-bottom {
+                            top: calc(100% - 36px);
+                            transform: rotateZ(45deg);
+                        }
+                        .shape-line {
+                            left: calc(100% - 40px);
+                            &:before {
+                                height: 40px;
+                                bottom: -7px;
+                                left: calc(100% + 12px);
+                                transform: rotateZ(45deg);
+                            }
+                        }
+                    }
+                    .shape-line {
+                        opacity: 0;
+                        position: inherit;
+                        width: 45px;
+                        height: 3px;
+                        left: -3px;
+                        bottom: -12px;
+                        border-bottom: 3px solid #33a7c9;
+                        transition: all 0.1s;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -6px;
+                            left: -11px;
+                            width: 3px;
+                            height: 30px;
+                            background-color: #33a7c9;
+                            transform: rotateZ(-45deg);
+                        }
+                    }
+                }
+            }
+            .woman {
+                bottom: -4%;
+                width: 43%;
+                left: 23%;
+                img {
+                    width: 100%;
+                }
+            }
+            .bascule {
+                bottom: 0;
+                width: 70%;
+                left: 25%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
     .shape-blue {
         width: 65%;
     }
@@ -84,8 +690,10 @@
         height: 1000px;
         .content-behinde {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            right: 0;
+            top: 0;
+            width: 768px;
+            height: 1000px;
             .shape {
                 shape-outside: polygon(0px 2px, 98.05% 1.6%, 39.45% 1.7%, 46.2% 16.6%, 48.45% 20.2%, 50.15% 24.6%, 55.75% 32.6%, 67.05% 39.4%, 76.55% 40.7%, 84% 40.3%, 91.95% 39.5%, 99.75% 37.9%, 100% 48.9%, 100% 99%, 0% 99.2%);
                 clip-path: polygon(0px 2px, 98.05% 1.6%, 39.45% 1.7%, 46.2% 16.6%, 48.45% 20.2%, 50.15% 24.6%, 55.75% 32.6%, 67.05% 39.4%, 76.55% 40.7%, 84% 40.3%, 91.95% 39.5%, 99.75% 37.9%, 100% 48.9%, 100% 99%, 0% 99.2%);
@@ -95,6 +703,7 @@
                     z-index: 10;
                     font-size: 35px;
                     line-height: 35px;
+                    margin-top: 35px;
                 }
                 .desc {
                     padding-top: 20px;
@@ -122,80 +731,148 @@
         .content-front {
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            .woman {
-                bottom: 0%;
-                width: 40%;
-                left: 15%;
-                img {
-                    width: 100%;
-                }
-            }
-            .bascule {
-                bottom: 0;
-                width: 90%;
-                left: 5%;
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
-    .shape-blue {
-        width: 65%;
-    }
-    .bascule-container {
-        height: 1300px;
-        .content-behinde {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            .shape {
-                shape-outside: polygon(0px 2px, 98.35% 2.3%, 39.45% 1.75%, 46.3% 16.6%, 48.55% 20.25%, 50.2% 24.6%, 55.75% 32.6%, 67.1% 39.45%, 76.55% 40.75%, 84.1% 40.3%, 92% 39.55%, 99.8% 37.9%, 100% 48.9%, 100% 99%, 0% 99.25%);
-                clip-path: polygon(0px 2px, 98.35% 2.3%, 39.45% 1.75%, 46.3% 16.6%, 48.55% 20.25%, 50.2% 24.6%, 55.75% 32.6%, 67.1% 39.45%, 76.55% 40.75%, 84.1% 40.3%, 92% 39.55%, 99.8% 37.9%, 100% 48.9%, 100% 99%, 0% 99.25%);
-            }
-            .text {
-                .title {
-                    z-index: 10;
-                    font-size: 35px;
-                    line-height: 35px;
-                }
-                .desc {
-                    padding-top: 20px;
-                    font-size: 22px;
-                    line-height: 24px;
-                    li {
-                        margin-bottom: 6px;
-                        height: 25px;
-                        span {
-                            font-size: 20px;
-                            line-height: 20px;
-                            margin-left: 15px;
-                            &:before {
+            width: 768px;
+            height: 1000px;
+            margin: 0 auto;
+            position: relative;
+            .options {
+                position: relative;
+                max-width: 1280px;
+                height: 100%;
+                z-index: 10;
+                .option {
+                    max-width: 143px;
+                    padding: 3px;
+                    padding-left: 7px;
+                    padding-right: 10px;
+                    padding-bottom: 7px;
+                    border: none;
+                    background: transparent;
+                    color: black;
+                    font-size: 16px;
+                    line-height: 1.1;
+                    text-align: left;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-bottom: 4px solid #33a7c9;
+                    position: absolute;
+                    transform: scale(1);
+                    &:focus {
+                        outline: unset;
+                    }
+                    &:hover {
+                        .shape-line {
+                            opacity: 1;
+                        }
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: -15px;
+                        width: 4px;
+                        height: 40px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                    }
+                    .shape-line-bottom {
+                        position: absolute;
+                        top: calc(100% - 4px);
+                        right: -17px;
+                        width: 4px;
+                        height: 45px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                        img {
+                            top: calc(100% - 5px);
+                            right: -9px;
+                            position: absolute;
+                            width: 28px;
+                        }
+                    }
+                    &#option1 {
+                        top: 280px;
+                        left: 12%;
+                    }
+                    &#option2 {
+                        top: 380px;
+                        left: 7%;
+                    }
+                    &#option3 {
+                        top: 490px;
+                        left: 9%;
+                    }
+                    &#option4 {
+                        top: 410px;
+                        left: 53%;
+                        .shape-line {
+                            left: calc(100% - 50px);
+                            &::before {
                                 content: '';
-                                width: 15px;
-                                height: 15px;
-                                left: -18px;
-                                top: 8px;
+                                position: absolute;
+                                bottom: -30.5px;
+                                left: calc(100% + 10px);
+                                width: 3px;
+                                height: 35px;
+                                background-color: #33a7c9;
+                                -webkit-transform: rotateZ(-45deg);
+                                transform: rotateZ(-45deg);
                             }
+                        }
+                    }
+                    &#option5 {
+                        top: 510px;
+                        left: 54%;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -36px;
+                            left: -15px;
+                            width: 4px;
+                            height: 40px;
+                            transform: rotateZ(45deg);
+                            background-color: #33a7c9;
+                        }
+                        .shape-line-bottom {
+                            top: calc(100% - 36px);
+                            transform: rotateZ(45deg);
+                        }
+                        .shape-line {
+                            left: calc(100% - 40px);
+                            &:before {
+                                height: 40px;
+                                bottom: -7px;
+                                left: calc(100% + 12px);
+                                transform: rotateZ(45deg);
+                            }
+                        }
+                    }
+                    .shape-line {
+                        opacity: 0;
+                        position: inherit;
+                        width: 45px;
+                        height: 3px;
+                        left: -3px;
+                        bottom: -12px;
+                        border-bottom: 3px solid #33a7c9;
+                        transition: all 0.1s;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -6px;
+                            left: -11px;
+                            width: 3px;
+                            height: 30px;
+                            background-color: #33a7c9;
+                            transform: rotateZ(-45deg);
                         }
                     }
                 }
             }
-        }
-        .content-front {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             .woman {
                 bottom: 0%;
                 width: 40%;
-                left: 15%;
+                left: 23%;
                 img {
                     width: 100%;
                 }
@@ -212,8 +889,7 @@
     }
 }
 
-// Lanscape
-@media screen and (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
+@media screen and (min-width: 1024px) {
     .shape-blue {
         width: 65%;
     }
@@ -221,7 +897,7 @@
         height: 1200px;
         .content-behinde {
             position: absolute;
-            width: 100%;
+            width: 1024px;
             height: 100%;
             .shape {
                 shape-outside: polygon(0px 2px, 92.95% 3.5%, 41.6% 3.5%, 47.35% 18.5%, 50.4% 26%, 58.1% 38.1%, 68.65% 44.75%, 74.5% 45.25%, 76.95% 45.25%, 79.7% 45.1%, 84.1% 45.25%, 89.75% 45%, 95.1% 44.15%, 97.75% 43.65%, 99.6% 43.6%, 99.9% 45.25%, 37% 54.9%, 100% 49%, 100% 99%, 0% 99.35%);
@@ -230,8 +906,9 @@
             .text {
                 .title {
                     z-index: 10;
-                    font-size: 45px;
-                    line-height: 45px;
+                    font-size: 40px;
+                    line-height: 40px;
+                    margin-top: 50px;
                 }
                 .desc {
                     padding-top: 20px;
@@ -239,9 +916,10 @@
                     line-height: 22px;
                     li {
                         margin-bottom: 6px;
+                        height: 20px;
                         span {
-                            font-size: 25px;
-                            line-height: 30px;
+                            font-size: 20px;
+                            line-height: 20px;
                             margin-left: 15px;
                             &:before {
                                 content: '';
@@ -258,87 +936,154 @@
         .content-front {
             top: 0;
             left: 0;
-            width: 100%;
+            width: 1024px;
             height: 100%;
+            .options {
+                position: relative;
+                max-width: 1280px;
+                height: 100%;
+                z-index: 10;
+                .option {
+                    max-width: 143px;
+                    padding: 3px;
+                    padding-left: 7px;
+                    padding-right: 10px;
+                    padding-bottom: 7px;
+                    border: none;
+                    background: transparent;
+                    color: black;
+                    font-size: 16px;
+                    line-height: 1.1;
+                    text-align: left;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-bottom: 4px solid #33a7c9;
+                    position: absolute;
+                    transform: scale(1);
+                    &:focus {
+                        outline: unset;
+                    }
+                    &:hover {
+                        .shape-line {
+                            opacity: 1;
+                        }
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: -15px;
+                        width: 4px;
+                        height: 40px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                    }
+                    .shape-line-bottom {
+                        position: absolute;
+                        top: calc(100% - 4px);
+                        right: -17px;
+                        width: 4px;
+                        height: 45px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                        img {
+                            top: calc(100% - 5px);
+                            right: -9px;
+                            position: absolute;
+                            width: 28px;
+                        }
+                    }
+                    &#option1 {
+                        top: 280px;
+                        left: 12%;
+                    }
+                    &#option2 {
+                        top: 420px;
+                        left: 15%;
+                    }
+                    &#option3 {
+                        top: 530px;
+                        left: 7%;
+                    }
+                    &#option4 {
+                        top: 520px;
+                        left: 50%;
+                        .shape-line {
+                            left: calc(100% - 50px);
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: -30.5px;
+                                left: calc(100% + 10px);
+                                width: 3px;
+                                height: 35px;
+                                background-color: #33a7c9;
+                                -webkit-transform: rotateZ(-45deg);
+                                transform: rotateZ(-45deg);
+                            }
+                        }
+                    }
+                    &#option5 {
+                        top: 660px;
+                        left: 50%;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -36px;
+                            left: -15px;
+                            width: 4px;
+                            height: 40px;
+                            transform: rotateZ(45deg);
+                            background-color: #33a7c9;
+                        }
+                        .shape-line-bottom {
+                            top: calc(100% - 36px);
+                            transform: rotateZ(45deg);
+                        }
+                        .shape-line {
+                            left: calc(100% - 40px);
+                            &:before {
+                                height: 40px;
+                                bottom: -7px;
+                                left: calc(100% + 12px);
+                                transform: rotateZ(45deg);
+                            }
+                        }
+                    }
+                    .shape-line {
+                        opacity: 0;
+                        position: inherit;
+                        width: 45px;
+                        height: 3px;
+                        left: -3px;
+                        bottom: -12px;
+                        border-bottom: 3px solid #33a7c9;
+                        transition: all 0.1s;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -6px;
+                            left: -11px;
+                            width: 3px;
+                            height: 30px;
+                            background-color: #33a7c9;
+                            transform: rotateZ(-45deg);
+                        }
+                    }
+                }
+            }
             .woman {
                 bottom: 0%;
                 width: 35%;
-                left: 15%;
+                left: 22%;
                 img {
                     width: 100%;
                 }
             }
             .bascule {
                 bottom: 0;
-                width: 90%;
-                left: 5%;
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
-    .shape-blue {
-        width: 50%;
-    }
-    .bascule-container {
-        height: 1024px;
-        .content-behinde {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            .shape {
-                shape-outside: polygon(0px 2px, 92.95% 3.5%, 54.4% 3.4%, 57.55% 16.5%, 58.4% 23.45%, 64.35% 37.2%, 68.65% 44.75%, 70.3% 48.55%, 72.2% 50.1%, 75.1% 51.75%, 77.15% 52.45%, 85.6% 53.5%, 91.95% 53.05%, 95.45% 52.05%, 97.75% 51.25%, 100% 48.95%, 100% 99%, 0% 99.3%);
-                clip-path: polygon(0px 2px, 92.95% 3.5%, 54.4% 3.4%, 57.55% 16.5%, 58.4% 23.45%, 64.35% 37.2%, 68.65% 44.75%, 70.3% 48.55%, 72.2% 50.1%, 75.1% 51.75%, 77.15% 52.45%, 85.6% 53.5%, 91.95% 53.05%, 95.45% 52.05%, 97.75% 51.25%, 100% 48.95%, 100% 99%, 0% 99.3%);
-            }
-            .text {
-                .title {
-                    z-index: 10;
-                    font-size: 45px;
-                    line-height: 45px;
-                }
-                .desc {
-                    padding-top: 20px;
-                    font-size: 20px;
-                    line-height: 22px;
-                    li {
-                        margin-bottom: 6px;
-                        span {
-                            font-size: 25px;
-                            line-height: 30px;
-                            margin-left: 15px;
-                            &:before {
-                                content: '';
-                                width: 18px;
-                                height: 18px;
-                                left: -25px;
-                                top: 10px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .content-front {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            .woman {
-                bottom: 0%;
-                width: 28%;
-                left: 25%;
-                img {
-                    width: 100%;
-                }
-            }
-            .bascule {
-                bottom: 0;
-                width: 60%;
-                left: 20%;
+                width: 75%;
+                left: 12.5%;
                 img {
                     width: 100%;
                 }
@@ -348,15 +1093,16 @@
 }
 
 // Laptop screen 
-@media screen and (min-width: 1280px) and (orientation: landscape) {
+@media screen and (min-width: 1280px) {
     .shape-blue {
-        width: 52%;
+        width: 49%;
     }
     .bascule-container {
-        height: 1200px;
+        height: 800px;
+        overflow: hidden;
         .content-behinde {
             position: absolute;
-            width: 100%;
+            width: 1280px;
             height: 100%;
             .shape {
                 shape-outside: polygon(0px 2px, 92.95% 3.5%, 54.4% 3.4%, 57.55% 16.5%, 58.4% 23.45%, 64.35% 37.2%, 68.65% 44.75%, 70.3% 48.55%, 72.2% 50.1%, 75.1% 51.75%, 77.15% 52.45%, 85.6% 53.5%, 91.95% 53.05%, 95.45% 52.05%, 97.75% 51.25%, 100% 48.95%, 100% 99%, 0% 99.3%);
@@ -365,8 +1111,6 @@
             .text {
                 .title {
                     z-index: 10;
-                    font-size: 45px;
-                    line-height: 45px;
                 }
                 .desc {
                     padding-top: 20px;
@@ -375,8 +1119,8 @@
                     li {
                         margin-bottom: 6px;
                         span {
-                            font-size: 25px;
-                            line-height: 30px;
+                            // font-size: 20px;
+                            // line-height: 20px;
                             margin-left: 15px;
                             &:before {
                                 content: '';
@@ -393,22 +1137,215 @@
         .content-front {
             top: 0;
             left: 0;
-            width: 100%;
+            width: 1280px;
             height: 100%;
             max-width: 1280px;
+            z-index: 130;
+            position: relative;
             margin: 0 auto;
+            .options {
+                position: relative;
+                max-width: 1280px;
+                height: 100%;
+                z-index: 10;
+                .option {
+                    max-width: 143px;
+                    padding: 3px;
+                    padding-left: 7px;
+                    padding-right: 10px;
+                    padding-bottom: 7px;
+                    border: none;
+                    background: transparent;
+                    color: black;
+                    font-size: 16px;
+                    line-height: 1.1;
+                    text-align: left;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-bottom: 4px solid #33a7c9;
+                    position: absolute;
+                    &:focus {
+                        outline: unset;
+                    }
+                    &:hover {
+                        .shape-line {
+                            opacity: 1;
+                        }
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: -15px;
+                        width: 4px;
+                        height: 40px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                    }
+                    .shape-line-bottom {
+                        position: absolute;
+                        top: calc(100% - 4px);
+                        right: -17px;
+                        width: 4px;
+                        height: 45px;
+                        background-color: #33a7c9;
+                        transform: rotateZ(-45deg);
+                        img {
+                            top: calc(100% - 5px);
+                            right: -9px;
+                            position: absolute;
+                            width: 28px;
+                        }
+                    }
+                    &#option1 {
+                        top: 80px;
+                        left: 12%;
+                    }
+                    &#option2 {
+                        top: 180px;
+                        left: 10%;
+                    }
+                    &#option3 {
+                        top: 300px;
+                        left: 9%;
+                    }
+                    &#option4 {
+                        top: 160px;
+                        left: 40%;
+                        .shape-line {
+                            left: calc(100% - 50px);
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: -30.5px;
+                                left: calc(100% + 10px);
+                                width: 3px;
+                                height: 35px;
+                                background-color: #33a7c9;
+                                -webkit-transform: rotateZ(-45deg);
+                                transform: rotateZ(-45deg);
+                            }
+                        }
+                    }
+                    &#option5 {
+                        top: 280px;
+                        left: 40%;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -36px;
+                            left: -15px;
+                            width: 4px;
+                            height: 40px;
+                            transform: rotateZ(45deg);
+                            background-color: #33a7c9;
+                        }
+                        .shape-line-bottom {
+                            top: calc(100% - 36px);
+                            transform: rotateZ(45deg);
+                        }
+                        .shape-line {
+                            left: calc(100% - 40px);
+                            &:before {
+                                height: 40px;
+                                bottom: -7px;
+                                left: calc(100% + 12px);
+                                transform: rotateZ(45deg);
+                            }
+                        }
+                    }
+                    .shape-line {
+                        opacity: 0;
+                        position: inherit;
+                        width: 45px;
+                        height: 3px;
+                        left: -3px;
+                        bottom: -12px;
+                        border-bottom: 3px solid #33a7c9;
+                        transition: all 0.1s;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: -6px;
+                            left: -11px;
+                            width: 3px;
+                            height: 30px;
+                            background-color: #33a7c9;
+                            transform: rotateZ(-45deg);
+                        }
+                    }
+                }
+            }
             .woman {
                 bottom: -4%;
-                width: 30%;
+                width: 25%;
                 left: 20%;
+                z-index: 1;
+                position: absolute;
                 img {
                     width: 100%;
                 }
             }
             .bascule {
                 bottom: 0;
-                width: 65%;
-                left: 16.5%;
+                width: 55%;
+                left: 14%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .shape-blue {
+        width: 51%;
+    }
+    .bascule-container {
+        height: 1200px;
+        .content-behinde {
+            width: 1600px;
+        }
+        .content-front {
+            .options {
+                .option {
+                    &#option1 {
+                        top: 230px;
+                        left: 12%;
+                    }
+                    &#option2 {
+                        top: 380px;
+                        left: 12%;
+                    }
+                    &#option3 {
+                        top: 550px;
+                        left: 10%;
+                    }
+                    &#option4 {
+                        top: 330px;
+                        left: 44%;
+                    }
+                    &#option5 {
+                        top: 500px;
+                        left: 44%;
+                    }
+                }
+            }
+            .woman {
+                bottom: -4%;
+                width: 33%;
+                left: 20%;
+                z-index: 1;
+                position: absolute;
+                img {
+                    width: 100%;
+                }
+            }
+            .bascule {
+                bottom: 0;
+                width: 70%;
+                left: 15%;
                 img {
                     width: 100%;
                 }
@@ -419,34 +1356,40 @@
 
 @media screen and (min-width: 1920px) {
     .shape-blue {
-        width: 46%;
+        width: 49%;
     }
     .bascule-container {
-        height: 1080px;
+        height: 1300px;
+        overflow: hidden;
         .content-behinde {
+            position: absolute;
+            width: 100%;
+            height: 100%;
             .shape {
-                shape-outside: polygon(0px 2px, 93.05% 1.65%, 57.3% 1.3%, 59.75% 19.7%, 61.75% 26.75%, 65.3% 43.35%, 68.4% 51.55%, 70.45% 57.2%, 73.2% 60.85%, 75.95% 61.5%, 79.7% 63.6%, 84.1% 64.65%, 91.15% 64.65%, 96.5% 64.8%, 98.9% 63.5%, 99.45% 62.95%, 99.95% 61.5%, 100% 99.05%, 0% 99.35%);
-                clip-path: polygon(0px 2px, 93.05% 1.65%, 57.3% 1.3%, 59.75% 19.7%, 61.75% 26.75%, 65.3% 43.35%, 68.4% 51.55%, 70.45% 57.2%, 73.2% 60.85%, 75.95% 61.5%, 79.7% 63.6%, 84.1% 64.65%, 91.15% 64.65%, 96.5% 64.8%, 98.9% 63.5%, 99.45% 62.95%, 99.95% 61.5%, 100% 99.05%, 0% 99.35%);
+                shape-outside: polygon(0px 2px, 92.95% 3.5%, 54.4% 3.4%, 57.55% 16.5%, 58.4% 23.45%, 64.35% 37.2%, 68.65% 44.75%, 70.3% 48.55%, 72.2% 50.1%, 75.1% 51.75%, 77.15% 52.45%, 85.6% 53.5%, 91.95% 53.05%, 95.45% 52.05%, 97.75% 51.25%, 100% 48.95%, 100% 99%, 0% 99.3%);
+                clip-path: polygon(0px 2px, 92.95% 3.5%, 54.4% 3.4%, 57.55% 16.5%, 58.4% 23.45%, 64.35% 37.2%, 68.65% 44.75%, 70.3% 48.55%, 72.2% 50.1%, 75.1% 51.75%, 77.15% 52.45%, 85.6% 53.5%, 91.95% 53.05%, 95.45% 52.05%, 97.75% 51.25%, 100% 48.95%, 100% 99%, 0% 99.3%);
             }
             .text {
                 .title {
-                    font-size: 60px;
-                    line-height: 60px;
+                    z-index: 10;
+                    font-size: 45px;
+                    line-height: 45px;
                 }
                 .desc {
-                    font-size: 28px;
-                    line-height: 30px;
+                    padding-top: 20px;
+                    font-size: 30px;
+                    line-height: 32px;
                     li {
                         margin-bottom: 6px;
                         span {
-                            font-size: 38px;
-                            line-height: 42px;
+                            // font-size: 35px;
+                            // line-height: 40px;
                             margin-left: 15px;
                             &:before {
                                 content: '';
-                                width: 24px;
-                                height: 24px;
-                                left: -32px;
+                                width: 22px;
+                                height: 22px;
+                                left: -35px;
                                 top: 15px;
                             }
                         }
@@ -455,22 +1398,44 @@
             }
         }
         .content-front {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            .options {
+                .option {
+                    &#option1 {
+                        top: 230px;
+                        left: 12%;
+                    }
+                    &#option2 {
+                        top: 420px;
+                        left: 12%;
+                    }
+                    &#option3 {
+                        top: 600px;
+                        left: 10%;
+                    }
+                    &#option4 {
+                        top: 430px;
+                        left: 45%;
+                    }
+                    &#option5 {
+                        top: 600px;
+                        left: 45%;
+                    }
+                }
+            }
             .woman {
-                bottom: 0%;
-                width: 20%;
-                left: 25%;
+                bottom: -4%;
+                width: 35%;
+                left: 20%;
+                z-index: 1;
+                position: absolute;
                 img {
                     width: 100%;
                 }
             }
             .bascule {
                 bottom: 0;
-                width: 50%;
-                left: 20%;
+                width: 78%;
+                left: 11%;
                 img {
                     width: 100%;
                 }

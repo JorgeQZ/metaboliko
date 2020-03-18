@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+    <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
 </head>
 
@@ -12,7 +13,7 @@
     <?php wp_body_open(); ?>
     <!-- whatsapp button -->
     <div class="button-whatsapp">
-        <a href="#" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=5218128627473&text=&source=&data=" target="_blank">
             <img src="<?php echo get_template_directory_uri().'/img/whatsapp-button.png'; ?>" alt="">
         </a>
     </div><!-- whatasapp button-->

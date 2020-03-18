@@ -4,6 +4,24 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         $('.menu-header-container').toggleClass('active');
     });
+
+    $('#custom-select-hero-select li').click(function(e) {
+        var option = $('#custom-select-hero-select li').index(this);
+        $('.text-option .title, .text-option .desc').hide('fast');
+        $('.text-option#option' + option + ' .title').fadeIn();
+        $('.text-option#option' + option + ' .desc').fadeIn();
+
+        $('html,body').delay(300).animate({
+            scrollTop: $("#bascula").offset().top - 90
+        }, 'slow');
+    });
+
+    $('button.option').click(function() {
+        var optionButton = $('button.option').index(this);
+        $('.text-option .title, .text-option .desc').hide('fast');
+        $('.text-option#option' + optionButton + ' .title').fadeIn('fast');
+        $('.text-option#option' + optionButton + ' .desc').fadeIn('fast');
+    });
 });
 
 var screen_width = $(window).width();

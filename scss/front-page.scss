@@ -30,16 +30,17 @@
             font-size: 35px;
             line-height: 35px;
             z-index: 10;
-            p{
+            p {
                 font-weight: normal;
                 margin: 0;
                 font-size: 25px;
                 line-height: 25px;
-                strong{
+                strong {
                     font-size: 35px;
                     line-height: 35px;
                 }
             }
+            border: none;
         }
         .ring-overlay {
             // display: none;
@@ -53,7 +54,7 @@
             z-index: 10;
             border: 10px solid rgba(white, .6);
         }
-        .content {
+        .front-content {
             position: relative;
             text-align: left;
             color: white;
@@ -61,6 +62,7 @@
             margin-top: -80px;
             .title {
                 font-size: 50px;
+                border: none;
             }
         }
         .button-whatsapp {
@@ -402,12 +404,12 @@
             font-size: 70px;
             line-height: 70px;
             z-index: 10;
-            p{
+            p {
                 font-weight: normal;
                 margin: 0;
                 font-size: 50px;
                 line-height: 50px;
-                strong{
+                strong {
                     font-size: 70px;
                     line-height: 70px;
                 }
@@ -420,7 +422,7 @@
             left: calc(50% - 250px);
             border: 18px solid rgba(white, .6);
         }
-        .content {
+        .front-content {
             position: relative;
             text-align: left;
             color: white;
@@ -562,7 +564,6 @@
                         transition: all .3s;
                         margin-bottom: 10px;
                         opacity: 1;
-
                         position: absolute;
                         bottom: 0;
                         width: calc(100% - 2rem);
@@ -575,7 +576,6 @@
                         overflow: hidden;
                         transition: all 0.3s;
                         opacity: 0;
-
                         max-height: none;
                         position: absolute;
                         width: calc(100% - 2rem);
@@ -588,14 +588,11 @@
                         .title {
                             opacity: 0;
                             bottom: 30%;
-
                         }
                         .desc {
                             opacity: 1;
                             //max-height: 200px;
-
                             bottom: 0%;
-
                         }
                     }
                 }
@@ -725,6 +722,7 @@
                 line-height: 32px;
                 font-weight: 100;
                 font-family: $font;
+                max-width: 600px;
             }
             .form {
                 .form-control {
@@ -827,7 +825,6 @@
                         transition: all .3s;
                         margin-bottom: 10px;
                         opacity: 1;
-
                         position: absolute;
                         bottom: 0;
                         width: calc(100% - 2rem);
@@ -840,7 +837,6 @@
                         overflow: hidden;
                         transition: all 0.3s;
                         opacity: 0;
-
                         max-height: none;
                         position: absolute;
                         width: calc(100% - 2rem);
@@ -871,8 +867,17 @@
         padding: 1rem 3.047rem 4rem 3.047rem;
         display: flex;
         align-items: center;
+        justify-content: center;
         .col {
             padding: 1rem;
+            &:nth-child(1) {
+                width: 40%;
+                max-width: 542px;
+            }
+            &:nth-child(2) {
+                width: 60%;
+                max-width: 780px;
+            }
             .figure-container {
                 position: relative;
                 padding: 25px;
@@ -925,6 +930,7 @@
                 }
                 .button {
                     margin-top: 20px;
+                    margin-left: 0;
                     padding: 10px 20px;
                     color: $color-accented;
                     background-color: #fff;
@@ -970,9 +976,6 @@
                     }
                     a {
                         color: white;
-                        &:hover {
-                            // color: $color-text-alternate;
-                        }
                     }
                 }
             }

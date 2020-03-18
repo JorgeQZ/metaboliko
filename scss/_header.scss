@@ -6,23 +6,24 @@
         width: 100%;
         z-index: 100;
         position: fixed;
-        padding: 1rem 2rem;
+        padding: .4rem 2rem;
         display: flex;
         top: 0;
         align-items: center;
         transition: all 0.2s;
         justify-content: space-between;
         background: transparent;
+        z-index: 1000;
         &.bg {
             background: rgba(0, 202, 226, 1);
         }
         .brand-logo {
-            width: 200px;
+            width: 150px;
             position: relative;
             z-index: 200;
             img {
                 width: 100%;
-                max-width: 200px;
+                max-width: 150px;
             }
         }
         .menu-button {
@@ -143,9 +144,9 @@
         justify-content: space-between;
         transition: all 0.3s;
         background: transparent;
+        z-index: 1000;
         &.bg {
-            background: rgb(0, 202, 226);
-            background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
+            background: rgba(0, 170, 208, 1);
         }
         .brand-logo {
             width: 200px;
