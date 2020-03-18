@@ -8,7 +8,7 @@
     <div class="ring-overlay"></div><!-- ring-overlay -->
 
     <!-- content -->
-    <div class="content">
+    <div class="front-content">
         <div class="title">Quiero...</div>
         <select name="hero-select" id="hero-select" class="select-custom">
             <option value="Cirugías para Bajar de Peso">Cirugías para Bajar de Peso</option>
@@ -19,7 +19,7 @@
         </select>
     </div><!-- content -->
 
-   
+
 
     <!-- social-media -->
     <div class="social-media">
@@ -40,8 +40,7 @@
     </div><!-- social-media -->
     <!-- carousel -->
     <div class="banner-carousel owl-carousel owl-theme">
-        <div class="item"
-            style="background-image: url(<?php echo get_template_directory_uri().'/img/banner.jpg'; ?>)">
+        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/banner.jpg'; ?>)">
             <!-- overlay -->
             <div class="overlay"></div>
             <!-- overlay -->
@@ -130,15 +129,54 @@
             <img src="<?php echo get_template_directory_uri().'/img/blue-shape.png'?>" alt="">
         </div>
     </div><!-- Behinde -->
+
+
     <!-- Front -->
     <div class="content-front">
-       
+        <!-- Options -->
+        <div class="options">
+            <button class="option" id="option1">
+                <div class="shape-line-bottom"></div>
+                <div class="shape-line"></div>
+                <strong>operarme para</strong>
+                <br>perder peso
+            </button>
+
+            <button class="option" id="option2">
+                <div class="shape-line-bottom"></div>
+                <div class="shape-line"></div>
+                <strong>definición</strong> <br> muscular
+            </button>
+
+            <button class="option" id="option3">
+                <div class="shape-line-bottom"></div>
+                <div class="shape-line"></div>
+                <strong>no sé a qué</strong> <br> soy candidat@
+            </button>
+
+            <button class="option" id="option4">
+                <div class="shape-line-bottom"></div>
+                <div class="shape-line"></div>
+                <strong>mejorar</strong> <br>mi imagen
+            </button>
+
+            <button class="option" id="option5">
+                <div class="shape-line-bottom"></div>
+                <div class="shape-line"></div>
+                <strong>perder</strong> peso
+            </button>
+        </div><!-- Options -->
+
+        <!-- Bascula -->
         <div class="bascule">
             <img src="<?php echo get_template_directory_uri().'/img/bascula.png'?>" alt="">
-        </div>
+        </div><!-- Bascula -->
+
+        <!-- Mujer -->
         <div class="woman">
             <img src="<?php echo get_template_directory_uri().'/img/woman.png'?>" alt="">
-        </div>
+        </div><!-- Mujer -->
+
     </div><!-- Front -->
 </div><!-- Bascula -->
 
@@ -172,7 +210,8 @@
 </div><!-- Quien es el DR Fraga -->
 
 <!-- Direccion -->
-<?php get_template_part('template-parts/content', 'address')?><!-- Direccion -->
+<?php get_template_part('template-parts/content', 'address')?>
+<!-- Direccion -->
 
 <!-- Contacto -->
 <?php get_template_part('template-parts/content', 'contact')?>
