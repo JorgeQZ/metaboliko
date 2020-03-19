@@ -47,39 +47,45 @@
           justify-content: center;
 }
 
-.contenedor-general-tenedor .contenedor-info p.enc {
-  color: white;
-  font-size: 66px;
-  line-height: 60px;
-  margin: 0;
+.contenedor-general-tenedor .contenedor-info .enc {
   position: relative;
   margin-bottom: 50px;
-  font-weight: bold;
 }
 
-.contenedor-general-tenedor .contenedor-info p.enc small {
+.contenedor-general-tenedor .contenedor-info .enc p {
+  color: white;
+  margin: 0;
   font-weight: normal;
   font-size: 45px;
   line-height: 45px;
 }
 
-.contenedor-general-tenedor .contenedor-info p.enc span {
+.contenedor-general-tenedor .contenedor-info .enc p strong {
+  font-size: 66px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.contenedor-general-tenedor .contenedor-info .enc span {
   position: absolute;
   left: -12px;
-  top: -89px;
-  font-size: 130px;
-  line-height: 120px;
+  top: -74px;
+}
+
+.contenedor-general-tenedor .contenedor-info .enc span p {
   color: transparent;
   -webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: white;
-}
-
-.contenedor-general-tenedor .contenedor-info p.enc span small {
   font-size: 90px;
   line-height: 90px;
 }
 
-.contenedor-general-tenedor .contenedor-info p.desc {
+.contenedor-general-tenedor .contenedor-info .enc span p strong {
+  font-size: 130px;
+  line-height: 120px;
+}
+
+.contenedor-general-tenedor .contenedor-info .desc p {
   color: white;
   font-size: 14px;
   line-height: 24px;
@@ -114,6 +120,11 @@
 }
 
 .contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .media img {
+  width: 100%;
+  display: block;
+}
+
+.contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .media video {
   width: 100%;
   display: block;
 }
@@ -170,9 +181,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
   border-radius: 15px;
   cursor: pointer;
@@ -185,7 +200,7 @@
   margin: 0;
 }
 
-.contenedor-general-tenedor .contenedor-items-slider .item-slider p span {
+.contenedor-general-tenedor .contenedor-items-slider .item-slider p strong {
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
@@ -220,6 +235,7 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 0 3px;
 }
 
 .contenedor-general-galeria .cont-galeria .cont-slide .cont-img {
@@ -259,7 +275,7 @@
   .contenedor-general-tenedor .contenedor-info {
     padding: 0 4%;
   }
-  .contenedor-general-tenedor .contenedor-info p.desc {
+  .contenedor-general-tenedor .contenedor-info .desc p {
     line-height: 20px;
   }
   .contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item {
@@ -281,25 +297,29 @@
   .contenedor-general-tenedor .contenedor-info {
     padding: 0 3%;
   }
-  .contenedor-general-tenedor .contenedor-info p.enc {
-    font-size: 55px;
-    line-height: 45px;
+  .contenedor-general-tenedor .contenedor-info .enc {
     margin-bottom: 20px;
   }
-  .contenedor-general-tenedor .contenedor-info p.enc small {
+  .contenedor-general-tenedor .contenedor-info .enc p {
     font-size: 35px;
     line-height: 35px;
   }
-  .contenedor-general-tenedor .contenedor-info p.enc span {
-    font-size: 90px;
-    line-height: 80px;
-    top: -55px;
+  .contenedor-general-tenedor .contenedor-info .enc p strong {
+    font-size: 55px;
+    line-height: 45px;
   }
-  .contenedor-general-tenedor .contenedor-info p.enc span small {
+  .contenedor-general-tenedor .contenedor-info .enc span {
+    top: -49px;
+  }
+  .contenedor-general-tenedor .contenedor-info .enc span p {
     font-size: 60px;
     line-height: 60px;
   }
-  .contenedor-general-tenedor .contenedor-info p.desc {
+  .contenedor-general-tenedor .contenedor-info .enc span p strong {
+    font-size: 90px;
+    line-height: 80px;
+  }
+  .contenedor-general-tenedor .contenedor-info .desc p {
     font-size: 12px;
     line-height: 13px;
   }
@@ -335,27 +355,29 @@
   .contenedor-general-tenedor .contenedor-info {
     padding: 150px 5% 50px;
   }
-  .contenedor-general-tenedor .contenedor-info p.enc {
-    font-size: 45px;
-    line-height: 40px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+  .contenedor-general-tenedor .contenedor-info .enc {
+    margin-bottom: 20px;
   }
-  .contenedor-general-tenedor .contenedor-info p.enc small {
+  .contenedor-general-tenedor .contenedor-info .enc p {
     font-size: 30px;
     line-height: 30px;
   }
-  .contenedor-general-tenedor .contenedor-info p.enc span {
-    font-size: 66px;
-    line-height: 70px;
-    top: -47px;
-    letter-spacing: -3px;
-  }
-  .contenedor-general-tenedor .contenedor-info p.enc span small {
-    font-size: 50px;
+  .contenedor-general-tenedor .contenedor-info .enc p strong {
+    font-size: 45px;
     line-height: 40px;
   }
-  .contenedor-general-tenedor .contenedor-info p.desc {
+  .contenedor-general-tenedor .contenedor-info .enc span {
+    top: -30px;
+  }
+  .contenedor-general-tenedor .contenedor-info .enc span p {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  .contenedor-general-tenedor .contenedor-info .enc span p strong {
+    font-size: 66px;
+    line-height: 70px;
+  }
+  .contenedor-general-tenedor .contenedor-info .desc p {
     font-size: 12px;
     line-height: 13px;
   }

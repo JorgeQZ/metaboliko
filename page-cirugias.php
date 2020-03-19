@@ -460,8 +460,8 @@ $(document).ready(function() {
     });
 */
 
-    $( ".owl-prev").html("<img src='<?php echo get_template_directory_uri().'/img/arrowl-azul-video.png'; ?>'>");
-    $( ".owl-next").html("<img src='<?php echo get_template_directory_uri().'/img/arrowr-azul-video.png'; ?>'>");
+    $( ".video-carousel .owl-prev").html("<img src='<?php echo get_template_directory_uri().'/img/arrowl-azul-video.png'; ?>'>");
+    $( ".video-carousel .owl-next").html("<img src='<?php echo get_template_directory_uri().'/img/arrowr-azul-video.png'; ?>'>");
 
 
     $(".contenedor-items-global .contenedor-items-slider .item-slider").each(function(index){

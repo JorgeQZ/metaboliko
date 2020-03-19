@@ -44,40 +44,45 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        p.enc{
-            color: white;
-            font-size: 66px;
-            line-height: 60px;
-            margin: 0;
+        .enc{
             position: relative;
             margin-bottom: 50px;
-            font-weight: bold;
-            small{
+            p{
+                color: white;
+                margin: 0;
                 font-weight: normal;
                 font-size: 45px;
                 line-height: 45px;
+                strong{
+                    font-size: 66px;
+                    line-height: 60px;
+                    font-weight: bold;
+                }
             }
             span{
                 position: absolute;
                 left: -12px;
-                top: -89px;
-                font-size: 130px;
-                line-height: 120px;
-                color: transparent;
-                -webkit-text-stroke-width: .5px;
-                -webkit-text-stroke-color: white;
-                small{
+                top: -74px;
+                p{
+                    color: transparent;
+                    -webkit-text-stroke-width: .5px;
+                    -webkit-text-stroke-color: white;
                     font-size: 90px;
                     line-height: 90px;
+                    strong{
+                        font-size: 130px;
+                        line-height: 120px;
+                    }
                 }
-
             }
         }
-        p.desc{
-            color: white;
-            font-size: 14px;
-            line-height: 24px;
-            margin: 0;
+        .desc{
+            p{
+                color: white;
+                font-size: 14px;
+                line-height: 24px;
+                margin: 0;
+            }
         }
     }
 
@@ -102,6 +107,10 @@
                     overflow: hidden;
                     margin-bottom: 35px;
                     img{
+                        width: 100%;
+                        display: block;
+                    }
+                    video{
                         width: 100%;
                         display: block;
                     }
@@ -156,7 +165,8 @@
             background-position: center;
             margin: 0 5px;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
             padding: 5px;
             border-radius: 15px;
             cursor: pointer;
@@ -165,7 +175,7 @@
                 font-size: 17px;
                 line-height: 17px;
                 margin: 0;
-                span{
+                strong{
                     font-weight: bold;
                     font-size: 24px;
                     line-height: 24px;
@@ -194,6 +204,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            padding: 0 3px;
             .cont-img{
                 width: 19%;
                 border: 3px solid #67ae3d;
@@ -236,8 +247,10 @@
     .contenedor-general-tenedor{ 
         .contenedor-info{
             padding: 0 4%;
-            p.desc{
-                line-height: 20px;
+            .desc{
+                p{
+                    line-height: 20px;
+                }
             }
         }
         .contenedor-general-videos{
@@ -270,27 +283,33 @@
     .contenedor-general-tenedor{ 
         .contenedor-info{
             padding: 0 3%;
-            p.enc{ 
-                font-size: 55px;
-                line-height: 45px;
+            .enc{
                 margin-bottom: 20px;
-                small{
+                p{
                     font-size: 35px;
                     line-height: 35px;
+                    strong{
+                        font-size: 55px;
+                        line-height: 45px;
+                    }
                 }
                 span{
-                    font-size: 90px;
-                    line-height: 80px;
-                    top: -55px;
-                    small{
+                    top: -49px;
+                    p{
                         font-size: 60px;
                         line-height: 60px;
+                        strong{
+                            font-size: 90px;
+                            line-height: 80px;
+                        }
                     }
                 }
             }
-            p.desc{
-                font-size: 12px;
-                line-height: 13px;
+            .desc{
+                p{
+                    font-size: 12px;
+                    line-height: 13px;                
+                }
             }
         }
 
@@ -339,29 +358,33 @@
 
         .contenedor-info{
             padding: 150px 5% 50px;
-            p.enc{ 
-                font-size: 45px;
-                line-height: 40px;
-                margin-top: 20px;
-                margin-bottom: 30px;
-                small{
+            .enc{
+                margin-bottom: 20px;
+                p{
                     font-size: 30px;
                     line-height: 30px;
-                }
-                span{
-                    font-size: 66px;
-                    line-height: 70px;
-                    top: -47px;
-                    letter-spacing: -3px;
-                    small{
-                        font-size: 50px;
+                    strong{
+                        font-size: 45px;
                         line-height: 40px;
                     }
                 }
+                span{
+                    top: -30px;
+                    p{
+                        font-size: 45px;
+                        line-height: 40px;
+                        strong{
+                            font-size: 66px;
+                            line-height: 70px;
+                        }
+                    }
+                }
             }
-            p.desc{
-                font-size: 12px;
-                line-height: 13px;
+            .desc{
+                p{
+                    font-size: 12px;
+                    line-height: 13px;                
+                }
             }
         }
         .contenedor-general-videos{

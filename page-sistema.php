@@ -4,7 +4,9 @@
 * 
 */
 ?>
-<?php get_header(); ?>
+<?php get_header(); 
+$ID = get_the_ID();
+?>
 
 <!-- Hero -->
 <?php get_template_part('template-parts/banner','hero') ?>
@@ -14,6 +16,112 @@
     <img src="<?php echo get_template_directory_uri().'/img/fondo-tenedor.jpg'; ?>" alt="">
 
 <div class="contenedor-items-global">
+
+
+    <?php if( have_rows('sistema', $ID) ): 
+    $i = 1;    
+    ?>
+
+    <?php while( have_rows('sistema', $ID) ): the_row(); 
+        $contenido = get_sub_field('contenido');	
+        $galeria_videos = get_sub_field('galeria_videos');	
+
+    ?>
+
+
+    <div class="contenedor-item-global <?php if($i == 1) echo 'active' ?>">
+        <div class="contenedor-info">
+            <div class="enc">
+                <?php echo $contenido['titulo']; ?>
+                <span>
+                    <?php echo $contenido['titulo']; ?>
+                </span>
+            </div>
+            <div class="desc">
+                <?php echo $contenido['descripcion']; ?>
+            </div>
+        </div>
+        
+        <div class="contenedor-general-videos">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="video-carousel owl-carousel owl-theme slider-videos" nav="true">
+
+                <?php
+                    if( have_rows('galeria_videos') ): while ( have_rows('galeria_videos') ) : the_row(); 
+                            ?>
+                            <!--
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen el SISTEMA PROTEINADO logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                            -->
+                                <!-- Item -->
+
+                                <div class="cont-item">
+                                    <div class="customVideo media">
+                                        <video>
+                                            <source src="<?php echo get_sub_field('video'); ?>" preload>
+                                            Your browser does not support the video tag.
+                                        </video>                                    
+                                    </div>
+                                    <div class="info">
+                                        <p>
+                                            <?php echo get_sub_field('descripcion_video'); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Item -->
+
+                            <?php
+                    endwhile; endif;
+                ?>
+
+                <!--
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen el SISTEMA PROTEINADO logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen el SISTEMA PROTEINADO logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <?php
+    $i++; 
+    endwhile; ?>
+    <?php endif; ?>
+
+<!--
     <div class="contenedor-item-global active">
         <div class="contenedor-info">
             <p class="enc">
@@ -66,6 +174,9 @@
             </div>
         </div>
     </div>
+
+
+    
     <div class="contenedor-item-global">
         <div class="contenedor-info">
             <p class="enc">
@@ -222,9 +333,28 @@
             </div>
         </div>
     </div>
+-->
 </div>
 
     <div class="contenedor-items-slider">
+
+    <?php if( have_rows('sistema', $ID) ): ?>
+
+    <?php while( have_rows('sistema', $ID) ): the_row(); 
+        $contenido = get_sub_field('contenido');	
+        $galeria_videos = get_sub_field('galeria_videos');	
+
+    ?>
+
+    <div class="item-slider" style="background-image: url(<?php echo $contenido['fondo_boton_item']; ?>);">
+        <?php echo $contenido['titulo']; ?>
+    </div>
+
+    <?php
+    endwhile; ?>
+    <?php endif; ?>
+
+<!--
         <div class="item-slider" style="background-image: url(<?php echo get_template_directory_uri().'/img/item-slidersistema.jpg'; ?>);">
             <p>
             Perder <br> <span>Peso</span>
@@ -245,6 +375,7 @@
             Definición <br> <span>Muscular</span>
             </p>
         </div>
+-->
     </div>
 </div>
 
@@ -252,6 +383,52 @@
 <div class="contenedor-general-galeria">
     <div class="cont-galeria">
         <div id="slider-galeria" class="owl-carousel owl-theme">
+
+        <?php 
+                    $rows = count(get_field('galeria', $ID));
+                    $i = 1;
+                    ?>
+                    <?php if( have_rows('galeria', $ID) ): ?>
+
+                    <?php while( have_rows('galeria', $ID) ): the_row(); 
+                        $imagen = get_sub_field('imagen');
+                    ?>
+                        <?php
+                        if($i == 1)
+                        {
+                        ?>
+                        <div class="cont-slide">
+                        <?php
+                        }
+                        ?>
+                        <div class="cont-img">
+                            <img src="<?php echo $imagen ?>" alt="">
+                        </div>
+                        <?php
+                        if($i == 10)
+                        {
+                        ?>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    <?php
+                    if($i < 10) 
+                    $i++;
+                    else
+                    $i = 1 
+                    ?>    
+                    <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php
+                    if($i != 1)
+                    {
+                    ?>
+                    </div>
+                    <?php
+                    }
+                    ?>
+<!--            
             <div class="cont-slide">
                 <div class="cont-img">
                     <img src="<?php echo get_template_directory_uri().'/img/img-galeria.jpg'; ?>" alt="">
@@ -283,6 +460,8 @@
                 <div class="cont-img">
                     <img src="<?php echo get_template_directory_uri().'/img/img-galeria.jpg'; ?>" alt="">
                 </div>
+
+-->
             </div>
         </div>
     </div>
@@ -307,7 +486,7 @@ $(document).ready(function() {
     });
 
     
-
+/*
     $(".slider-videos").owlCarousel({
         animateOut: 'slideOutLeft',
         animateIn: 'slideInRight',
@@ -323,7 +502,10 @@ $(document).ready(function() {
         dots: false,
         autoplayHoverPause: true
     });
+*/
 
+    $( ".video-carousel .owl-prev").html("<img src='<?php echo get_template_directory_uri().'/img/arrowl-verde-video.png'; ?>'>");
+    $( ".video-carousel .owl-next").html("<img src='<?php echo get_template_directory_uri().'/img/arrowr-verde-video.png'; ?>'>");
 
 
     $("#slider-galeria").owlCarousel({
