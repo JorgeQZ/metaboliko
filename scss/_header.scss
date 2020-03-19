@@ -6,7 +6,7 @@
         width: 100%;
         z-index: 100;
         position: fixed;
-        padding: .4rem 2rem;
+        padding: .6rem 2rem;
         display: flex;
         top: 0;
         align-items: center;
@@ -80,19 +80,19 @@
                 >li {
                     border-right: 1px solid rgba(white, 0.2);
                     padding: 5px 15px;
-                    margin: 15px 0;
+                    margin: 10px 0;
                     list-style: none;
                     position: relative;
                     text-align: right;
-                    font-size: 25px;
-                    line-height: 25px;
+                    font-size: 20px;
+                    line-height: 20px;
                     >a {
                         text-transform: uppercase;
                         color: white;
                         position: relative;
                     }
                     &.menu-item-has-children {
-                        padding-right: 25px;
+                        padding-right: 15px;
                         >a {
                             &:before {
                                 position: absolute;
@@ -111,9 +111,9 @@
                         margin-top: 10px;
                         li {
                             list-style: none;
-                            font-size: 14px;
+                            font-size: 12px;
                             text-align: right;
-                            line-height: 14px;
+                            line-height: 12px;
                             padding: 3px 0;
                             >a {
                                 text-transform: uppercase;

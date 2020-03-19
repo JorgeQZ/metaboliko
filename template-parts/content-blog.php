@@ -1,42 +1,35 @@
 <div class="blog-container">
     <div class="col">
+
+
         <!-- carousel -->
         <div class="post-carousel owl-carousel owl-theme">
 
-        <!-- Item -->
-            <div class="item"
-                style="background-image: url(<?php echo get_template_directory_uri().'/img/blog-1.jpg'; ?>)">
-                <!-- overlay -->
-                <div class="overlay"></div><!-- overlay -->
-
-                <!-- Content -->
-                <div class="content">
-                    <div class="title">
-                        ¿Porqué operarse con nosotros?
-                    </div>
-                    <div class="vermas">
-                        <a href="">
-                            <span>
-                                Ver más
-                            </span>
-                        </a>
-                    </div>
-                </div><!-- Content -->
-            </div><!-- Item -->
-
+            <?php  
+                $post_args = array(
+                    'posts_per_page' => 4,
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'category_name' => 'slider'
+                );
+            
+                $the_query = new WP_Query($post_args);
+                if ( $the_query->have_posts() ) :
+                    while ( $the_query->have_posts() ) : $the_query->the_post(); 
+            ?>
             <!-- Item -->
             <div class="item"
-                style="background-image: url(<?php echo get_template_directory_uri().'/img/blog-1.jpg'; ?>)">
+                style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
                 <!-- overlay -->
                 <div class="overlay"></div><!-- overlay -->
 
                 <!-- Content -->
                 <div class="content">
                     <div class="title">
-                        ¿Porqué operarse con nosotros?
+                        <?php the_title(); ?>
                     </div>
                     <div class="vermas">
-                        <a href="">
+                        <a href="<?php the_permalink() ?>">
                             <span>
                                 Ver más
                             </span>
@@ -44,83 +37,45 @@
                     </div>
                 </div><!-- Content -->
             </div><!-- Item -->
-
-            <!-- Item -->
-            <div class="item"
-                style="background-image: url(<?php echo get_template_directory_uri().'/img/blog-1.jpg'; ?>)">
-                <!-- overlay -->
-                <div class="overlay"></div><!-- overlay -->
-
-                <!-- Content -->
-                <div class="content">
-                    <div class="title">
-                        ¿Porqué operarse con nosotros?
-                    </div>
-                    <div class="vermas">
-                        <a href="">
-                            <span>
-                                Ver más
-                            </span>
-                        </a>
-                    </div>
-                </div><!-- Content -->
-            </div><!-- Item -->
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
         </div><!-- carousel -->
     </div>
 
     <!-- Column -->
     <div class="col">
 
+        <?php  
+        $post_args = array(
+            'posts_per_page' => 4,
+            'post_type' => 'post',
+            'post_status' => 'publish'
+        );
+     
+        $the_query = new WP_Query($post_args);
+        ?>
+
         <!-- Grid -->
         <div class="grid">
-
+            <?php 
+            if ( $the_query->have_posts() ) :
+                while ( $the_query->have_posts() ) : $the_query->the_post(); 
+                
+                ?>
             <!-- Item -->
-            <div class="item"
-                style="background-image: url(<?php echo get_template_directory_uri().'/img/blog-5.jpg'; ?>)">
+            <div class="item" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
                 <!-- overlay -->
                 <div class="overlay"></div><!-- overlay -->
                 <!-- Content -->
                 <div class="content">
-                    <div class="title">¿Cómo se relacionan la obesidad y la cirrosis hepática?</div>
-                    <div class="vermas"><a href="#">Ver más</a></div>
+                    <div class="title"><?php the_title(); ?></div>
+                    <div class="vermas"><a href="<?php the_permalink() ?>">Ver más</a></div>
                 </div><!-- Content -->
             </div><!-- Item -->
-
-            <!-- Item -->
-            <div class="item"
-                style="background-image: url(<?php echo get_template_directory_uri().'/img/blog-6.jpg'; ?>)">
-                <!-- overlay -->
-                <div class="overlay"></div><!-- overlay -->
-                <!-- Content -->
-                <div class="content">
-                    <div class="title">¿Cómo se relacionan la obesidad y la cirrosis hepática?</div>
-                    <div class="vermas"><a href="#">Ver más</a></div>
-                </div><!-- Content -->
-            </div><!-- Item -->
-
-            <!-- Item -->
-            <div class="item"
-                style="background-image: url(<?php echo get_template_directory_uri().'/img/blog-7.jpg'; ?>)">
-                <!-- overlay -->
-                <div class="overlay"></div><!-- overlay -->
-                <!-- Content -->
-                <div class="content">
-                    <div class="title">¿Cómo se relacionan la obesidad y la cirrosis hepática?</div>
-                    <div class="vermas"><a href="#">Ver más</a></div>
-                </div><!-- Content -->
-            </div><!-- Item -->
-
-            <!-- Item -->
-            <div class="item"
-                style="background-image: url(<?php echo get_template_directory_uri().'/img/blog-8.jpg'; ?>)">
-                <!-- overlay -->
-                <div class="overlay"></div><!-- overlay -->
-                <!-- Content -->
-                <div class="content">
-                    <div class="title">¿Cómo se relacionan la obesidad y la cirrosis hepática?</div>
-                    <div class="vermas"><a href="#">Ver más</a></div>
-                </div><!-- Content -->
-            </div><!-- Item -->
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
         </div><!-- Grid -->
 
     </div><!-- Column -->
