@@ -26,6 +26,17 @@ $.fn.CustomVideo = function() {
 }
 
 $(document).ready(function() {
+
+    var navv = $(".video-carousel").attr("nav");
+    if (!navv) {
+        navv = false;
+    }
+
+    var dotss = $(".video-carousel").attr("dots");
+    if (!dotss) {
+        dotss = false;
+    }
+
     $(".video-carousel").owlCarousel({
         animateOut: 'slideOutLeft',
         animateIn: 'slideInRight',
@@ -35,7 +46,9 @@ $(document).ready(function() {
         center: true,
         lazyLoad: false,
         smartSpeed: 450,
-        onDragged: PauseVideos
+        onDragged: PauseVideos,
+        nav: navv,
+        dots: dotss
     });
 
     $(".customVideo").CustomVideo();

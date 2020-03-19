@@ -21,8 +21,12 @@ if($rows) : ?>
     <div class="title">¿Qué hacemos?</div><!-- Titulo -->
 
     <!-- carousel -->
+<<<<<<< HEAD
     <div class="video-carousel owl-carousel owl-theme">
     <?php foreach($rows as $row): ?>
+=======
+    <div class="video-carousel owl-carousel owl-theme" dots="true">
+>>>>>>> c672d6004545af2802eb4eaa79248b256d75ad1b
         <!-- Item -->
         <div class="item">
             <div class="customVideo">

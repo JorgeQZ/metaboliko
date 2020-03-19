@@ -6,6 +6,8 @@
 ?>
 <?php get_header(); 
 $ID = get_the_ID();
+$seccion_2 = get_field('seccion_2');	
+
 ?>
 
 <!-- Hero -->
@@ -15,16 +17,13 @@ $ID = get_the_ID();
 <div class="contenedor-general-cirugias">
     <div class="cont-cirugias">
         <p class="enc">
-            Cirugías
+            <?php echo $seccion_2['titulo']; ?>
             <span>
-                Cirugías
+                <?php echo $seccion_2['titulo']; ?>
             </span>
         </p>
         <p class="desc">
-        No sigas imaginando cómo sería tu vida 
-        sin padecer de obesidad. 
-        <br><br>
-        Recupera tu salud recupera tu vida.
+            <?php echo $seccion_2['descripcion']; ?>
         </p>
     </div>
 </div>
@@ -146,21 +145,27 @@ $ID = get_the_ID();
 
 <div class="contenedor-general-video">
     <div class="contenedor-video">
-        <div id="slider-videos" class="owl-carousel owl-theme" style="position: relative;">
+        <div id="slider-videos" class="video-carousel owl-carousel owl-theme" nav="true" dots="true">
 
-            <?php 
-                $rows = count(get_field('galeria_videos', $ID));
-                $i = 1;
-                ?>
                 <?php if( have_rows('galeria_videos', $ID) ): ?>
 
                 <?php while( have_rows('galeria_videos', $ID) ): the_row(); 
                     $video = get_sub_field('video');
                 ?>
-
+<!--
                 <div class="cont-video">
                     <img src="<?php echo $video ?>" alt="">
                 </div>
+-->
+                <!-- Item -->
+        <div class="item">
+            <div class="customVideo cont-video">
+                <video>
+                    <source src="<?php echo $video ?>" preload>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div><!-- Item -->
 
             <?php endwhile; ?>
             <?php endif; ?>
@@ -211,6 +216,10 @@ $(document).ready(function() {
         autoplayHoverPause: true
     });
 
+    $( ".owl-prev").html("<img src='<?php echo get_template_directory_uri().'/img/arrowl-video.png'; ?>'>");
+    $( ".owl-next").html("<img src='<?php echo get_template_directory_uri().'/img/arrowr-video.png'; ?>'>");
+
+    /*
     $("#slider-videos").owlCarousel({
         animateOut: 'slideOutLeft',
         animateIn: 'slideInRight',
@@ -225,5 +234,6 @@ $(document).ready(function() {
         navText : ["<img src='<?php echo get_template_directory_uri().'/img/arrowl-video.png'; ?>'>","<img src='<?php echo get_template_directory_uri().'/img/arrowr-video.png'; ?>'>"],
         autoplayHoverPause: true
     });
+    */
 });
 </script>

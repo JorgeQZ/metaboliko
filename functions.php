@@ -65,6 +65,7 @@ function add_theme_scripts() {
         wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
         wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
         wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('video', get_template_directory_uri().'/js/video.js', array('jquery'),'1.1', true);
     }
 
     if(is_page_template('page-cirugias.php')){
@@ -73,6 +74,7 @@ function add_theme_scripts() {
         wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
         wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
         wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('video', get_template_directory_uri().'/js/video.js', array('jquery'),'1.1', true);
     }
 
     if(is_page_template('page-sistema.php')){
