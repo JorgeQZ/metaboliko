@@ -13,45 +13,33 @@
 <!-- Address -->
 
 <!-- Video -->
+<?php 
+$rows = get_field('videos' );
+if($rows) : ?>
 <div class="video-container">
     <!-- Titulo -->
     <div class="title">¿Qué hacemos?</div><!-- Titulo -->
 
     <!-- carousel -->
+<<<<<<< HEAD
+    <div class="video-carousel owl-carousel owl-theme">
+    <?php foreach($rows as $row): ?>
+=======
     <div class="video-carousel owl-carousel owl-theme" dots="true">
+>>>>>>> c672d6004545af2802eb4eaa79248b256d75ad1b
         <!-- Item -->
         <div class="item">
             <div class="customVideo">
-                <video>
-                    <source src="<?php echo get_template_directory_uri(); ?>/video/video.MP4" type="video/mp4" preload>
+                <video controls>
+                    <source src="<?php echo $row['video']?>" type="video/mp4" preload>
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div><!-- Item -->
-
-        <!-- Item -->
-        <div class="item">
-            <div class="customVideo">
-                <video>
-                    <source src="<?php echo get_template_directory_uri(); ?>/video/video.MP4" type="video/mp4" preload>
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div><!-- Item -->
-
-        <!-- Item -->
-        <div class="item">
-            <div class="customVideo">
-                <video>
-                    <source src="<?php echo get_template_directory_uri(); ?>/video/video.MP4" type="video/mp4" preload>
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div><!-- Item -->
-
+    <?php endforeach; ?>
     </div><!-- carousel -->
 </div><!-- Video -->
-
+<?php endif; ?>
 
 <!-- Contacto -->
 <?php get_template_part('template-parts/content','contact') ?>

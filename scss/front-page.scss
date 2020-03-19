@@ -221,52 +221,33 @@
                 position: relative;
                 padding: 25px;
                 width: 280px;
-                .ring {
+                img {
                     width: 100%;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    opacity: 0.8;
-                }
-                .figure {
-                    width: 230px;
-                    height: 310px;
-                    padding-top: 0px;
-                    border-radius: 0px 0px 200px 200px;
-                    text-align: center;
-                    overflow: hidden;
-                    position: relative;
-                    img {
-                        width: 100%;
-                    }
-                    .dr {
-                        transform: translateY(30px);
-                        margin: 0 auto;
-                        width: 210px;
-                    }
-                    .back {
-                        position: absolute;
-                        bottom: 0px;
-                        left: 0;
-                        width: 230px;
-                    }
                 }
             }
             .content {
                 margin-top: 20px;
                 color: white;
                 .title {
-                    font-size: 40px;
-                    line-height: 40px;
-                    small {
-                        font-weight: bold;
-                        text-transform: uppercase;
+                    p {
+                        font-size: 40px;
+                        line-height: 40px;
+                        padding: 0;
+                        margin: 0;
+                        small {
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
                     }
                 }
                 .desc {
                     padding: 25px 0;
-                    font-size: 18px;
-                    line-height: 20px;
+                    p {
+                        padding: 0;
+                        font-size: 18px;
+                        line-height: 20px;
+                        margin: 0;
+                    }
                 }
                 .button {
                     display: block;
@@ -915,6 +896,7 @@
             }
             .content {
                 color: white;
+                padding: 1rem;
                 .title {
                     font-size: 65px;
                     line-height: 65px;

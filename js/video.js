@@ -28,12 +28,12 @@ $.fn.CustomVideo = function() {
 $(document).ready(function() {
 
     var navv = $(".video-carousel").attr("nav");
-    if(!navv){
+    if (!navv) {
         navv = false;
     }
 
     var dotss = $(".video-carousel").attr("dots");
-    if(!dotss){
+    if (!dotss) {
         dotss = false;
     }
 

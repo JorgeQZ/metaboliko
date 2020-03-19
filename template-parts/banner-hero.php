@@ -5,6 +5,7 @@
 
     <?php if($post_type == 'post'): ?>
     <!-- Titulo -->
+    <div class="overlay"></div>
     <div class="title">
         <?php the_title(); ?>
     </div><!-- Titulo -->

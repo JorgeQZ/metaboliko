@@ -13,21 +13,11 @@
 <div class="content-dr">
     <div class="content">
         <div class="title">
-            <small>
-                <strong>PERFIL</strong><br>
-            </small>
-            PROFESIONAL
+            <?php the_field('titulo')?>
         </div>
 
         <div class="text">
-            El Dr. Hernán Fraga, destacado profesional
-            de la salud, con diversos estudios y certificaciones, con excelencia académica tanto de especialidad
-            en cirugía general como de laparoscopía avanzada, enfocados a la solución de problemas de salud mediante el
-            debido proceso de prevención,
-            el diagnóstico, tratamiento y la rehabilitación
-            de sus pacientes, manteniendo siempre
-            presentes los valores de ética, respeto,
-            honestidad y responsabilidad.
+            <?php the_field('descripcion')?>
         </div>
     </div>
 </div><!-- Content -->

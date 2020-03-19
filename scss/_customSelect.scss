@@ -103,6 +103,7 @@
             font-weight: bold;
             padding-right: 20px;
             width: 200px;
+            text-transform: uppercase;
         }
         .UlOptions {
             display: none;
@@ -129,6 +130,7 @@
                 line-height: 15px;
                 border-bottom: 1px solid transparent;
                 transition: $time-transition;
+                text-transform: uppercase;
                 &:hover {
                     border-bottom: 1px solid #fefdfd;
                 }
