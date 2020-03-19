@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+
+<?php $opcion1 = get_field('opcion_1');?>
+<?php $opcion2 = get_field('opcion_2');?>
+<?php $opcion3 = get_field('opcion_3');?>
+<?php $opcion4 = get_field('opcion_4');?>
+<?php $opcion5 = get_field('opcion_5');?>
+
 <!-- Hero Banner -->
 <div class="hero-banner">
     <!-- hero title -->
@@ -11,11 +18,11 @@
     <div class="front-content">
         <div class="title">Quiero...</div>
         <select name="hero-select" id="hero-select" class="select-custom">
-            <option>Operarme para perder peso</option>
-            <option>Definición muscular</option>
-            <option>No sé a qué soy candidato</option>
-            <option>Mejorar mi imagen</option>
-            <option>Perder peso</option>
+            <option><?php echo $opcion1['boton']?></option>
+            <option><?php echo $opcion2['boton']?></option>
+            <option><?php echo $opcion3['boton']?></option>
+            <option><?php echo $opcion4['boton']?></option>
+            <option><?php echo $opcion5['boton']?></option>
         </select>
     </div><!-- content -->
 
@@ -70,19 +77,24 @@
     ?>
 
     <?php if($the_query->have_posts()):?>
-        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <div class="col" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
-                <a href="<?php the_permalink(); ?>" target="_blank">
-                    <div class="overlay"></div>
-                    <div class="text">
-                        <div class="title"><?php the_title(); ?></div>
-                        <div class="desc"><?php the_excerpt(); ?></div>
-                    </div>
-                </a>
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <div class="col" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
+        <a href="<?php the_permalink(); ?>" target="_blank">
+            <div class="overlay"></div>
+            <div class="text">
+                <div class="title"><?php the_title(); ?></div>
+                <div class="desc"><?php the_excerpt(); ?></div>
             </div>
-        <?php endwhile; ?>
+        </a>
+    </div>
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
     <?php endif; ?>
 </div><!-- Posts -->
+
+
+
+
 
 <!-- Bascula -->
 <div class="bascule-container" id="bascula">
@@ -92,102 +104,43 @@
         <div class="text">
             <div class="text-option active" id="option0">
                 <div class="title">
-                    operarme para <br>
-                    <strong>perder peso</strong>
+                    <?php echo $opcion1['titulo']?>
                 </div>
                 <div class="desc">
-                    Existen diferentes cirugías para bajar de peso
-                    que se llevan a cabo en la clínica Metaboliko,
-                    estas son diseñadas para pacientes que cumplen
-                    con ciertos criterios, por lo que es importante conocer
-                    a profundidad cada caso y así determinar cuál es la mejor opción
-                    para cada persona. Entre las cirugías para bajar de peso
-                    que realizamos se encuentran:
-                    <ul>
-                        <li><span>BANDA GÁSTRICA</span></li>
-                        <li><span>MANGA GÁSTRICA</span></li>
-                        <li><span>BYPASS GÁSTRICO</span></li>
-                    </ul>
+                    <?php echo $opcion1['descripcion']?>
                 </div>
             </div>
+
             <div class="text-option" id="option1">
                 <div class="title">
-                    Definición<br>
-                    <strong>muscular</strong>
+                    <?php echo $opcion2['titulo']?>
                 </div>
                 <div class="desc">
-                    Existen diferentes cirugías para bajar de peso
-                    que se llevan a cabo en la clínica Metaboliko,
-                    estas son diseñadas para pacientes que cumplen
-                    con ciertos criterios, por lo que es importante conocer
-                    a profundidad cada caso y así determinar cuál es la mejor opción
-                    para cada persona. Entre las cirugías para bajar de peso
-                    que realizamos se encuentran:
-                    <ul>
-                        <li><span>BANDA GÁSTRICA</span></li>
-                        <li><span>MANGA GÁSTRICA</span></li>
-                        <li><span>BYPASS GÁSTRICO</span></li>
-                    </ul>
+                    <?php echo $opcion2['descripcion']?>
                 </div>
             </div>
             <div class="text-option" id="option2">
                 <div class="title">
-                    No sé a qué <br>
-                    <strong>soy candidat@</strong>
+                    <?php echo $opcion3['titulo']?>
                 </div>
                 <div class="desc">
-                    Existen diferentes cirugías para bajar de peso
-                    que se llevan a cabo en la clínica Metaboliko,
-                    estas son diseñadas para pacientes que cumplen
-                    con ciertos criterios, por lo que es importante conocer
-                    a profundidad cada caso y así determinar cuál es la mejor opción
-                    para cada persona. Entre las cirugías para bajar de peso
-                    que realizamos se encuentran:
-                    <ul>
-                        <li><span>BANDA GÁSTRICA</span></li>
-                        <li><span>MANGA GÁSTRICA</span></li>
-                        <li><span>BYPASS GÁSTRICO</span></li>
-                    </ul>
+                    <?php echo $opcion3['descripcion']?>
                 </div>
             </div>
             <div class="text-option" id="option3">
                 <div class="title">
-                    Mejorar <br>
-                    <strong>mi imagen</strong>
+                    <?php echo $opcion4['titulo']?>
                 </div>
                 <div class="desc">
-                    Existen diferentes cirugías para bajar de peso
-                    que se llevan a cabo en la clínica Metaboliko,
-                    estas son diseñadas para pacientes que cumplen
-                    con ciertos criterios, por lo que es importante conocer
-                    a profundidad cada caso y así determinar cuál es la mejor opción
-                    para cada persona. Entre las cirugías para bajar de peso
-                    que realizamos se encuentran:
-                    <ul>
-                        <li><span>BANDA GÁSTRICA</span></li>
-                        <li><span>MANGA GÁSTRICA</span></li>
-                        <li><span>BYPASS GÁSTRICO</span></li>
-                    </ul>
+                    <?php echo $opcion4['descripcion']?>
                 </div>
             </div>
             <div class="text-option" id="option4">
                 <div class="title">
-                    perder <br>
-                    <strong>peso</strong>
+                    <?php echo $opcion5['titulo']?>
                 </div>
                 <div class="desc">
-                    Existen diferentes cirugías para bajar de peso
-                    que se llevan a cabo en la clínica Metaboliko,
-                    estas son diseñadas para pacientes que cumplen
-                    con ciertos criterios, por lo que es importante conocer
-                    a profundidad cada caso y así determinar cuál es la mejor opción
-                    para cada persona. Entre las cirugías para bajar de peso
-                    que realizamos se encuentran:
-                    <ul>
-                        <li><span>BANDA GÁSTRICA</span></li>
-                        <li><span>MANGA GÁSTRICA</span></li>
-                        <li><span>BYPASS GÁSTRICO</span></li>
-                    </ul>
+                    <?php echo $opcion5['descripcion']?>
                 </div>
             </div>
         </div>
@@ -202,34 +155,45 @@
         <!-- Options -->
         <div class="options">
             <button class="option" id="option1" data-item="0">
-                <div class="shape-line-bottom"></div>
+                <div class="shape-line-bottom">
+                    <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                </div>
                 <div class="shape-line"></div>
-                <strong>operarme para</strong>
-                <br>perder peso
+                <?php echo $opcion1['boton']?>
             </button>
 
             <button class="option" id="option2" data-item="1">
-                <div class="shape-line-bottom"></div>
+                <div class="shape-line-bottom">
+                <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                </div>
                 <div class="shape-line"></div>
-                <strong>definición</strong> <br> muscular
+                <?php echo $opcion2['boton']?>
             </button>
 
             <button class="option" id="option3" data-item="2">
-                <div class="shape-line-bottom"></div>
+                <div class="shape-line-bottom">
+                <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                </div>
                 <div class="shape-line"></div>
-                <strong>no sé a qué</strong> <br> soy candidat@
+                <?php echo $opcion3['boton']?>
             </button>
 
             <button class="option" id="option4" data-item="3">
                 <div class="shape-line-bottom"></div>
                 <div class="shape-line"></div>
-                <strong>mejorar</strong> <br>mi imagen
+                <div class="shape-line-img">
+                <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                </div>
+                <?php echo $opcion4['boton']?>
             </button>
 
             <button class="option" id="option5" data-item="4">
                 <div class="shape-line-bottom"></div>
                 <div class="shape-line"></div>
-                <strong>perder</strong> peso
+                <div class="shape-line-img">
+                <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                </div>
+                <?php echo $opcion5['boton']?>
             </button>
         </div><!-- Options -->
 
@@ -246,31 +210,24 @@
     </div><!-- Front -->
 </div><!-- Bascula -->
 
-
-
 <!-- Quien es el DR Fraga -->
+
+<?php $fraga = get_field('fraga'); ?>
 <div class="who-is-container">
     <div class="col">
         <div class="figure-container">
-            <img src="<?php echo get_template_directory_uri().'/img/ring-bg.png'; ?>" alt="" class="ring">
-            <div class="figure">
-                <img src="<?php echo get_template_directory_uri().'/img/dr-fraga-cicle-bg.png'; ?>" alt="" class="back">
-                <img src="<?php echo get_template_directory_uri().'/img/dr-fraga-figure.png'; ?>" alt="" class="dr">
-            </div>
+            <img src="<?php echo $fraga['imagen']['url']?>" alt="">
         </div>
     </div>
     <div class="col">
         <div class="content">
             <div class="title">
-                <small>¿Quien es</small> <br> EL DR. FRAGA
+                <?php echo $fraga['titulo']?>
             </div>
             <div class="desc">
-                Especialista en cirugía laparoscópica bariátrica
-                y metabólica. En clínica Metabóliko tenemos
-                como prioridad mejorar la calidad de vida de todos nuestros pacientes. Además, contamos
-                con una filosofía la cual es que nuestros pacientes vivan saludables y felices.
+                <?php echo $fraga['descripcion']?>
             </div>
-            <a class="button" href="#">conoce más</a>
+            <a class="button" href="<?php echo $fraga['url_link']?>"><?php echo $fraga['texto_link']?></a>
         </div>
     </div>
 </div><!-- Quien es el DR Fraga -->
@@ -283,19 +240,6 @@
 <?php get_template_part('template-parts/content', 'contact')?>
 <!-- Contacto -->
 
-
-
-<?php 
-
-// if ( have_posts() ) {
-
-//     while ( have_posts() ) {
-//         the_post();
-
-//         the_content();
-//     }
-// }
-?>
 <script>
 $('#hero-select').CustomSelect(
     'Cirugía para perder peso'

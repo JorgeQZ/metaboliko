@@ -100,15 +100,23 @@
             }
             .text {
                 .title {
-                    z-index: 10;
-                    font-size: 15px;
-                    line-height: 15px;
-                    margin-top: 15px;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        z-index: 10;
+                        font-size: 15px;
+                        line-height: 15px;
+                        margin-top: 15px;
+                    }
                 }
                 .desc {
-                    padding-top: 10px;
-                    font-size: 12px;
-                    line-height: 12px;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        padding-top: 10px;
+                        font-size: 12px;
+                        line-height: 12px;
+                    }
                     li {
                         margin-bottom: 6px;
                         span {
@@ -154,6 +162,10 @@
                     border-bottom: 4px solid #33a7c9;
                     position: absolute;
                     transform: scale(.6);
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
                     &:focus {
                         outline: unset;
                     }
@@ -185,6 +197,7 @@
                             right: -9px;
                             position: absolute;
                             width: 28px;
+                            transform: rotateZ(47deg) translate(-4px, -7px) scale(.8);
                         }
                     }
                     &#option1 {
@@ -202,6 +215,31 @@
                     &#option4 {
                         top: 250px;
                         left: 50%;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                        }
+                        .shape-line-img {
+                            position: absolute;
+                            bottom: -8px;
+                            left: -15px;
+                            width: 4px;
+                            height: 40px;
+                            background-color: #33a7c9;
+                            -webkit-transform: rotateZ(135deg);
+                            transform: rotateZ(135deg);
+                            img {
+                                top: calc(100% - 5px);
+                                right: -9px;
+                                position: absolute;
+                                width: 28px;
+                                transform: rotateZ(47deg) translate(-4px, -7px) scale(.8);
+                            }
+                        }
                         .shape-line {
                             left: calc(100% - 50px);
                             &::before {
@@ -223,12 +261,26 @@
                         &:before {
                             content: '';
                             position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                        }
+                        .shape-line-img {
+                            position: absolute;
                             bottom: -36px;
                             left: -15px;
                             width: 4px;
                             height: 40px;
                             transform: rotateZ(45deg);
                             background-color: #33a7c9;
+                            img {
+                                top: calc(100% - 5px);
+                                right: -9px;
+                                position: absolute;
+                                width: 28px;
+                                transform: rotateZ(47deg) translate(-4px, -7px) scale(.8);
+                            }
                         }
                         .shape-line-bottom {
                             top: calc(100% - 36px);
@@ -299,14 +351,18 @@
             }
             .text {
                 .title {
-                    z-index: 10;
-                    font-size: 15px;
-                    line-height: 15px;
+                    p {
+                        z-index: 10;
+                        font-size: 15px;
+                        line-height: 15px;
+                    }
                 }
                 .desc {
-                    padding-top: 10px;
-                    font-size: 12px;
-                    line-height: 12px;
+                    p {
+                        padding-top: 10px;
+                        font-size: 12px;
+                        line-height: 12px;
+                    }
                     li {
                         margin-bottom: 6px;
                         span {
@@ -491,20 +547,26 @@
     .bascule-container {
         height: 700px;
         .content-behinde {
+            right: 0;
+            width: 400px;
             .shape {
                 shape-outside: polygon(0px 2px, 98.15% 1.6%, 14.05% 1.6%, 24.7% 19.8%, 33.75% 32.2%, 43.15% 40%, 53.45% 45.6%, 66.9% 48%, 76.9% 48.2%, 84.05% 49.6%, 91.55% 49.2%, 95.65% 49.6%, 100% 49%, 100% 99%, 0% 99.2%);
                 clip-path: polygon(0px 2px, 98.15% 1.6%, 14.05% 1.6%, 24.7% 19.8%, 33.75% 32.2%, 43.15% 40%, 53.45% 45.6%, 66.9% 48%, 76.9% 48.2%, 84.05% 49.6%, 91.55% 49.2%, 95.65% 49.6%, 100% 49%, 100% 99%, 0% 99.2%);
             }
             .text {
                 .title {
-                    z-index: 10;
-                    font-size: 15px;
-                    line-height: 15px;
+                    p {
+                        z-index: 10;
+                        font-size: 15px;
+                        line-height: 15px;
+                    }
                 }
                 .desc {
-                    padding-top: 10px;
-                    font-size: 12px;
-                    line-height: 12px;
+                    p {
+                        padding-top: 10px;
+                        font-size: 12px;
+                        line-height: 12px;
+                    }
                     li {
                         margin-bottom: 6px;
                         span {
@@ -524,9 +586,11 @@
             }
         }
         .content-front {
+            position: relative;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 400px;
+            margin: 0 auto;
             height: 100%;
             .options {
                 position: relative;
@@ -700,15 +764,19 @@
             }
             .text {
                 .title {
-                    z-index: 10;
-                    font-size: 35px;
-                    line-height: 35px;
-                    margin-top: 35px;
+                    p {
+                        z-index: 10;
+                        font-size: 35px;
+                        line-height: 35px;
+                        margin-top: 35px;
+                    }
                 }
                 .desc {
-                    padding-top: 20px;
-                    font-size: 16px;
-                    line-height: 18px;
+                    p {
+                        padding-top: 20px;
+                        font-size: 16px;
+                        line-height: 18px;
+                    }
                     li {
                         margin-bottom: 6px;
                         height: 25px;
@@ -905,15 +973,19 @@
             }
             .text {
                 .title {
-                    z-index: 10;
-                    font-size: 40px;
-                    line-height: 40px;
-                    margin-top: 50px;
+                    p {
+                        z-index: 10;
+                        font-size: 40px;
+                        line-height: 40px;
+                        margin-top: 50px;
+                    }
                 }
                 .desc {
-                    padding-top: 20px;
-                    font-size: 20px;
-                    line-height: 22px;
+                    p {
+                        padding-top: 20px;
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
                     li {
                         margin-bottom: 6px;
                         height: 20px;
@@ -980,7 +1052,7 @@
                     }
                     .shape-line-bottom {
                         position: absolute;
-                        top: calc(100% - 4px);
+                        top: calc(100% - 5px);
                         right: -17px;
                         width: 4px;
                         height: 45px;
@@ -1008,6 +1080,31 @@
                     &#option4 {
                         top: 520px;
                         left: 50%;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                        }
+                        .shape-line-img {
+                            position: absolute;
+                            bottom: -8px;
+                            left: -15px;
+                            width: 4px;
+                            height: 40px;
+                            background-color: #33a7c9;
+                            -webkit-transform: rotateZ(135deg);
+                            transform: rotateZ(135deg);
+                            img {
+                                top: calc(100% - 5px);
+                                right: -9px;
+                                position: absolute;
+                                width: 28px;
+                                transform: rotateZ(47deg) translate(-4px, -7px) scale(.8);
+                            }
+                        }
                         .shape-line {
                             left: calc(100% - 50px);
                             &::before {
@@ -1029,12 +1126,26 @@
                         &:before {
                             content: '';
                             position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                        }
+                        .shape-line-img {
+                            position: absolute;
                             bottom: -36px;
                             left: -15px;
                             width: 4px;
                             height: 40px;
                             transform: rotateZ(45deg);
                             background-color: #33a7c9;
+                            img {
+                                top: calc(100% - 5px);
+                                right: -9px;
+                                position: absolute;
+                                width: 28px;
+                                transform: rotateZ(47deg) translate(-4px, -7px) scale(.8);
+                            }
                         }
                         .shape-line-bottom {
                             top: calc(100% - 36px);
@@ -1113,9 +1224,11 @@
                     z-index: 10;
                 }
                 .desc {
-                    padding-top: 20px;
-                    font-size: 20px;
-                    line-height: 22px;
+                    p {
+                        padding-top: 20px;
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
                     li {
                         margin-bottom: 6px;
                         span {
@@ -1371,26 +1484,30 @@
             }
             .text {
                 .title {
-                    z-index: 10;
-                    font-size: 45px;
-                    line-height: 45px;
+                    p {
+                        z-index: 10;
+                        font-size: 45px;
+                        line-height: 45px;
+                    }
                 }
                 .desc {
-                    padding-top: 20px;
-                    font-size: 30px;
-                    line-height: 32px;
-                    li {
-                        margin-bottom: 6px;
-                        span {
-                            // font-size: 35px;
-                            // line-height: 40px;
-                            margin-left: 15px;
-                            &:before {
-                                content: '';
-                                width: 22px;
-                                height: 22px;
-                                left: -35px;
-                                top: 15px;
+                    p {
+                        padding-top: 20px;
+                        font-size: 30px;
+                        line-height: 32px;
+                        li {
+                            margin-bottom: 6px;
+                            span {
+                                // font-size: 35px;
+                                // line-height: 40px;
+                                margin-left: 15px;
+                                &:before {
+                                    content: '';
+                                    width: 22px;
+                                    height: 22px;
+                                    left: -35px;
+                                    top: 15px;
+                                }
                             }
                         }
                     }
