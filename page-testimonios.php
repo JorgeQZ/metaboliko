@@ -145,7 +145,7 @@ $seccion_2 = get_field('seccion_2');
 
 <div class="contenedor-general-video">
     <div class="contenedor-video">
-        <div id="slider-videos" class="video-carousel owl-carousel owl-theme" nav="true">
+        <div id="slider-videos" class="video-carousel owl-carousel owl-theme" nav="true" dots="true">
 
                 <?php if( have_rows('galeria_videos', $ID) ): ?>
 

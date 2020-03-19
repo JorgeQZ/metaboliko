@@ -219,6 +219,11 @@
   display: block;
 }
 
+.contenedor-general-video .contenedor-video .cont-item .media video {
+  width: 100%;
+  display: block;
+}
+
 .contenedor-general-video .contenedor-video .cont-item .info p {
   color: #282828;
   font-size: 15px;

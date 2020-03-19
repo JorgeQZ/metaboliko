@@ -94,11 +94,12 @@ $ID = get_the_ID();
 
         <div class="contenedor-general-video">
             <div class="contenedor-video">
-                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                <div id="slider-videos" class="video-carousel owl-carousel owl-theme slider-videos" nav="true">
 
                 <?php
                     if( have_rows('galeria_videos') ): while ( have_rows('galeria_videos') ) : the_row(); 
                             ?>
+                            <!--
                                 <div class="cont-item">
                                     <div class="media">
                                         <img src="<?php echo get_sub_field('video'); ?>" alt="">
@@ -109,6 +110,22 @@ $ID = get_the_ID();
                                         </p>
                                     </div>
                                 </div>
+                            -->
+                                <!-- Item -->
+                                <div class="cont-item">
+                                    <div class="customVideo media">
+                                        <video>
+                                            <source src="<?php echo get_sub_field('video'); ?>" preload>
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div class="info">
+                                        <p>
+                                            <?php echo get_sub_field('descripcion_video'); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Item -->
 
                             <?php
                     endwhile; endif;
@@ -425,6 +442,7 @@ $(document).ready(function() {
         autoplayHoverPause: true
     });
 
+/*    
     $(".slider-videos").owlCarousel({
         animateOut: 'slideOutLeft',
         animateIn: 'slideInRight',
@@ -440,6 +458,10 @@ $(document).ready(function() {
         dots: false,
         autoplayHoverPause: true
     });
+*/
+
+    $( ".owl-prev").html("<img src='<?php echo get_template_directory_uri().'/img/arrowl-azul-video.png'; ?>'>");
+    $( ".owl-next").html("<img src='<?php echo get_template_directory_uri().'/img/arrowr-azul-video.png'; ?>'>");
 
 
     $(".contenedor-items-global .contenedor-items-slider .item-slider").each(function(index){

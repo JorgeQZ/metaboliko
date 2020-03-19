@@ -18,7 +18,7 @@
     <div class="title">¿Qué hacemos?</div><!-- Titulo -->
 
     <!-- carousel -->
-    <div class="video-carousel owl-carousel owl-theme">
+    <div class="video-carousel owl-carousel owl-theme" dots="true">
         <!-- Item -->
         <div class="item">
             <div class="customVideo">
