@@ -4,7 +4,9 @@
 * 
 */
 ?>
-<?php get_header(); ?>
+<?php get_header(); 
+$ID = get_the_ID();
+?>
 
 <!-- Hero -->
 <?php get_template_part('template-parts/banner','hero') ?>
@@ -37,6 +39,53 @@
     </p>
     <div class="cont-galeria">
         <div id="slider-galeria" class="owl-carousel owl-theme">
+
+        <?php 
+                    $rows = count(get_field('galeria', $ID));
+                    $i = 1;
+                    ?>
+                    <?php if( have_rows('galeria', $ID) ): ?>
+
+                    <?php while( have_rows('galeria', $ID) ): the_row(); 
+                        $imagen = get_sub_field('imagen');
+                    ?>
+                        <?php
+                        if($i == 1)
+                        {
+                        ?>
+                        <div class="cont-slide">
+                        <?php
+                        }
+                        ?>
+                        <div class="cont-img">
+                            <img src="<?php echo $imagen ?>" alt="">
+                        </div>
+                        <?php
+                        if($i == 8)
+                        {
+                        ?>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    <?php
+                    if($i < 8) 
+                    $i++;
+                    else
+                    $i = 1 
+                    ?>    
+                    <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php
+                    if($i != 1)
+                    {
+                    ?>
+                    </div>
+                    <?php
+                    }
+                    ?>
+
+        <!--
             <div class="cont-slide">
                 <div class="cont-img">
                     <img src="<?php echo get_template_directory_uri().'/img/img-galeria.jpg'; ?>" alt="">
@@ -89,6 +138,7 @@
                     <img src="<?php echo get_template_directory_uri().'/img/img-galeria.jpg'; ?>" alt="">
                 </div>
             </div>
+        -->
         </div>
     </div>
 </div>
@@ -97,6 +147,25 @@
 <div class="contenedor-general-video">
     <div class="contenedor-video">
         <div id="slider-videos" class="owl-carousel owl-theme" style="position: relative;">
+
+            <?php 
+                $rows = count(get_field('galeria_videos', $ID));
+                $i = 1;
+                ?>
+                <?php if( have_rows('galeria_videos', $ID) ): ?>
+
+                <?php while( have_rows('galeria_videos', $ID) ): the_row(); 
+                    $video = get_sub_field('video');
+                ?>
+
+                <div class="cont-video">
+                    <img src="<?php echo $video ?>" alt="">
+                </div>
+
+            <?php endwhile; ?>
+            <?php endif; ?>
+
+        <!--
             <div class="cont-video">
                 <img src="<?php echo get_template_directory_uri().'/img/testimonios-video.png'; ?>" alt="">
             </div>
@@ -106,6 +175,7 @@
             <div class="cont-video">
                 <img src="<?php echo get_template_directory_uri().'/img/testimonios-video.png'; ?>" alt="">
             </div>
+        -->
         </div>
     </div>
 </div>

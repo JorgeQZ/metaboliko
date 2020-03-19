@@ -4,7 +4,9 @@
 * 
 */
 ?>
-<?php get_header(); ?>
+<?php get_header(); 
+$ID = get_the_ID();
+?>
 
 <!-- Hero -->
 <?php get_template_part('template-parts/banner','hero') ?>
@@ -13,6 +15,24 @@
 <div class="contenedor-items-global">
 
     <div class="contenedor-items-slider">
+
+    <?php if( have_rows('cirugia', $ID) ): ?>
+
+    <?php while( have_rows('cirugia', $ID) ): the_row(); 
+        $contenido = get_sub_field('contenido');	
+        $galeria_videos = get_sub_field('galeria_videos');	
+
+    ?>
+
+    <div class="item-slider" style="background-image: url(<?php echo $contenido['fondo_boton_item']; ?>);">
+        <?php echo $contenido['titulo']; ?>
+    </div>
+   
+    <?php
+    endwhile; ?>
+    <?php endif; ?>
+
+<!--    
         <div class="item-slider" style="background-image: url(<?php echo get_template_directory_uri().'/img/item-slidercirugias.jpg'; ?>);">
             <p>
                 Banda <br> <span>Gástrica</span>
@@ -33,7 +53,93 @@
                 Cirugía de <br> <span>Revisión</span>
             </p>
         </div>
+-->
+
     </div>
+
+
+
+    <?php if( have_rows('cirugia', $ID) ): 
+    $i = 1;    
+    ?>
+
+    <?php while( have_rows('cirugia', $ID) ): the_row(); 
+        $contenido = get_sub_field('contenido');	
+        $galeria_videos = get_sub_field('galeria_videos');	
+
+    ?>
+
+    <div class="contenedor-item-global <?php if($i == 1) echo 'active' ?>">
+        <div class="contenedor-general-cirugias">
+            <div class="slider-cirugias">
+                <div class="cont-img">
+                    <div class="img">
+                        <img src="<?php echo $contenido['imagen']; ?>" alt="">
+                    </div>
+                </div>
+                <div class="cont-info">
+                    <div class="enc">
+                        <?php echo $contenido['titulo']; ?>
+                        <span>
+                            <?php echo $contenido['titulo']; ?>
+                        </span>
+                    </div>
+                    <div class="desc">
+                        <?php echo $contenido['descripcion']; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contenedor-general-video">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+
+                <?php
+                    if( have_rows('galeria_videos') ): while ( have_rows('galeria_videos') ) : the_row(); 
+                            ?>
+                                <div class="cont-item">
+                                    <div class="media">
+                                        <img src="<?php echo get_sub_field('video'); ?>" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p>
+                                            <?php echo get_sub_field('descripcion_video'); ?>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            <?php
+                    endwhile; endif;
+                ?>
+
+    <!--                
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/cirugias-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            La banda gástrica por laparoscopia es una cirugía para bajar de peso 
+                            que se lleva a cabo mediante tres incisiones en el abdomen mediante 
+                            los cuales se realiza la disección del estómago y se coloca la banda 
+                            gástrica, la cual rodea la parte superior de todo el estómago.
+                            </p>
+                        </div>
+                    </div>
+    -->
+                </div>
+            </div>
+        </div>
+    </div>    
+    <?php
+    $i++; 
+    endwhile; ?>
+    <?php endif; ?>
+
+<!--
+
 
     <div class="contenedor-item-global active">
         <div class="contenedor-general-cirugias">
@@ -99,8 +205,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div class="contenedor-item-global">
         <div class="contenedor-general-cirugias">
@@ -296,6 +400,9 @@
             </div>
         </div>
     </div>
+
+
+-->
 
 </div>
 
