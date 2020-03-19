@@ -59,45 +59,29 @@
 
 <!-- Posts -->
 <div class="posts-container">
-    <div class="col" style="background-image: url(<?php echo get_template_directory_uri().'/img/post-1.jpg'; ?>)">
-        <a href="#" target="_blank">
-            <div class="overlay"></div>
-            <div class="text">
-                <div class="title">TITLE</div>
-                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque, deserunt
-                    voluptatum
-                    blanditiis sunt, quasi, laboriosam porro veniam expedita vitae consectetur distinctio dolor
-                    quibusdam
-                    praesentium in non cumque doloremque dicta!</div>
+    <?php  
+    $post_args = array(
+        'posts_per_page' => 3,
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'category_name' => 'principal'
+    );
+    $the_query = new WP_Query($post_args);    
+    ?>
+
+    <?php if($the_query->have_posts()):?>
+        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <div class="col" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
+                <a href="<?php the_permalink(); ?>" target="_blank">
+                    <div class="overlay"></div>
+                    <div class="text">
+                        <div class="title"><?php the_title(); ?></div>
+                        <div class="desc"><?php the_excerpt(); ?></div>
+                    </div>
+                </a>
             </div>
-        </a>
-    </div>
-    <div class="col" style="background-image: url(<?php echo get_template_directory_uri().'/img/post-2.jpg'; ?>)">
-        <a href="#" target="_blank">
-            <div class="overlay"></div>
-            <div class="text">
-                <div class="title">calidad <strong>de vida</strong></div>
-                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque, deserunt
-                    voluptatum
-                    blanditiis sunt, quasi, laboriosam porro veniam expedita vitae consectetur distinctio dolor
-                    quibusdam
-                    praesentium in non cumque doloremque dicta!</div>
-            </div>
-        </a>
-    </div>
-    <div class="col" style="background-image: url(<?php echo get_template_directory_uri().'/img/post-3.jpg'; ?>)">
-        <a href="#" target="_blank">
-            <div class="overlay"></div>
-            <div class="text">
-                <div class="title">obesidad y <br> <strong>definición muscular</strong></div>
-                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque, deserunt
-                    voluptatum
-                    blanditiis sunt, quasi, laboriosam porro veniam expedita vitae consectetur distinctio dolor
-                    quibusdam
-                    praesentium in non cumque doloremque dicta!</div>
-            </div>
-        </a>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </div><!-- Posts -->
 
 <!-- Bascula -->
@@ -128,7 +112,7 @@
             </div>
             <div class="text-option" id="option1">
                 <div class="title">
-                  Definición<br>
+                    Definición<br>
                     <strong>muscular</strong>
                 </div>
                 <div class="desc">
@@ -148,7 +132,7 @@
             </div>
             <div class="text-option" id="option2">
                 <div class="title">
-                   No sé a qué <br>
+                    No sé a qué <br>
                     <strong>soy candidat@</strong>
                 </div>
                 <div class="desc">
@@ -188,7 +172,7 @@
             </div>
             <div class="text-option" id="option4">
                 <div class="title">
-                   perder <br>
+                    perder <br>
                     <strong>peso</strong>
                 </div>
                 <div class="desc">

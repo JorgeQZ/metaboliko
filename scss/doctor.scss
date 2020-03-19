@@ -26,3 +26,36 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .content-dr {
+        min-height: 80vh;
+        padding: 1rem 1rem;
+        padding-bottom: 3rem;
+        background-image: url(../img/content-drfr-bg.jpg);
+        background-position: left;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: white;
+        .content {
+            max-width: 530px;
+            width: 95%;
+            .title {
+                font-size: 50px;
+                line-height: 1;
+                font-weight: 100;
+            }
+            .text {
+                margin-top: 20px;
+                border-left: 2px solid #fff;
+                padding-left: 1rem;
+                font-size: 28px;
+                line-height: 1;
+                text-align: left;
+                font-weight: 100;
+            }
+        }
+    }
+}

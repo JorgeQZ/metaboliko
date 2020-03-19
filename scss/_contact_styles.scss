@@ -65,13 +65,19 @@
         .col {
             display: flex;
             align-items: center;
+            &:last-child {
+                justify-content: center;
+            }
             .content {
                 font-size: 30px;
                 line-height: 32px;
                 font-weight: 100;
                 font-family: $font;
+                max-width: 500px;
             }
             .form {
+                margin: 0 auto;
+                max-width: 500px;
                 .form-control {
                     float: left;
                     margin-bottom: 20px;

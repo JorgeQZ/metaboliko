@@ -14,6 +14,17 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    .overlay {
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        background-image: url(../img/overlay.png);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: hard-light;
+        opacity: 0.6;
+    }
     .title {
         color: white;
         font-weight: bold;
@@ -22,6 +33,8 @@ header {
         border: 1px solid white;
         padding: 15px 15px;
         max-width: 70%;
+        position: relative;
+        z-index: 1;
     }
     .content_text {
         width: 90%;
@@ -236,6 +249,73 @@ header {
                 &:hover {
                     img {
                         opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-banner {
+        .image_texto {
+            display: block;
+            .col {
+                &:first-child {
+                    width: 100%;
+                }
+                &:last-child {
+                    width: 100%;
+                    padding: 2rem;
+                    padding-top: 0;
+                }
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    margin: 0 auto;
+                    width: 50%;
+                    max-width: 400px;
+                }
+                h1 {
+                    font-size: 40px;
+                    line-height: 1;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    small {
+                        font-size: 30px;
+                    }
+                }
+                p {
+                    margin-top: 0;
+                    font-size: 20px;
+                }
+                a {
+                    width: 250px;
+                    padding: 10px;
+                    padding-right: 40px;
+                    padding-left: 30px;
+                    border: 1px solid white;
+                    color: white;
+                    font-size: 12px;
+                    transition: all 0.2s;
+                    &:hover {
+                        background-color: #00a0a8;
+                    }
+                    span {
+                        position: relative;
+                        &:before {
+                            content: '';
+                            width: 7px;
+                            height: 9px;
+                            background-image: url(../img/arrow.png);
+                            background-size: cover;
+                            position: absolute;
+                            top: 4px;
+                            right: -12px;
+                            transition: all 0.1s linear;
+                        }
                     }
                 }
             }
