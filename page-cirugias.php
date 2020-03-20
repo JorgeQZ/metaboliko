@@ -91,13 +91,17 @@ $ID = get_the_ID();
             </div>
         </div>
 
+        <?php 
+        if( have_rows('galeria_videos'))
+        {
+        ?>
 
         <div class="contenedor-general-video">
             <div class="contenedor-video">
                 <div id="slider-videos" class="video-carousel owl-carousel owl-theme slider-videos" nav="true">
 
                 <?php
-                    if( have_rows('galeria_videos') ): while ( have_rows('galeria_videos') ) : the_row(); 
+                    while ( have_rows('galeria_videos') ) : the_row(); 
                             ?>
                             <!--
                                 <div class="cont-item">
@@ -128,7 +132,7 @@ $ID = get_the_ID();
                                 <!-- Item -->
 
                             <?php
-                    endwhile; endif;
+                    endwhile;
                 ?>
 
     <!--                
@@ -149,6 +153,9 @@ $ID = get_the_ID();
                 </div>
             </div>
         </div>
+        <?php
+        }
+        ?>
     </div>    
     <?php
     $i++; 

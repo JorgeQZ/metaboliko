@@ -50,7 +50,7 @@
 .contenedor-general-cirugias{
     width: 100%;
     min-height: 100vh;
-    padding: 75px 0;
+    padding: 160px 0;    
     background-image: url(../img/fondo-cirugias.jpg);
     background-size: cover;
     background-position: center;
@@ -137,7 +137,7 @@
                 p{
                     color: white;
                     font-size: 14px;
-                    line-height: 24px;
+                    line-height: 21px;
                     margin: 0;
                 }
             }
@@ -319,6 +319,7 @@
     .contenedor-items-global{
         .contenedor-items-slider{
             flex-wrap: wrap;
+            top: -35px;
             .item-slider{
                 width: 120px;
                 height: 90px;

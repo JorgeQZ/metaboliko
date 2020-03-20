@@ -88,7 +88,7 @@
 .contenedor-general-tenedor .contenedor-info .desc p {
   color: white;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 21px;
   margin: 0;
 }
 
@@ -363,6 +363,7 @@
   .contenedor-general-tenedor .contenedor-items-slider {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    top: -35px;
   }
   .contenedor-general-tenedor .contenedor-items-slider .item-slider {
     width: 120px;

@@ -61,6 +61,10 @@ $(document).ready(function() {
         PauseVideos();
     });
 
+    $('.contenedor-items-slider .item-slider').click(function(e) {
+        PauseVideos();
+    });
+
     function PauseVideos() {
         var videos = $('.customVideo video');
 
