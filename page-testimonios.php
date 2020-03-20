@@ -40,7 +40,6 @@ $seccion_2 = get_field('seccion_2');
         <div id="slider-galeria" class="owl-carousel owl-theme">
 
         <?php 
-                    $rows = count(get_field('galeria', $ID));
                     $i = 1;
                     ?>
                     <?php if( have_rows('galeria', $ID) ): ?>

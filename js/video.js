@@ -57,6 +57,10 @@ $(document).ready(function() {
         PauseVideos();
     });
 
+    $('.video-carousel .owl-nav button').click(function(e) {
+        PauseVideos();
+    });
+
     function PauseVideos() {
         var videos = $('.customVideo video');
 

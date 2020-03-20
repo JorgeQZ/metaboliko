@@ -55,6 +55,18 @@ span.wpcf7-not-valid-tip {
     }
 }
 
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    footer {
+        .column{
+            &:first-child{
+                padding: 15px 0;
+                flex: auto;
+            }
+        }
+    }
+}
+
 @import 'variables';
 @import 'header';
 @import 'address_styles';

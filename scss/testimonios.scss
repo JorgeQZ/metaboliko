@@ -142,6 +142,19 @@
                 display: block;
                 box-shadow: 0px -45px 60px -40px rgba(0,0,0,0.75), 0px 45px 60px -40px rgba(0,0,0,0.75);
             }
+            img.play{
+                position: absolute;
+                width: 70px;
+                top: calc(50% - 50px);
+                left: calc(50% - 35px);
+                z-index: 999;
+                border-radius: 0;
+                border: 0;
+                box-shadow: none;
+            }
+            .overlay{
+                display: none;
+            }
         }
 
         .owl-nav{
@@ -311,6 +324,11 @@
             width: 95%;
             .cont-video{
                 width: 100%;
+                img.play{
+                    width: 30px;
+                    top: calc(50% - 20px);
+                    left: calc(50% - 15px);
+                }
             }
             .owl-dots{
                 .owl-dot{

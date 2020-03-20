@@ -179,6 +179,19 @@
                     width: 100%;
                     display: block;
                 }
+                img.play{
+                    position: absolute;
+                    width: 70px;
+                    top: calc(50% - 120px);
+                    left: calc(50% - 35px);
+                    z-index: 999;
+                    border-radius: 0;
+                    border: 0;
+                    box-shadow: none;
+                }
+                .overlay{
+                    display: none;
+                }
             }
             .info{
                 p{
