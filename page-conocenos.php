@@ -19,7 +19,7 @@ if($rows) : ?>
 <div class="video-container">
     <!-- Titulo -->
     <div class="title">¿Qué hacemos?</div><!-- Titulo -->
-
+<div class="cont-video-carousel">
     <!-- carousel -->
     <div class="video-carousel owl-carousel owl-theme" dots="true">
     <?php foreach($rows as $row): ?>
@@ -34,6 +34,7 @@ if($rows) : ?>
         </div><!-- Item -->
     <?php endforeach; ?>
     </div><!-- carousel -->
+</div>
 </div><!-- Video -->
 <?php endif; ?>
 
@@ -41,14 +42,14 @@ if($rows) : ?>
 <?php get_template_part('template-parts/content','contact') ?>
 <!-- Contacto -->
 
-
+<?php get_footer(); ?>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.address-container .col div, .video-container .title, .video-container .video-carousel, .contact-container .col{
+.address-container .col div, .video-container .title, .cont-video-carousel, .contact-container .col{
     opacity: 0;
 }
 </style>
@@ -58,7 +59,7 @@ var $j = jQuery.noConflict();
 
 	jQuery(function($j) {
 
-    $j('.address-container .col div, .video-container .title, .video-container .video-carousel').waypoint(function() {
+    $j('.address-container .col div, .video-container .title, .cont-video-carousel').waypoint(function() {
         $j(this).toggleClass('fadeInUp animated');
     }, {
         offset: '75%',
@@ -84,5 +85,3 @@ var $j = jQuery.noConflict();
 });
 
 </script>
-
-<?php get_footer(); ?>

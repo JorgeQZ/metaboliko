@@ -261,12 +261,14 @@ $(document).ready(function() {
 });
 </script>
 
+<?php get_footer(); ?>
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.bascule-container .content-front .options .option, .bascule-container .content-behinde .text, .who-is-container .col, .address-container .col div, .contact-container .col{
+.bascule-container .content-front .options .option, .who-is-container .col, .address-container .col div, .contact-container .col, .bascule-container .content-behinde .text .title, .bascule-container .content-behinde .text .desc{
     opacity: 0;
 }
 </style>
@@ -276,7 +278,7 @@ var $j = jQuery.noConflict();
 
 	jQuery(function($j) {
 
-    $j('.bascule-container .content-front .options .option, .address-container .col div').waypoint(function() {
+    $j('.bascule-container .content-front .options .option, .address-container .col div, .bascule-container .content-behinde .text .title, .bascule-container .content-behinde .text .desc').waypoint(function() {
         $j(this).toggleClass('fadeInUp animated');
     }, {
         offset: '75%',
@@ -290,7 +292,7 @@ var $j = jQuery.noConflict();
         triggerOnce: true
     });
 
-    $j('.bascule-container .content-behinde .text, .who-is-container .col:nth-child(2), .contact-container .col:last-child').waypoint(function() {
+    $j('.who-is-container .col:nth-child(2), .contact-container .col:last-child').waypoint(function() {
         $j(this).toggleClass('fadeInRight animated');
     }, {
         offset: '75%',
@@ -301,7 +303,3 @@ var $j = jQuery.noConflict();
 });
 
 </script>
-
-
-
-<?php get_footer(); ?>
