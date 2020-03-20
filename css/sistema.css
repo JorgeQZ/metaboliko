@@ -117,6 +117,7 @@
   border-radius: 25px;
   overflow: hidden;
   margin-bottom: 35px;
+  position: relative;
 }
 
 .contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .media img {
@@ -132,8 +133,8 @@
 .contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .media img.play {
   position: absolute;
   width: 70px;
-  top: calc(50% - 100px);
-  left: calc(50% - 35px);
+  top: calc(50% - 40px);
+  left: calc(50% - 30px);
   z-index: 999;
   border-radius: 0;
   border: 0;
@@ -405,6 +406,11 @@
   }
   .contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .media {
     margin-bottom: 10px;
+  }
+  .contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .media img.play {
+    width: 30px;
+    top: calc(50% - 15px);
+    left: calc(50% - 10px);
   }
   .contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .info p {
     font-size: 11px;

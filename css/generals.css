@@ -369,6 +369,12 @@ span.wpcf7-not-valid-tip {
         -ms-flex: auto;
             flex: auto;
   }
+  footer .column .widget-area .menu > li {
+    text-align: center;
+  }
+  footer .column .widget-area .menu > li > a {
+    font-size: 14px !important;
+  }
 }
 
 @media screen and (min-width: 320px) {
