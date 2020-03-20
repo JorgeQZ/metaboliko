@@ -481,3 +481,45 @@ $(document).ready(function() {
 
 });
 </script>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+
+<style>
+.contenedor-items-global .contenedor-items-slider, .contenedor-general-cirugias .slider-cirugias .cont-img, .contenedor-general-cirugias .slider-cirugias .cont-info, .contenedor-general-video .contenedor-video{
+    opacity: 0;
+}
+</style>
+
+<script>
+var $j = jQuery.noConflict();
+
+	jQuery(function($j) {
+
+    $j('.contenedor-general-video .contenedor-video').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+	$j('.contenedor-general-cirugias .slider-cirugias .cont-img').waypoint(function() {
+        $j(this).toggleClass('fadeInLeft animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.contenedor-items-global .contenedor-items-slider, .contenedor-general-cirugias .slider-cirugias .cont-info').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+
+});
+
+</script>

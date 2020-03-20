@@ -260,4 +260,48 @@ $(document).ready(function() {
     });
 });
 </script>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+
+<style>
+.bascule-container .content-front .options .option, .bascule-container .content-behinde .text, .who-is-container .col, .address-container .col div, .contact-container .col{
+    opacity: 0;
+}
+</style>
+
+<script>
+var $j = jQuery.noConflict();
+
+	jQuery(function($j) {
+
+    $j('.bascule-container .content-front .options .option, .address-container .col div').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+	$j('.who-is-container .col:nth-child(1), .contact-container .col:first-child').waypoint(function() {
+        $j(this).toggleClass('fadeInLeft animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.bascule-container .content-behinde .text, .who-is-container .col:nth-child(2), .contact-container .col:last-child').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+
+});
+
+</script>
+
+
+
 <?php get_footer(); ?>

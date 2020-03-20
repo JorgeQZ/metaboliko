@@ -31,14 +31,16 @@ $ID = get_the_ID();
 
     <div class="contenedor-item-global <?php if($i == 1) echo 'active' ?>">
         <div class="contenedor-info">
-            <div class="enc">
-                <?php echo $contenido['titulo']; ?>
-                <span>
+            <div class="cont-info">
+                <div class="enc">
                     <?php echo $contenido['titulo']; ?>
-                </span>
-            </div>
-            <div class="desc">
-                <?php echo $contenido['descripcion']; ?>
+                    <span>
+                        <?php echo $contenido['titulo']; ?>
+                    </span>
+                </div>
+                <div class="desc">
+                    <?php echo $contenido['descripcion']; ?>
+                </div>
             </div>
         </div>
         
@@ -530,4 +532,45 @@ $(document).ready(function() {
 
 
 });
+</script>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+
+<style>
+.contenedor-general-tenedor .contenedor-items-slider, .contenedor-general-tenedor .contenedor-info .cont-info, .contenedor-general-tenedor .contenedor-general-videos .contenedor-video, .contenedor-general-galeria .cont-galeria {
+    opacity: 0;
+}
+</style>
+
+<script>
+var $j = jQuery.noConflict();
+
+	jQuery(function($j) {
+
+    $j('.contenedor-general-tenedor .contenedor-general-videos .contenedor-video, .contenedor-general-galeria .cont-galeria').waypoint(function() {
+        $j(this).toggleClass('fadeInUp animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+	$j('.contenedor-general-tenedor .contenedor-info .cont-info').waypoint(function() {
+        $j(this).toggleClass('fadeInLeft animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.contenedor-general-tenedor .contenedor-items-slider').waypoint(function() {
+        $j(this).toggleClass('fadeInRight animated');
+    }, {
+        offset: '75%',
+        triggerOnce: true
+    });
+
+
+});
+
 </script>
