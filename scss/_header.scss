@@ -91,6 +91,11 @@
                         color: white;
                         position: relative;
                     }
+                    &.current-menu-item{
+                        a{
+                            font-weight: bold;
+                        }
+                    }
                     &.menu-item-has-children {
                         padding-right: 15px;
                         >a {

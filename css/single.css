@@ -30,7 +30,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: color-dodge;
   opacity: 0.6;
 }
 
@@ -427,4 +427,32 @@ header {
   background-size: cover;
   padding: 2rem;
   padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-banner .image_texto {
+    padding: 0 4rem;
+  }
+  .hero-banner .image_texto .col img {
+    width: 90%;
+    max-width: 475px;
+  }
+  .hero-banner .image_texto .col p {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .hero-banner .image_texto .col h1 {
+    font-size: 60px;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .hero-banner .image_texto .col:first-child {
+    width: 45%;
+  }
+  .hero-banner .image_texto .col:last-child {
+    width: 55%;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
 }

@@ -24,7 +24,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: color-dodge;
     opacity: 0.6;
   }
   .hero-banner .hero-title {
@@ -271,6 +271,9 @@
   .who-is-container .col .content .title p small {
     font-weight: bold;
     text-transform: uppercase;
+  }
+  .who-is-container .col .content .title p img {
+    display: none;
   }
   .who-is-container .col .content .desc {
     padding: 25px 0;
@@ -901,7 +904,7 @@
     background-image: url(../img/dr-fraga-bg.jpg);
     background-size: cover;
     background-position: center;
-    padding: 1rem 3.047rem 4rem 3.047rem;
+    /*padding: 1rem 3.047rem 4rem 3.047rem;*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -911,22 +914,27 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0 4rem;
   }
   .who-is-container .col {
     padding: 1rem;
   }
   .who-is-container .col:nth-child(1) {
-    width: 40%;
+    /*width: 40%;*/
+    width: 45%;
     max-width: 542px;
   }
   .who-is-container .col:nth-child(2) {
-    width: 60%;
+    /*width: 60%;*/
+    width: 55%;
     max-width: 780px;
   }
   .who-is-container .col .figure-container {
     position: relative;
-    padding: 25px;
-    width: 400px;
+    /*padding: 25px;
+                width: 400px;*/
+    padding: 25px 0;
+    width: 100%;
   }
   .who-is-container .col .figure-container .ring {
     width: 100%;
@@ -966,15 +974,31 @@
   .who-is-container .col .content .title {
     font-size: 65px;
     line-height: 65px;
+    position: relative;
+  }
+  .who-is-container .col .content .title p {
+    font-size: 60px;
+    line-height: 60px;
   }
   .who-is-container .col .content .title small {
     font-weight: bold;
     text-transform: uppercase;
   }
+  .who-is-container .col .content .title img {
+    position: absolute;
+    width: 500px;
+    left: -80px;
+    top: 78%;
+    display: block;
+  }
   .who-is-container .col .content .desc {
     padding: 25px 0;
     font-size: 30px;
     line-height: 32px;
+  }
+  .who-is-container .col .content .desc p {
+    font-size: 24px;
+    line-height: 26px;
   }
   .who-is-container .col .content .button {
     margin-top: 20px;

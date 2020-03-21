@@ -497,6 +497,9 @@ span.wpcf7-not-valid-tip {
     color: white;
     position: relative;
   }
+  header .menu-header-container > .menu > li.current-menu-item a {
+    font-weight: bold;
+  }
   header .menu-header-container > .menu > li.menu-item-has-children {
     padding-right: 15px;
   }
@@ -1070,6 +1073,10 @@ footer .column .widget-area .menu > li > a {
   text-decoration: none;
   font-size: 12px;
   line-height: 14px;
+}
+
+footer .column .widget-area .menu > li ul {
+  display: none;
 }
 
 .social-container {

@@ -47,16 +47,16 @@
     </div><!-- social-media -->
     <!-- carousel -->
     <div class="banner-carousel owl-carousel owl-theme">
-        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/banner.jpg'; ?>)">
+        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/home-banner2.jpg'; ?>)">
             <!-- overlay -->
             <div class="overlay"></div>
             <!-- overlay -->
         </div>
-        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/banner.jpg'; ?>)">
+        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/home-banner2.jpg'; ?>)">
             <!-- overlay -->
             <div class="overlay"></div><!-- overlay -->
         </div>
-        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/banner.jpg'; ?>)">
+        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/home-banner2.jpg'; ?>)">
             <!-- overlay -->
             <div class="overlay"></div><!-- overlay -->
         </div>
@@ -223,6 +223,7 @@
         <div class="content">
             <div class="title">
                 <?php echo $fraga['titulo']?>
+                <img src="<?php echo get_template_directory_uri().'/img/drfraga-line.jpg'?>" alt="">
             </div>
             <div class="desc">
                 <?php echo $fraga['descripcion']?>

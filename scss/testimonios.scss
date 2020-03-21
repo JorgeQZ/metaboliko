@@ -31,7 +31,7 @@
                 color: transparent;
                 -webkit-text-stroke-width: .5px;
                 -webkit-text-stroke-color: white;
-
+                opacity: .5;
             }
         }
         p.desc{
@@ -69,6 +69,7 @@
             color: transparent;
             -webkit-text-stroke-width: .5px;
             -webkit-text-stroke-color: #67ae3d;
+            opacity: .5;
         }
     }
     .cont-galeria{
@@ -113,7 +114,7 @@
 
 .contenedor-general-video{
     width: 100%;
-    background-image: url(../img/fondo-testimonios-video.jpg);
+    background-image: url(../img/fondo-testimonios-video2.jpg);
     background-size: cover;
     background-position: center;
 

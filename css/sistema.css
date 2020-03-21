@@ -78,6 +78,7 @@
   -webkit-text-stroke-color: white;
   font-size: 90px;
   line-height: 90px;
+  opacity: .5;
 }
 
 .contenedor-general-tenedor .contenedor-info .enc span p strong {

@@ -69,7 +69,7 @@ $ID = get_the_ID();
 
     ?>
 
-    <div class="contenedor-item-global <?php if($i == 1) echo 'active' ?>">
+    <div class="contenedor-item-global active">
         <div class="contenedor-general-cirugias">
             <div class="slider-cirugias">
                 <div class="cont-img">
@@ -479,9 +479,61 @@ $(document).ready(function() {
     });
 
 
+
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+    i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+var tech = getUrlParameter('cirugia');
+
+
+if(tech){
+    /*
+    $(".services-container .item").each(function(index){
+        if(index == tech){
+            $(this).addClass("active");
+        }
+        else{
+            $(this).removeClass("active");
+        }
+    });
+    */
+    $(".contenedor-item-global").each(function(index){
+        if(index == tech)
+        {
+            $(this).addClass("active");
+        }
+        else{
+            $(this).removeClass("active");
+        }
+    });
+}
+else{
+    $(".contenedor-item-global").each(function(index){
+        if(index == 0)
+        {
+            $(this).addClass("active");
+        }
+        else{
+            $(this).removeClass("active");
+        }
+    });
+}
+
+
 });
 </script>
-
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
