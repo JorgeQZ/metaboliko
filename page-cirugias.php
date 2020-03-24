@@ -551,7 +551,7 @@ else{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.contenedor-items-global .contenedor-items-slider, .slider-cirugias, .contenedor-general-video .contenedor-video{
+.contenedor-items-global .contenedor-items-slider, .slider-cirugias, .contenedor-general-video .contenedor-video, .hero-banner .hero-title{
     opacity: 0;
 }
 </style>
@@ -579,6 +579,13 @@ var $j = jQuery.noConflict();
         $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.hero-banner .hero-title').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
+    }, {
+        offset: '100%',
         triggerOnce: true
     });
 
