@@ -445,14 +445,15 @@
 }
 
 @media screen and (min-width: 1280px) {
-  header {
-    position: relative;
-    background: #00cae2;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #00cae2), color-stop(60%, #00aad0), to(#00aad0));
-    background: linear-gradient(0deg, #00cae2 4%, #00aad0 60%, #00aad0 100%);
-  }
   .logged_in .mt {
     top: 0px;
+  }
+  .blog header {
+    position: relative;
+    background: #00aad0;
+  }
+  .blog header .sub-menu {
+    background: #00aad0;
   }
   .blog-container {
     display: -webkit-box;

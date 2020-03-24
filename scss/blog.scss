@@ -402,14 +402,23 @@
 }
 
 @media screen and (min-width: 1280px) {
-  header {
-    position: relative;
-    background: rgb(0, 202, 226);
-    background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
-  }
   .logged_in {
     .mt {
       top: 0px;
+    }
+  }
+
+  .blog {
+    header {
+      position: relative;
+      background: rgba(0, 170, 208, 1);
+
+      // background: rgb(0, 202, 226);
+      // background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
+
+      .sub-menu {
+        background: rgba(0, 170, 208, 1);
+      }
     }
   }
   .blog-container {
