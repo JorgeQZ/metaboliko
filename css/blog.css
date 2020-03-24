@@ -110,7 +110,7 @@
     position: relative;
   }
   .blog-container .col .post-carousel .item .content .vermas span:before {
-    content: '';
+    content: "";
     width: 7px;
     height: 9px;
     background-image: url(../img/arrow.png);
@@ -120,9 +120,6 @@
     right: -12px;
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
-  }
-  .blog-container .col .post-carousel .item .content .vermas span:hover:before {
-    right: -15px;
   }
   .blog-container .col .grid {
     display: -webkit-box;
@@ -198,7 +195,7 @@
     font-weight: bold;
   }
   .blog-container .col .grid .item .content .vermas:before {
-    content: '';
+    content: "";
     width: 8px;
     height: 11px;
     background-image: url(../img/arrow.png);
@@ -208,9 +205,6 @@
     right: 5px;
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
-  }
-  .blog-container .col .grid .item .content .vermas:hover:before {
-    right: 3px;
   }
 }
 
@@ -312,6 +306,22 @@
     width: 120px;
     border: 1px solid white;
     text-align: center;
+    border: 0.5px solid white;
+    -webkit-box-shadow: 0 0 0 white;
+            box-shadow: 0 0 0 white;
+    text-align: center;
+    background: transparent;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .blog-container .col .post-carousel .item .content .vermas:hover {
+    background: #00aad0;
+    border: 0.5px solid white;
+    -webkit-box-shadow: 0 0 4px 1px white;
+            box-shadow: 0 0 4px 1px white;
+  }
+  .blog-container .col .post-carousel .item .content .vermas:hover span:before {
+    right: -15px;
   }
   .blog-container .col .post-carousel .item .content .vermas a {
     color: white;
@@ -323,7 +333,7 @@
     position: relative;
   }
   .blog-container .col .post-carousel .item .content .vermas span:before {
-    content: '';
+    content: "";
     width: 7px;
     height: 9px;
     background-image: url(../img/arrow.png);
@@ -403,6 +413,16 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin-top: 10px;
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 4px 1px transparent;
+            box-shadow: 0 0 4px 1px transparent;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .blog-container .col .grid .item .content .vermas:hover {
+    background: #00aad0;
+    -webkit-box-shadow: 0 0 7px 3px white;
+            box-shadow: 0 0 7px 3px white;
   }
   .blog-container .col .grid .item .content .vermas a {
     font-size: 13px;
@@ -411,9 +431,9 @@
     font-weight: bold;
   }
   .blog-container .col .grid .item .content .vermas:before {
-    content: '';
+    content: "";
     width: 8px;
-    height: 11px;
+    height: 10px;
     background-image: url(../img/arrow.png);
     background-size: cover;
     position: absolute;
@@ -421,9 +441,6 @@
     right: 5px;
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
-  }
-  .blog-container .col .grid .item .content .vermas:hover:before {
-    right: 3px;
   }
 }
 
@@ -535,8 +552,6 @@
     padding: 7px 10px;
     padding-right: 15px;
     width: 120px;
-    border: 1px solid white;
-    text-align: center;
   }
   .blog-container .col .post-carousel .item .content .vermas a {
     color: white;
@@ -548,7 +563,7 @@
     position: relative;
   }
   .blog-container .col .post-carousel .item .content .vermas span:before {
-    content: '';
+    content: "";
     width: 7px;
     height: 9px;
     background-image: url(../img/arrow.png);
@@ -558,9 +573,6 @@
     right: -12px;
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
-  }
-  .blog-container .col .post-carousel .item .content .vermas span:hover:before {
-    right: -15px;
   }
   .blog-container .col .grid {
     display: -webkit-box;
@@ -613,9 +625,9 @@
   }
   .blog-container .col .grid .item .content .vermas {
     position: relative;
-    width: 70px;
-    height: 19px;
-    padding: 0;
+    width: 85px;
+    height: 30px;
+    padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -636,18 +648,15 @@
     font-weight: bold;
   }
   .blog-container .col .grid .item .content .vermas:before {
-    content: '';
-    width: 8px;
-    height: 11px;
+    content: "";
+    width: 7px;
+    height: 10px;
     background-image: url(../img/arrow.png);
     background-size: cover;
     position: absolute;
-    top: 3px;
-    right: 5px;
+    top: 8.5px;
+    right: 10px;
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
-  }
-  .blog-container .col .grid .item .content .vermas:hover:before {
-    right: 3px;
   }
 }

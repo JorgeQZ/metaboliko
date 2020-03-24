@@ -117,22 +117,22 @@
     position: relative;
   }
   .hero-banner .social-media .links:before {
-    content: '';
+    content: "";
     width: 1px;
     height: calc(65vh - 230px);
     background: #fff;
     bottom: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
   }
   .hero-banner .social-media .links:after {
-    content: '';
+    content: "";
     width: 1px;
     height: calc(65vh - 230px);
     background: #fff;
     top: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
   }
   .hero-banner .social-media .links a {
     display: -webkit-box;
@@ -223,7 +223,7 @@
     color: white;
     margin-top: auto;
     position: relative;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
   .posts-container .col a .text .title {
     font-size: 24px;
@@ -336,67 +336,6 @@
   .address-container .col .desc .subcol a {
     color: white;
   }
-  .contact-container {
-    background-position: center;
-    background-size: cover;
-    padding: 4rem 1.047rem;
-    background-image: url(../img/contact-bg.jpg);
-    color: white;
-  }
-  .contact-container .col {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 30px;
-  }
-  .contact-container .col .content {
-    font-size: 30px;
-    line-height: 32px;
-    font-weight: 100;
-    font-family: "Sukhumvit Set";
-  }
-  .contact-container .col .form .form-control {
-    float: left;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  .contact-container .col .form .form-control label {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: bold;
-    display: block;
-  }
-  .contact-container .col .form .form-control input {
-    width: 100%;
-    border: none;
-    font-size: 16px;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    background-color: #fefdfd;
-  }
-  .contact-container .col .form .form-control input[type=submit] {
-    width: auto;
-    background-color: #000;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 5px 25px;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  .contact-container .col .form .form-control.full {
-    width: 100%;
-  }
-  .contact-container .col .form .form-control.half {
-    width: 100%;
-  }
-  .contact-container .col .form .form-control.third {
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: 414px) {
@@ -493,22 +432,22 @@
     position: relative;
   }
   .hero-banner .social-media .links:before {
-    content: '';
+    content: "";
     width: 1px;
     height: calc(65vh - 230px);
     background: #fff;
     bottom: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
   }
   .hero-banner .social-media .links:after {
-    content: '';
+    content: "";
     width: 1px;
     height: calc(65vh - 230px);
     background: #fff;
     top: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
   }
   .hero-banner .social-media .links a {
     display: -webkit-box;
@@ -593,7 +532,7 @@
     color: white;
     margin-top: auto;
     position: relative;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     height: 100%;
   }
@@ -601,14 +540,14 @@
     font-size: 24px;
     line-height: 24px;
     text-transform: uppercase;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     margin-bottom: 10px;
     opacity: 1;
     position: absolute;
     bottom: 0;
     width: calc(100% - 2rem);
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .posts-container .col a .text .desc {
     font-size: 18px;
@@ -621,7 +560,7 @@
     position: absolute;
     width: calc(100% - 2rem);
     bottom: -30%;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .posts-container .col a:hover .text .title {
     opacity: 0;
@@ -752,73 +691,6 @@
   .address-container .col .desc .subcol a {
     color: white;
   }
-  .contact-container {
-    padding: 4rem 3.047rem;
-  }
-  .contact-container .col {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contact-container .col .content {
-    font-size: 30px;
-    line-height: 32px;
-    font-weight: 100;
-    font-family: "Sukhumvit Set";
-    max-width: 600px;
-  }
-  .contact-container .col .form .form-control {
-    float: left;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  .contact-container .col .form .form-control label {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: bold;
-    display: block;
-  }
-  .contact-container .col .form .form-control input {
-    width: 100%;
-    border: none;
-    font-size: 16px;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    background-color: #fefdfd;
-  }
-  .contact-container .col .form .form-control input[type=submit] {
-    width: auto;
-    background-color: #000;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 5px 25px;
-    font-size: 25px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    cursor: pointer;
-  }
-  .contact-container .col .form .form-control.full {
-    width: 100%;
-  }
-  .contact-container .col .form .form-control.half {
-    width: 47.5%;
-    margin-right: 5%;
-  }
-  .contact-container .col .form .form-control.half:nth-of-type(2n + 1) {
-    margin-right: 0;
-  }
-  .contact-container .col .form .form-control.third {
-    width: 30%;
-    margin-right: 5%;
-  }
-  .contact-container .col .form .form-control.third:nth-of-type(3n) {
-    margin-right: 0;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -862,7 +734,7 @@
     color: white;
     margin-top: auto;
     position: relative;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     height: 100%;
   }
@@ -870,14 +742,14 @@
     font-size: 24px;
     line-height: 24px;
     text-transform: uppercase;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     margin-bottom: 10px;
     opacity: 1;
     position: absolute;
     bottom: 0;
     width: calc(100% - 2rem);
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .posts-container .col a .text .desc {
     font-size: 18px;
@@ -890,7 +762,7 @@
     position: absolute;
     width: calc(100% - 2rem);
     bottom: -30%;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .posts-container .col a:hover .text .title {
     opacity: 0;
@@ -1055,88 +927,6 @@
   }
   .address-container .col .desc .subcol a {
     color: white;
-  }
-  .contact-container {
-    background-position: center;
-    background-size: cover;
-    padding: 4rem 3.047rem;
-    background-image: url(../img/contact-bg.jpg);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    color: white;
-  }
-  .contact-container .col {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contact-container .col .content {
-    font-size: 30px;
-    line-height: 32px;
-    font-weight: 100;
-    font-family: "Sukhumvit Set";
-    padding-right: 1rem;
-  }
-  .contact-container .col .form .form-control {
-    float: left;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  .contact-container .col .form .form-control label {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: bold;
-    display: block;
-  }
-  .contact-container .col .form .form-control input {
-    width: 100%;
-    border: none;
-    font-size: 16px;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    background-color: #fefdfd;
-  }
-  .contact-container .col .form .form-control input[type=submit] {
-    width: auto;
-    background-color: #000;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 5px 25px;
-    font-size: 25px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    cursor: pointer;
-  }
-  .contact-container .col .form .form-control input[type=submit]:hover {
-    color: black;
-    background-color: #fff;
-  }
-  .contact-container .col .form .form-control.full {
-    width: 100%;
-  }
-  .contact-container .col .form .form-control.half {
-    width: 47.5%;
-    margin-right: 5%;
-  }
-  .contact-container .col .form .form-control.half:nth-of-type(2n + 1) {
-    margin-right: 0;
-  }
-  .contact-container .col .form .form-control.third {
-    width: 30%;
-    margin-right: 5%;
-  }
-  .contact-container .col .form .form-control.third:nth-of-type(3n) {
-    margin-right: 0;
   }
 }
 
