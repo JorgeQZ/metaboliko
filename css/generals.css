@@ -645,7 +645,9 @@ span.wpcf7-not-valid-tip {
   }
   header .menu-header-container > .menu > li > .sub-menu {
     max-height: 0;
-    min-width: 140px;
+    min-width: 170px;
+    max-width: 400px;
+    width: 100%;
     overflow: hidden;
     position: absolute;
     padding: 0 10px;
@@ -660,6 +662,7 @@ span.wpcf7-not-valid-tip {
     transition: all 0.3s ease-in-out;
   }
   header .menu-header-container > .menu > li > .sub-menu li {
+    position: relative;
     list-style: none;
     font-size: 14px;
     text-align: left;

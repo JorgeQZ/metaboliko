@@ -218,8 +218,6 @@
             padding-right: 0;
           }
           &:hover {
-            > a {
-            }
             .sub-menu {
               max-height: 1000px;
               transform: translateY(-0px);
@@ -228,8 +226,9 @@
           }
           > .sub-menu {
             max-height: 0;
-            min-width: 140px;
-            // max-width: 400px;
+            min-width: 170px;
+            max-width: 400px;
+            width: 100%;
             overflow: hidden;
             position: absolute;
             padding: 0 10px;
@@ -242,6 +241,7 @@
             transition: all 0.3s ease-in-out;
 
             li {
+              position: relative;
               list-style: none;
               font-size: 14px;
               text-align: left;
