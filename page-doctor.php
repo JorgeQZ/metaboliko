@@ -35,7 +35,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.content-dr .content, .address-container .col div, .contact-container .col{
+.content-dr .content, .address-container .col div, .contact-container .col, .hero-banner .image_texto{
     opacity: 0;
 }
 </style>
@@ -45,8 +45,8 @@ var $j = jQuery.noConflict();
 
 	jQuery(function($j) {
 
-    $j('.address-container .col div').waypoint(function() {
-        $j(this).toggleClass('fadeInUp animated');
+    $j('.address-container .col div, .hero-banner .image_texto').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
@@ -54,14 +54,14 @@ var $j = jQuery.noConflict();
 
 
 	$j('.content-dr .content, .contact-container .col:first-child').waypoint(function() {
-        $j(this).toggleClass('fadeInLeft animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
 
     $j('.contact-container .col:last-child').waypoint(function() {
-        $j(this).toggleClass('fadeInRight animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true

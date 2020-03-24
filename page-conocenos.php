@@ -49,7 +49,7 @@ if($rows) : ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.address-container .col div, .video-container .title, .cont-video-carousel, .contact-container .col{
+.address-container .col div, .video-container .title, .cont-video-carousel, .contact-container .col, .hero-banner .content_text{
     opacity: 0;
 }
 </style>
@@ -59,8 +59,8 @@ var $j = jQuery.noConflict();
 
 	jQuery(function($j) {
 
-    $j('.address-container .col div, .video-container .title, .cont-video-carousel').waypoint(function() {
-        $j(this).toggleClass('fadeInUp animated');
+    $j('.address-container .col div, .video-container .title, .cont-video-carousel, .hero-banner .content_text').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
@@ -68,14 +68,14 @@ var $j = jQuery.noConflict();
 
 
 	$j('.contact-container .col:first-child').waypoint(function() {
-        $j(this).toggleClass('fadeInLeft animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
 
     $j('.contact-container .col:last-child').waypoint(function() {
-        $j(this).toggleClass('fadeInRight animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true

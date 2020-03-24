@@ -253,7 +253,7 @@ var $j = jQuery.noConflict();
 	jQuery(function($j) {
 
     $j('.contenedor-general-galeria p.enc, .contenedor-general-galeria .cont-galeria, .contenedor-general-video .contenedor-video').waypoint(function() {
-        $j(this).toggleClass('fadeInUp animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
@@ -267,7 +267,7 @@ var $j = jQuery.noConflict();
     });
 */
     $j('.contenedor-general-cirugias .cont-cirugias').waypoint(function() {
-        $j(this).toggleClass('fadeInRight animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
