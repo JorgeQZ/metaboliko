@@ -24,7 +24,8 @@ $ID = get_the_ID();
 
     ?>
 
-    <div class="item-slider" style="background-image: url(<?php echo $contenido['fondo_boton_item']; ?>);">
+    <div class="item-slider active">
+        <div class="mask" style="background-image: url(<?php echo $contenido['fondo_boton_item']; ?>);"></div>
         <?php echo $contenido['titulo']; ?>
     </div>
    
@@ -473,6 +474,8 @@ $(document).ready(function() {
 
     $(".contenedor-items-global .contenedor-items-slider .item-slider").each(function(index){
         $(this).click(function(){
+            $(".contenedor-items-global .contenedor-items-slider .item-slider").removeClass("active");
+            $(this).addClass("active");
             $(".contenedor-item-global").removeClass("active");
             $(".contenedor-item-global").eq(index).addClass("active");
         });
@@ -499,17 +502,16 @@ var tech = getUrlParameter('cirugia');
 
 
 if(tech){
-    /*
-    $(".services-container .item").each(function(index){
-        if(index == tech){
+    $(".contenedor-item-global").each(function(index){
+        if(index == tech)
+        {
             $(this).addClass("active");
         }
         else{
             $(this).removeClass("active");
         }
     });
-    */
-    $(".contenedor-item-global").each(function(index){
+    $(".contenedor-items-global .contenedor-items-slider .item-slider").each(function(index){
         if(index == tech)
         {
             $(this).addClass("active");
@@ -529,6 +531,15 @@ else{
             $(this).removeClass("active");
         }
     });
+    $(".contenedor-items-global .contenedor-items-slider .item-slider").each(function(index){
+        if(index == 0)
+        {
+            $(this).addClass("active");
+        }
+        else{
+            $(this).removeClass("active");
+        }
+    });
 }
 
 
@@ -540,7 +551,7 @@ else{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.contenedor-items-global .contenedor-items-slider, .contenedor-general-cirugias .slider-cirugias .cont-img, .contenedor-general-cirugias .slider-cirugias .cont-info, .contenedor-general-video .contenedor-video{
+.contenedor-items-global .contenedor-items-slider, .slider-cirugias, .contenedor-general-video .contenedor-video{
     opacity: 0;
 }
 </style>
@@ -551,21 +562,21 @@ var $j = jQuery.noConflict();
 	jQuery(function($j) {
 
     $j('.contenedor-general-video .contenedor-video').waypoint(function() {
-        $j(this).toggleClass('fadeInUp animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
 
-	$j('.contenedor-general-cirugias .slider-cirugias .cont-img').waypoint(function() {
-        $j(this).toggleClass('fadeInLeft animated');
+	$j('.slider-cirugias').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
 
-    $j('.contenedor-items-global .contenedor-items-slider, .contenedor-general-cirugias .slider-cirugias .cont-info').waypoint(function() {
-        $j(this).toggleClass('fadeInRight animated');
+    $j('.contenedor-items-global .contenedor-items-slider').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
