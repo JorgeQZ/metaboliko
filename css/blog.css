@@ -421,8 +421,8 @@
   }
   .blog-container .col .grid .item .content .vermas:hover {
     background: #00aad0;
-    -webkit-box-shadow: 0 0 4px 1px white;
-            box-shadow: 0 0 4px 1px white;
+    -webkit-box-shadow: 0 0 7px 3px white;
+            box-shadow: 0 0 7px 3px white;
   }
   .blog-container .col .grid .item .content .vermas a {
     font-size: 13px;

@@ -843,7 +843,7 @@ span.wpcf7-not-valid-tip {
             box-sizing: border-box;
     background-color: #fefdfd;
   }
-  .contact-container .col .form .form-control input[type=submit] {
+  .contact-container .col .form .form-control input[type="submit"] {
     width: auto;
     background-color: #000;
     color: white;
@@ -912,7 +912,7 @@ span.wpcf7-not-valid-tip {
             box-sizing: border-box;
     background-color: #fefdfd;
   }
-  .contact-container .col .form .form-control input[type=submit] {
+  .contact-container .col .form .form-control input[type="submit"] {
     width: auto;
     background-color: #000;
     color: white;
@@ -922,7 +922,14 @@ span.wpcf7-not-valid-tip {
     font-size: 25px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    -webkit-box-shadow: 0 0 0 0 transparent;
+            box-shadow: 0 0 0 0 transparent;
     cursor: pointer;
+  }
+  .contact-container .col .form .form-control input[type="submit"]:hover {
+    background: #00aad0;
+    -webkit-box-shadow: 0 0 6px 1px white;
+            box-shadow: 0 0 6px 1px white;
   }
   .contact-container .col .form .form-control.full {
     width: 100%;
@@ -993,7 +1000,7 @@ span.wpcf7-not-valid-tip {
             box-sizing: border-box;
     background-color: #fefdfd;
   }
-  .contact-container .col .form .form-control input[type=submit] {
+  .contact-container .col .form .form-control input[type="submit"] {
     width: auto;
     background-color: #000;
     color: white;
@@ -1004,10 +1011,6 @@ span.wpcf7-not-valid-tip {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     cursor: pointer;
-  }
-  .contact-container .col .form .form-control input[type=submit]:hover {
-    color: black;
-    background-color: #fff;
   }
   .contact-container .col .form .form-control.full {
     width: 100%;
