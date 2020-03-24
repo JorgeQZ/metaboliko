@@ -614,8 +614,22 @@ span.wpcf7-not-valid-tip {
     text-transform: uppercase;
     color: white;
     position: relative;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  header .menu-header-container > .menu > li > a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: inherit;
+    transition: inherit;
+  }
+  header .menu-header-container > .menu > li > a:hover:after {
+    background-color: rgba(255, 255, 255, 0.7);
   }
   header .menu-header-container > .menu > li.menu-item-has-children {
     padding-right: 0px;
