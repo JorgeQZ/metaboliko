@@ -1,5 +1,5 @@
 $ = jQuery;
-$.fn.CustomSelect = function(placeholder, attrContainer, attrUl, attrLi) {
+$.fn.CustomSelect = function (placeholder, attrContainer, attrUl, attrLi) {
     var CustomSelect = this[0];
     var IdCustomSelect = CustomSelect.id;
 
@@ -44,7 +44,7 @@ $.fn.CustomSelect = function(placeholder, attrContainer, attrUl, attrLi) {
         });
     }
 
-    UlOptions.forEach(function(item) {
+    UlOptions.forEach(function (item) {
         $("<li></li>")
             .attr({
                 class: "LiOption",
@@ -57,8 +57,8 @@ $.fn.CustomSelect = function(placeholder, attrContainer, attrUl, attrLi) {
 
     $("select#" + IdCustomSelect).remove();
 
-    $("#" + IdContainer).click(function() {
-        $("#UlOptions-" + IdCustomSelect).slideToggle("fast");
+    $("#" + IdContainer).click(function () {
+        $("#UlOptions-" + IdCustomSelect).slideToggle("slow");
         if ($("#" + IdContainer).hasClass('spinArrow')) {
             $("#" + IdContainer).removeClass('spinArrow');
         } else {
@@ -70,7 +70,7 @@ $.fn.CustomSelect = function(placeholder, attrContainer, attrUl, attrLi) {
     if (attrUl) $("#" + IdContainer + " ul").css(attrUl);
     if (attrLi) $("#" + IdContainer + " ul li").css(attrLi);
 
-    $(".LiOption").click(function() {
+    $(".LiOption").click(function () {
         $("." + IdContainer).removeClass('spinArrow');
 
         $("#I" + IdCustomSelect).val($(this).attr("value"));

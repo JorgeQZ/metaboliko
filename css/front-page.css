@@ -117,22 +117,22 @@
     position: relative;
   }
   .hero-banner .social-media .links:before {
-    content: '';
+    content: "";
     width: 1px;
     height: calc(65vh - 230px);
     background: #fff;
     bottom: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
   }
   .hero-banner .social-media .links:after {
-    content: '';
+    content: "";
     width: 1px;
     height: calc(65vh - 230px);
     background: #fff;
     top: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
   }
   .hero-banner .social-media .links a {
     display: -webkit-box;
@@ -223,7 +223,7 @@
     color: white;
     margin-top: auto;
     position: relative;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
   .posts-container .col a .text .title {
     font-size: 24px;
@@ -378,7 +378,7 @@
             box-sizing: border-box;
     background-color: #fefdfd;
   }
-  .contact-container .col .form .form-control input[type=submit] {
+  .contact-container .col .form .form-control input[type="submit"] {
     width: auto;
     background-color: #000;
     color: white;
@@ -493,22 +493,22 @@
     position: relative;
   }
   .hero-banner .social-media .links:before {
-    content: '';
+    content: "";
     width: 1px;
     height: calc(65vh - 230px);
     background: #fff;
     bottom: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
   }
   .hero-banner .social-media .links:after {
-    content: '';
+    content: "";
     width: 1px;
     height: calc(65vh - 230px);
     background: #fff;
     top: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
   }
   .hero-banner .social-media .links a {
     display: -webkit-box;
@@ -593,7 +593,7 @@
     color: white;
     margin-top: auto;
     position: relative;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     height: 100%;
   }
@@ -601,14 +601,14 @@
     font-size: 24px;
     line-height: 24px;
     text-transform: uppercase;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     margin-bottom: 10px;
     opacity: 1;
     position: absolute;
     bottom: 0;
     width: calc(100% - 2rem);
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .posts-container .col a .text .desc {
     font-size: 18px;
@@ -621,7 +621,7 @@
     position: absolute;
     width: calc(100% - 2rem);
     bottom: -30%;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .posts-container .col a:hover .text .title {
     opacity: 0;
@@ -790,7 +790,7 @@
             box-sizing: border-box;
     background-color: #fefdfd;
   }
-  .contact-container .col .form .form-control input[type=submit] {
+  .contact-container .col .form .form-control input[type="submit"] {
     width: auto;
     background-color: #000;
     color: white;
@@ -862,7 +862,7 @@
     color: white;
     margin-top: auto;
     position: relative;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     height: 100%;
   }
@@ -870,14 +870,14 @@
     font-size: 24px;
     line-height: 24px;
     text-transform: uppercase;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     margin-bottom: 10px;
     opacity: 1;
     position: absolute;
     bottom: 0;
     width: calc(100% - 2rem);
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .posts-container .col a .text .desc {
     font-size: 18px;
@@ -890,7 +890,7 @@
     position: absolute;
     width: calc(100% - 2rem);
     bottom: -30%;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   .posts-container .col a:hover .text .title {
     opacity: 0;
@@ -1105,7 +1105,7 @@
             box-sizing: border-box;
     background-color: #fefdfd;
   }
-  .contact-container .col .form .form-control input[type=submit] {
+  .contact-container .col .form .form-control input[type="submit"] {
     width: auto;
     background-color: #000;
     color: white;
@@ -1117,7 +1117,7 @@
     transition: all 0.3s;
     cursor: pointer;
   }
-  .contact-container .col .form .form-control input[type=submit]:hover {
+  .contact-container .col .form .form-control input[type="submit"]:hover {
     color: black;
     background-color: #fff;
   }
