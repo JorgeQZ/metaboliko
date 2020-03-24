@@ -1,41 +1,392 @@
 <?php
 /**
-* Template Name: Testimonios
+* Template Name: Sistema
 * 
 */
 ?>
 <?php get_header(); 
 $ID = get_the_ID();
-$seccion_2 = get_field('seccion_2');	
-
 ?>
 
 <!-- Hero -->
 <?php get_template_part('template-parts/banner','hero') ?>
 <!-- Hero -->
 
-<div class="contenedor-general-cirugias">
-    <div class="cont-cirugias">
-        <p class="enc">
-            <?php echo $seccion_2['titulo']; ?>
-            <span>
-                <?php echo $seccion_2['titulo']; ?>
-            </span>
-        </p>
-        <p class="desc">
-            <?php echo $seccion_2['descripcion']; ?>
-        </p>
+<div class="contenedor-general-tenedor">
+    <img src="<?php echo get_template_directory_uri().'/img/fondo-tenedor.jpg'; ?>" alt="">
+
+<div class="contenedor-items-global">
+
+
+    <?php if( have_rows('sistema', $ID) ): 
+    $i = 1;    
+    ?>
+
+    <?php while( have_rows('sistema', $ID) ): the_row(); 
+        $contenido = get_sub_field('contenido');	
+        $galeria_videos = get_sub_field('galeria_videos');	
+
+    ?>
+
+
+    <div class="contenedor-item-global <?php if($i == 1) echo 'active' ?>">
+        <div class="contenedor-info">
+            <div class="cont-info">
+                <div class="enc">
+                    <?php echo $contenido['titulo']; ?>
+                    <span>
+                        <?php echo $contenido['titulo']; ?>
+                    </span>
+                </div>
+                <div class="desc">
+                    <?php echo $contenido['descripcion']; ?>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contenedor-general-videos">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="video-carousel owl-carousel owl-theme slider-videos" nav="true">
+
+                <?php
+                    if( have_rows('galeria_videos') ): while ( have_rows('galeria_videos') ) : the_row(); 
+                            ?>
+                            <!--
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen el SISTEMA PROTEINADO logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                            -->
+                                <!-- Item -->
+
+                                <div class="cont-item">
+                                    <div class="customVideo media">
+                                        <video>
+                                            <source src="<?php echo get_sub_field('video'); ?>" preload>
+                                            Your browser does not support the video tag.
+                                        </video>                                    
+                                    </div>
+                                    <div class="info">
+                                        <p>
+                                            <?php echo get_sub_field('descripcion_video'); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Item -->
+
+                            <?php
+                    endwhile; endif;
+                ?>
+
+                <!--
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen el SISTEMA PROTEINADO logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen el SISTEMA PROTEINADO logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <?php
+    $i++; 
+    endwhile; ?>
+    <?php endif; ?>
+
+<!--
+    <div class="contenedor-item-global active">
+        <div class="contenedor-info">
+            <p class="enc">
+                    <small>Sistema</small> <br> Proteinado
+                    <span>
+                        <small>Sistema</small> <br> Proteinado
+                    </span>
+                </p>
+            <p class="desc">
+                El Sistema Proteinado es un tratamiento médico estricto, en el cual los pacientes 
+                entran en un estado metabólico controlado bajo estricta supervisión médica, 
+                logrando que su cuerpo gaste la GRASA almacenada en su cuerpo como fuente de energía. 
+                <br> <br>
+                Este cambio metabólico tiene como fin que el paciente pierda peso sin tener hambre, 
+                pero lo más importante viene después, ya que el paciente debe aprender a comer en 
+                forma intuitiva, es decir, en base a lo que haga en su día a día y en este proceso 
+                subir masa muscular con el fin de que el músculo le permita quemar más calorías 
+                y sea mas facíl mantener su peso ideal.
+            </p>
+        </div>
+        
+        <div class="contenedor-general-videos">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen el SISTEMA PROTEINADO logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen el SISTEMA PROTEINADO logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="contenedor-item-global">
+        <div class="contenedor-info">
+            <p class="enc">
+                    <small>Masa</small> <br> Muscular
+                    <span>
+                        <small>Masa</small> <br> Muscular
+                    </span>
+                </p>
+            <p class="desc">
+                La masa muscular es un tratamiento médico estricto, en el cual los pacientes 
+                entran en un estado metabólico controlado bajo estricta supervisión médica, 
+                logrando que su cuerpo gaste la GRASA almacenada en su cuerpo como fuente de energía. 
+                <br> <br>
+                Este cambio metabólico tiene como fin que el paciente pierda peso sin tener hambre, 
+                pero lo más importante viene después, ya que el paciente debe aprender a comer en 
+                forma intuitiva, es decir, en base a lo que haga en su día a día y en este proceso 
+                subir masa muscular con el fin de que el músculo le permita quemar más calorías 
+                y sea mas facíl mantener su peso ideal.
+            </p>
+        </div>
+        
+        <div class="contenedor-general-videos">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-item-global">
+        <div class="contenedor-info">
+            <p class="enc">
+                    <small>Mejora de</small> <br> Imagen
+                    <span>
+                        <small>Mejora de</small> <br> Imagen
+                    </span>
+                </p>
+            <p class="desc">
+                La masa muscular es un tratamiento médico estricto, en el cual los pacientes 
+                entran en un estado metabólico controlado bajo estricta supervisión médica, 
+                logrando que su cuerpo gaste la GRASA almacenada en su cuerpo como fuente de energía. 
+                <br> <br>
+                Este cambio metabólico tiene como fin que el paciente pierda peso sin tener hambre, 
+                pero lo más importante viene después, ya que el paciente debe aprender a comer en 
+                forma intuitiva, es decir, en base a lo que haga en su día a día y en este proceso 
+                subir masa muscular con el fin de que el músculo le permita quemar más calorías 
+                y sea mas facíl mantener su peso ideal.
+            </p>
+        </div>
+        
+        <div class="contenedor-general-videos">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-item-global">
+        <div class="contenedor-info">
+            <p class="enc">
+                    <small>Definición</small> <br> Muscular
+                    <span>
+                        <small>Definición</small> <br> Muscular
+                    </span>
+                </p>
+            <p class="desc">
+                La masa muscular es un tratamiento médico estricto, en el cual los pacientes 
+                entran en un estado metabólico controlado bajo estricta supervisión médica, 
+                logrando que su cuerpo gaste la GRASA almacenada en su cuerpo como fuente de energía. 
+                <br> <br>
+                Este cambio metabólico tiene como fin que el paciente pierda peso sin tener hambre, 
+                pero lo más importante viene después, ya que el paciente debe aprender a comer en 
+                forma intuitiva, es decir, en base a lo que haga en su día a día y en este proceso 
+                subir masa muscular con el fin de que el músculo le permita quemar más calorías 
+                y sea mas facíl mantener su peso ideal.
+            </p>
+        </div>
+        
+        <div class="contenedor-general-videos">
+            <div class="contenedor-video">
+                <div id="slider-videos" class="owl-carousel owl-theme slider-videos">
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cont-item">
+                        <div class="media">
+                            <img src="<?php echo get_template_directory_uri().'/img/sistema-video.jpg'; ?>" alt="">
+                        </div>
+                        <div class="info">
+                            <p>
+                            En resumen la MASA MUSCULAR logra hacer que el paciente pierda grasa sin tener hambre para después 
+                            aprender a comer en forma intuitiva mientras sube su masa muscular en las areas que mayormente le benefician, 
+                            por ejemplo en una mujer pierna y nalga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+</div>
+
+    <div class="contenedor-items-slider">
+
+    <?php if( have_rows('sistema', $ID) ): 
+    $i = 1;    
+    ?>
+
+    <?php while( have_rows('sistema', $ID) ): the_row(); 
+        $contenido = get_sub_field('contenido');	
+        $galeria_videos = get_sub_field('galeria_videos');	
+
+    ?>
+
+    <div class="item-slider <?php if($i == 1) echo 'active' ?>">
+        <div class="mask" style="background-image: url(<?php echo $contenido['fondo_boton_item']; ?>);"></div>
+        <?php echo $contenido['titulo']; ?>
+    </div>
+
+
+    <?php
+    endwhile; ?>
+    <?php endif; ?>
+
+<!--
+        <div class="item-slider" style="background-image: url(<?php echo get_template_directory_uri().'/img/item-slidersistema.jpg'; ?>);">
+            <p>
+            Perder <br> <span>Peso</span>
+            </p>
+        </div>
+        <div class="item-slider" style="background-image: url(<?php echo get_template_directory_uri().'/img/item2-slidersistema.jpg'; ?>);">
+            <p>
+            Incremento de <br> <span>Masa Muscular</span>
+            </p>
+        </div>
+        <div class="item-slider" style="background-image: url(<?php echo get_template_directory_uri().'/img/item3-slidersistema.jpg'; ?>);">
+            <p>
+            Mejora de <br> <span>Imagen</span>
+            </p>
+        </div>
+        <div class="item-slider" style="background-image: url(<?php echo get_template_directory_uri().'/img/item4-slidersistema.jpg'; ?>);">
+            <p>
+            Definición <br> <span>Muscular</span>
+            </p>
+        </div>
+-->
     </div>
 </div>
 
 
 <div class="contenedor-general-galeria">
-    <p class="enc">
-        Galería
-        <span>
-            Galería
-        </span>
-    </p>
     <div class="cont-galeria">
         <div id="slider-galeria" class="owl-carousel owl-theme">
 
@@ -59,7 +410,7 @@ $seccion_2 = get_field('seccion_2');
                             <img src="<?php echo $imagen ?>" alt="">
                         </div>
                         <?php
-                        if($i == 8)
+                        if($i == 10)
                         {
                         ?>
                         </div>
@@ -67,7 +418,7 @@ $seccion_2 = get_field('seccion_2');
                         }
                         ?>
                     <?php
-                    if($i < 8) 
+                    if($i < 10) 
                     $i++;
                     else
                     $i = 1 
@@ -82,8 +433,7 @@ $seccion_2 = get_field('seccion_2');
                     <?php
                     }
                     ?>
-
-        <!--
+<!--            
             <div class="cont-slide">
                 <div class="cont-img">
                     <img src="<?php echo get_template_directory_uri().'/img/img-galeria.jpg'; ?>" alt="">
@@ -109,77 +459,15 @@ $seccion_2 = get_field('seccion_2');
                 <div class="cont-img">
                     <img src="<?php echo get_template_directory_uri().'/img/img-galeria2.jpg'; ?>" alt="">
                 </div>
-            </div>
-            <div class="cont-slide">
                 <div class="cont-img">
                     <img src="<?php echo get_template_directory_uri().'/img/img-galeria3.jpg'; ?>" alt="">
                 </div>
                 <div class="cont-img">
                     <img src="<?php echo get_template_directory_uri().'/img/img-galeria.jpg'; ?>" alt="">
                 </div>
-                <div class="cont-img">
-                    <img src="<?php echo get_template_directory_uri().'/img/img-galeria2.jpg'; ?>" alt="">
-                </div>
-                <div class="cont-img">
-                    <img src="<?php echo get_template_directory_uri().'/img/img-galeria3.jpg'; ?>" alt="">
-                </div>
-                <div class="cont-img">
-                    <img src="<?php echo get_template_directory_uri().'/img/img-galeria.jpg'; ?>" alt="">
-                </div>
-                <div class="cont-img">
-                    <img src="<?php echo get_template_directory_uri().'/img/img-galeria2.jpg'; ?>" alt="">
-                </div>
-                <div class="cont-img">
-                    <img src="<?php echo get_template_directory_uri().'/img/img-galeria3.jpg'; ?>" alt="">
-                </div>
-                <div class="cont-img">
-                    <img src="<?php echo get_template_directory_uri().'/img/img-galeria.jpg'; ?>" alt="">
-                </div>
-            </div>
-        -->
-        </div>
-    </div>
-</div>
 
-
-<div class="contenedor-general-video">
-    <div class="contenedor-video">
-        <div id="slider-videos" class="video-carousel owl-carousel owl-theme" nav="true" dots="true">
-
-                <?php if( have_rows('galeria_videos', $ID) ): ?>
-
-                <?php while( have_rows('galeria_videos', $ID) ): the_row(); 
-                    $video = get_sub_field('video');
-                ?>
-<!--
-                <div class="cont-video">
-                    <img src="<?php echo $video ?>" alt="">
-                </div>
 -->
-                <!-- Item -->
-        <div class="item">
-            <div class="customVideo cont-video">
-                <video>
-                    <source src="<?php echo $video ?>" preload>
-                    Your browser does not support the video tag.
-                </video>
             </div>
-        </div><!-- Item -->
-
-            <?php endwhile; ?>
-            <?php endif; ?>
-
-        <!--
-            <div class="cont-video">
-                <img src="<?php echo get_template_directory_uri().'/img/testimonios-video.png'; ?>" alt="">
-            </div>
-            <div class="cont-video">
-                <img src="<?php echo get_template_directory_uri().'/img/testimonios-video.png'; ?>" alt="">
-            </div>
-            <div class="cont-video">
-                <img src="<?php echo get_template_directory_uri().'/img/testimonios-video.png'; ?>" alt="">
-            </div>
-        -->
         </div>
     </div>
 </div>
@@ -202,6 +490,29 @@ $(document).ready(function() {
         autoplayHoverPause: true
     });
 
+    
+/*
+    $(".slider-videos").owlCarousel({
+        animateOut: 'slideOutLeft',
+        animateIn: 'slideInRight',
+        items: 1,
+        margin: 0,
+        stagePadding: 0,
+        smartSpeed: 450,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 9000,
+        nav:true,
+        navText : ["<img src='<?php echo get_template_directory_uri().'/img/arrowl-verde-video.png'; ?>'>","<img src='<?php echo get_template_directory_uri().'/img/arrowr-verde-video.png'; ?>'>"],
+        dots: false,
+        autoplayHoverPause: true
+    });
+*/
+
+    $( ".video-carousel .owl-prev").html("<img src='<?php echo get_template_directory_uri().'/img/arrowl-verde-video.png'; ?>'>");
+    $( ".video-carousel .owl-next").html("<img src='<?php echo get_template_directory_uri().'/img/arrowr-verde-video.png'; ?>'>");
+
+
     $("#slider-galeria").owlCarousel({
         animateOut: 'slideOutLeft',
         animateIn: 'slideInRight',
@@ -215,25 +526,17 @@ $(document).ready(function() {
         autoplayHoverPause: true
     });
 
-    $( ".owl-prev").html("<img src='<?php echo get_template_directory_uri().'/img/arrowl-video.png'; ?>'>");
-    $( ".owl-next").html("<img src='<?php echo get_template_directory_uri().'/img/arrowr-video.png'; ?>'>");
 
-    /*
-    $("#slider-videos").owlCarousel({
-        animateOut: 'slideOutLeft',
-        animateIn: 'slideInRight',
-        items: 1,
-        margin: 0,
-        stagePadding: 0,
-        smartSpeed: 450,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 9000,
-        nav:true,
-        navText : ["<img src='<?php echo get_template_directory_uri().'/img/arrowl-video.png'; ?>'>","<img src='<?php echo get_template_directory_uri().'/img/arrowr-video.png'; ?>'>"],
-        autoplayHoverPause: true
+    $(".contenedor-general-tenedor .contenedor-items-slider .item-slider").each(function(index){
+        $(this).click(function(){
+            $(".contenedor-general-tenedor .contenedor-items-slider .item-slider").removeClass("active");
+            $(this).addClass("active");
+            $(".contenedor-item-global").removeClass("active");
+            $(".contenedor-item-global").eq(index).addClass("active");
+        });
     });
-    */
+
+
 });
 </script>
 
@@ -242,7 +545,7 @@ $(document).ready(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.contenedor-general-cirugias .cont-cirugias, .contenedor-general-galeria p.enc, .contenedor-general-galeria .cont-galeria, .contenedor-general-video .contenedor-video{
+.contenedor-general-tenedor .contenedor-items-slider, .contenedor-general-tenedor .contenedor-info .cont-info, .contenedor-general-tenedor .contenedor-general-videos .contenedor-video, .contenedor-general-galeria .cont-galeria, .hero-banner .hero-title{
     opacity: 0;
 }
 </style>
@@ -252,24 +555,31 @@ var $j = jQuery.noConflict();
 
 	jQuery(function($j) {
 
-    $j('.contenedor-general-galeria p.enc, .contenedor-general-galeria .cont-galeria, .contenedor-general-video .contenedor-video').waypoint(function() {
-        $j(this).toggleClass('fadeInUp animated');
+    $j('.contenedor-general-tenedor .contenedor-general-videos .contenedor-video, .contenedor-general-galeria .cont-galeria').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
-/*
-	$j('.contenedor-general-infraestructura .contenedor-logos .cont-logos img, .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-3), .contenedor-general-infraestructura .contenedor-general-info-servidores .cont-servidor:nth-child(4n-1), .banner .banner-title').waypoint(function() {
-        $j(this).toggleClass('fadeInLeft animated');
+
+	$j('.contenedor-general-tenedor .contenedor-info .cont-info').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
-*/
-    $j('.contenedor-general-cirugias .cont-cirugias').waypoint(function() {
-        $j(this).toggleClass('fadeInRight animated');
+
+    $j('.contenedor-general-tenedor .contenedor-items-slider').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.hero-banner .hero-title').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
+    }, {
+        offset: '100%',
         triggerOnce: true
     });
 

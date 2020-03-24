@@ -242,7 +242,7 @@ $(document).ready(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.contenedor-general-cirugias .cont-cirugias, .contenedor-general-galeria p.enc, .contenedor-general-galeria .cont-galeria, .contenedor-general-video .contenedor-video{
+.contenedor-general-cirugias .cont-cirugias, .contenedor-general-galeria p.enc, .contenedor-general-galeria .cont-galeria, .contenedor-general-video .contenedor-video, .hero-banner .hero-title{
     opacity: 0;
 }
 </style>
@@ -253,7 +253,7 @@ var $j = jQuery.noConflict();
 	jQuery(function($j) {
 
     $j('.contenedor-general-galeria p.enc, .contenedor-general-galeria .cont-galeria, .contenedor-general-video .contenedor-video').waypoint(function() {
-        $j(this).toggleClass('fadeInUp animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
@@ -267,9 +267,16 @@ var $j = jQuery.noConflict();
     });
 */
     $j('.contenedor-general-cirugias .cont-cirugias').waypoint(function() {
-        $j(this).toggleClass('fadeInRight animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
+        triggerOnce: true
+    });
+
+    $j('.hero-banner .hero-title').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
+    }, {
+        offset: '100%',
         triggerOnce: true
     });
 

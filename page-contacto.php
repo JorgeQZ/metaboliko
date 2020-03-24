@@ -7,7 +7,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.address-container .col div{
+.address-container .col div, .hero-banner .content_text_contactform{
     opacity: 0;
 }
 </style>
@@ -17,8 +17,8 @@ var $j = jQuery.noConflict();
 
 	jQuery(function($j) {
 
-    $j('.address-container .col div').waypoint(function() {
-        $j(this).toggleClass('fadeInUp animated');
+    $j('.address-container .col div, .hero-banner .content_text_contactform').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true

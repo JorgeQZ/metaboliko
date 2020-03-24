@@ -223,7 +223,7 @@
         <div class="content">
             <div class="title">
                 <?php echo $fraga['titulo']?>
-                <img src="<?php echo get_template_directory_uri().'/img/drfraga-line.jpg'?>" alt="">
+                <img src="<?php echo get_template_directory_uri().'/img/drfraga-line.png'?>" alt="">
             </div>
             <div class="desc">
                 <?php echo $fraga['descripcion']?>
@@ -269,7 +269,7 @@ $(document).ready(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.bascule-container .content-front .options .option, .who-is-container .col, .address-container .col div, .contact-container .col, .bascule-container .content-behinde .text .title, .bascule-container .content-behinde .text .desc{
+.bascule-container .content-front .options .option, .who-is-container .col, .address-container .col div, .contact-container .col, .bascule-container .content-behinde .text .title, .bascule-container .content-behinde .text .desc, .hero-banner .front-content, .hero-banner .hero-title{
     opacity: 0;
 }
 </style>
@@ -279,22 +279,29 @@ var $j = jQuery.noConflict();
 
 	jQuery(function($j) {
 
-    $j('.bascule-container .content-front .options .option, .address-container .col div, .bascule-container .content-behinde .text .title, .bascule-container .content-behinde .text .desc').waypoint(function() {
+    $j('.bascule-container .content-front .options .option, .bascule-container .content-behinde .text .title, .bascule-container .content-behinde .text .desc').waypoint(function() {
         $j(this).toggleClass('fadeInUp animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
 
-	$j('.who-is-container .col:nth-child(1), .contact-container .col:first-child').waypoint(function() {
-        $j(this).toggleClass('fadeInLeft animated');
+	$j('.who-is-container .col:nth-child(1), .contact-container .col:first-child, .address-container .col div, .hero-banner .front-content').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
     });
 
+    $j('.hero-banner .hero-title').waypoint(function() {
+        $j(this).toggleClass('fadeIn animated');
+    }, {
+        offset: '100%',
+        triggerOnce: true
+    });
+
     $j('.who-is-container .col:nth-child(2), .contact-container .col:last-child').waypoint(function() {
-        $j(this).toggleClass('fadeInRight animated');
+        $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
         triggerOnce: true
