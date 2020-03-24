@@ -683,7 +683,13 @@ span.wpcf7-not-valid-tip {
     line-height: 14px;
     padding: 10px 0;
     padding-left: 5px;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    -webkit-transition: inherit;
+    transition: inherit;
+  }
+  header .menu-header-container > .menu > li > .sub-menu li:hover {
+    background-color: #00aad0;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
   }
   header .menu-header-container > .menu > li > .sub-menu li > a {
     text-transform: uppercase;
