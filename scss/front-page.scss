@@ -76,57 +76,7 @@
         }
       }
     }
-    .social-media {
-      position: absolute;
-      right: 0;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      height: 100%;
-      z-index: 10;
-      .links {
-        height: 230px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        &:before {
-          content: "";
-          width: 1px;
-          height: calc(65vh - 230px);
-          background: #fff;
-          bottom: 100%;
-          position: absolute;
-          opacity: 0.5;
-        }
-        &:after {
-          content: "";
-          width: 1px;
-          height: calc(65vh - 230px);
-          background: #fff;
-          top: 100%;
-          position: absolute;
-          opacity: 0.5;
-        }
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 30px;
-          height: 40px;
-          text-align: center;
-          img {
-            transition: all 0.1s;
-            width: 25px;
-            margin: 2px 0;
-            opacity: 0.6;
-          }
-        }
-      }
-    }
+
     .banner-carousel {
       position: absolute;
       top: 0;
@@ -369,57 +319,7 @@
         }
       }
     }
-    .social-media {
-      position: absolute;
-      right: 0;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      height: 100%;
-      z-index: 10;
-      .links {
-        height: 230px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        &:before {
-          content: "";
-          width: 1px;
-          height: calc(65vh - 230px);
-          background: #fff;
-          bottom: 100%;
-          position: absolute;
-          opacity: 0.5;
-        }
-        &:after {
-          content: "";
-          width: 1px;
-          height: calc(65vh - 230px);
-          background: #fff;
-          top: 100%;
-          position: absolute;
-          opacity: 0.5;
-        }
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 30px;
-          height: 40px;
-          text-align: center;
-          img {
-            transition: all 0.1s;
-            width: 25px;
-            margin: 2px 0;
-            opacity: 0.6;
-          }
-        }
-      }
-    }
+
     .banner-carousel {
       position: absolute;
       top: 0;

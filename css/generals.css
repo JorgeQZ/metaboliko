@@ -674,6 +674,7 @@ span.wpcf7-not-valid-tip {
             transform: translateY(-20px);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    background: #00aad0;
   }
   header .menu-header-container > .menu > li > .sub-menu li {
     position: relative;
