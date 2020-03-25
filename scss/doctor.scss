@@ -1,61 +1,75 @@
 .content-dr {
+  min-height: 80vh;
+  padding: 0 3rem;
+  background-image: url(../img/content-drfr-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  .content {
+    max-width: 530px;
+    width: 45%;
+    .title {
+      font-size: 50px;
+      line-height: 1;
+      font-weight: 100;
+    }
+    .text {
+      margin-top: 20px;
+      border-left: 2px solid #fff;
+      padding-left: 1rem;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 100;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-dr {
     min-height: 80vh;
-    padding: 0 3rem;
+    padding: 1rem 1rem;
+    padding-bottom: 3rem;
     background-image: url(../img/content-drfr-bg.jpg);
-    background-position: center;
+    background-position: left;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     color: white;
     .content {
-        max-width: 530px;
-        width: 45%;
-        .title {
-            font-size: 50px;
-            line-height: 1;
-            font-weight: 100;
-        }
-        .text {
-            margin-top: 20px;
-            border-left: 2px solid #fff;
-            padding-left: 1rem;
-            font-size: 28px;
-            line-height: 1;
-            font-weight: 100;
-        }
+      max-width: 530px;
+      width: 95%;
+      .title {
+        font-size: 50px;
+        line-height: 1;
+        font-weight: 100;
+      }
+      .text {
+        margin-top: 20px;
+        border-left: 2px solid #fff;
+        padding-left: 1rem;
+        font-size: 28px;
+        line-height: 1;
+        text-align: left;
+        font-weight: 100;
+      }
     }
+  }
 }
 
-@media screen and (max-width: 768px) {
-    .content-dr {
-        min-height: 80vh;
-        padding: 1rem 1rem;
-        padding-bottom: 3rem;
-        background-image: url(../img/content-drfr-bg.jpg);
-        background-position: left;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        color: white;
-        .content {
-            max-width: 530px;
-            width: 95%;
-            .title {
-                font-size: 50px;
-                line-height: 1;
-                font-weight: 100;
-            }
-            .text {
-                margin-top: 20px;
-                border-left: 2px solid #fff;
-                padding-left: 1rem;
-                font-size: 28px;
-                line-height: 1;
-                text-align: left;
-                font-weight: 100;
-            }
-        }
+.address-container {
+  .col {
+    padding: 1rem;
+    background-position: center;
+    background-size: cover;
+    &:first-child {
+      background-image: url(../img/address-1-blue.jpg);
     }
+    &:last-child {
+      background-image: url(../img/address-2-blue.jpg);
+    }
+  }
 }

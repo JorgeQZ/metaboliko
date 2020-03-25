@@ -60,7 +60,7 @@
     z-index: 999;
   }
   .video-container .video-carousel .customVideo .overlay:before {
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     position: absolute;
@@ -100,4 +100,18 @@
     padding: 5rem 3rem;
     color: #04a1a9;
   }
+}
+
+.address-container .col {
+  padding: 1rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.address-container .col:first-child {
+  background-image: url(../img/address-1-blue.jpg);
+}
+
+.address-container .col:last-child {
+  background-image: url(../img/address-2-blue.jpg);
 }

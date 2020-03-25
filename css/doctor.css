@@ -74,3 +74,17 @@
     font-weight: 100;
   }
 }
+
+.address-container .col {
+  padding: 1rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.address-container .col:first-child {
+  background-image: url(../img/address-1-blue.jpg);
+}
+
+.address-container .col:last-child {
+  background-image: url(../img/address-2-blue.jpg);
+}
