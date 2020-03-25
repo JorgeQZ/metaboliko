@@ -62,7 +62,7 @@ $.fn.CustomSelect = function (placeholder, attrContainer, attrUl, attrLi) {
 
         $("#UlOptions-" + IdCustomSelect).toggleClass('active');
 
-        $("#UlOptions-" + IdCustomSelect).fadeToggle('fast');
+        $("#UlOptions-" + IdCustomSelect).slideToggle('normal');
         if ($("#" + IdContainer).hasClass('spinArrow')) {
             $("#" + IdContainer).removeClass('spinArrow');
         } else {
