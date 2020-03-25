@@ -130,6 +130,32 @@
   border-bottom: 1px solid #555555;
 }
 
+@-webkit-keyframes LiOption {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes LiOption {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 @media screen and (min-width: 320px) {
   #custom-select-hero-select {
     display: inline-block;
@@ -141,8 +167,14 @@
             box-sizing: border-box;
     position: relative;
     cursor: pointer;
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
+    background-color: transparent;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  #custom-select-hero-select:hover, #custom-select-hero-select.active {
+    background-color: rgba(0, 0, 0, 0.6);
   }
   #custom-select-hero-select::before {
     content: "";
@@ -152,8 +184,8 @@
     height: 6px;
     position: absolute;
     right: 10px;
-    -webkit-transition: all 0.1s;
-    transition: all 0.1s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     top: 22px;
   }
   #custom-select-hero-select.spinArrow::before {
@@ -177,6 +209,8 @@
     font-weight: bold;
     padding-right: 20px;
     width: 200px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   #custom-select-hero-select .UlOptions {
     display: none;
@@ -188,11 +222,55 @@
     width: calc(100% - 0px);
     left: 0;
     top: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     mix-blend-mode: overlay;
     z-index: 1;
   }
+  #custom-select-hero-select .UlOptions.active .LiOption {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    -webkit-animation-name: LiOption;
+            animation-name: LiOption;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    /* or: Xms */
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    /* or: normal */
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    /* or: backwards, both, none */
+  }
+  #custom-select-hero-select .UlOptions.active .LiOption:nth-child(1n) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  #custom-select-hero-select .UlOptions.active .LiOption:nth-child(2n) {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  #custom-select-hero-select .UlOptions.active .LiOption:nth-child(3n) {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  #custom-select-hero-select .UlOptions.active .LiOption:nth-child(4n) {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  #custom-select-hero-select .UlOptions.active .LiOption:nth-child(5n) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
   #custom-select-hero-select .UlOptions .LiOption {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
     height: 40px;
     margin: 5px;
     display: -webkit-box;
@@ -233,7 +311,6 @@
             box-sizing: border-box;
     position: relative;
     cursor: pointer;
-    border: 2px solid white;
     color: white;
   }
   #custom-select-hero-select::before {
@@ -244,8 +321,6 @@
     height: 6px;
     position: absolute;
     right: 10px;
-    -webkit-transition: all 0.1s;
-    transition: all 0.1s;
     top: 22px;
   }
   #custom-select-hero-select.spinArrow::before {
@@ -271,7 +346,6 @@
     width: 360px;
   }
   #custom-select-hero-select .UlOptions {
-    display: none;
     margin: 0;
     margin-top: 10px;
     padding: 0;
@@ -280,7 +354,7 @@
     width: calc(100% - 0px);
     left: 0;
     top: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     mix-blend-mode: overlay;
   }
   #custom-select-hero-select .UlOptions .LiOption {
@@ -299,8 +373,6 @@
     font-size: 15px;
     line-height: 15px;
     border-bottom: 1px solid transparent;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
   }
   #custom-select-hero-select .UlOptions .LiOption:hover {
     border-bottom: 1px solid #fefdfd;

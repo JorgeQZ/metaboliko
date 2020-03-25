@@ -31,32 +31,30 @@
     <!-- social-media -->
     <div class="social-media">
         <div class="links">
-            <a href="https://www.facebook.com/clinicametabolikO/" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/facebook-white.png'; ?>" alt=""></a>
-            <a href="https://twitter.com/metaboliko" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/twitter-white.png'; ?>" alt=""></a>
-            <a href="https://mx.linkedin.com/company/cl%C3%ADnica-metaboliko" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/linkedin-white.png'; ?>" alt=""></a>
-            <a href="https://www.instagram.com/clinicametaboliko/" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/instagram-white.png'; ?>" alt=""></a>
-            <a href="https://www.youtube.com/channel/UCV7KykfT6_opfuXtW8TWtZA" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/youtube-white.png'; ?>" alt=""></a>
-            <a href="https://www.pinterest.com.mx/metaboliko/" target="_blank"><img
-                    src="<?php echo get_template_directory_uri().'/img/icons/pinterest-white.png'; ?>" alt=""></a>
+            <a href="https://www.facebook.com/clinicametabolikO/" target="_blank"><img src="<?php echo get_template_directory_uri().'/img/icons/facebook-white.png'; ?>" alt=""></a>
+            <a href="https://twitter.com/metaboliko" target="_blank"><img src="<?php echo get_template_directory_uri().'/img/icons/twitter-white.png'; ?>" alt=""></a>
+            <a href="https://mx.linkedin.com/company/cl%C3%ADnica-metaboliko" target="_blank"><img src="<?php echo get_template_directory_uri().'/img/icons/linkedin-white.png'; ?>" alt=""></a>
+            <a href="https://www.instagram.com/clinicametaboliko/" target="_blank"><img src="<?php echo get_template_directory_uri().'/img/icons/instagram-white.png'; ?>" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCV7KykfT6_opfuXtW8TWtZA" target="_blank"><img src="<?php echo get_template_directory_uri().'/img/icons/youtube-white.png'; ?>" alt=""></a>
+            <a href="https://www.pinterest.com.mx/metaboliko/" target="_blank"><img src="<?php echo get_template_directory_uri().'/img/icons/pinterest-white.png'; ?>" alt=""></a>
         </div>
     </div><!-- social-media -->
     <!-- carousel -->
     <div class="banner-carousel owl-carousel owl-theme">
-        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/home-banner2.jpg'; ?>)">
+        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/banner-1.jpg'; ?>)">
             <!-- overlay -->
             <div class="overlay"></div>
             <!-- overlay -->
         </div>
-        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/home-banner2.jpg'; ?>)">
+        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/banner-2.jpg'; ?>)">
             <!-- overlay -->
             <div class="overlay"></div><!-- overlay -->
         </div>
-        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/home-banner2.jpg'; ?>)">
+        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/banner-3.jpg'; ?>)">
+            <!-- overlay -->
+            <div class="overlay"></div><!-- overlay -->
+        </div>
+        <div class="item" style="background-image: url(<?php echo get_template_directory_uri().'/img/banner-4.jpg'; ?>)">
             <!-- overlay -->
             <div class="overlay"></div><!-- overlay -->
         </div>
@@ -66,14 +64,14 @@
 
 <!-- Posts -->
 <div class="posts-container">
-    <?php  
+    <?php
     $post_args = array(
         'posts_per_page' => 3,
         'post_type' => 'post',
         'post_status' => 'publish',
         'category_name' => 'principal'
     );
-    $the_query = new WP_Query($post_args);    
+    $the_query = new WP_Query($post_args);
     ?>
 
     <?php if($the_query->have_posts()):?>
@@ -164,7 +162,7 @@
 
             <button class="option" id="option2" data-item="1">
                 <div class="shape-line-bottom">
-                <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
                 </div>
                 <div class="shape-line"></div>
                 <?php echo $opcion2['boton']?>
@@ -172,7 +170,7 @@
 
             <button class="option" id="option3" data-item="2">
                 <div class="shape-line-bottom">
-                <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
                 </div>
                 <div class="shape-line"></div>
                 <?php echo $opcion3['boton']?>
@@ -182,7 +180,7 @@
                 <div class="shape-line-bottom"></div>
                 <div class="shape-line"></div>
                 <div class="shape-line-img">
-                <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
                 </div>
                 <?php echo $opcion4['boton']?>
             </button>
@@ -191,7 +189,7 @@
                 <div class="shape-line-bottom"></div>
                 <div class="shape-line"></div>
                 <div class="shape-line-img">
-                <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
+                    <img src="<?php echo get_template_directory_uri().'/img/green-arc.png';?>" alt="">
                 </div>
                 <?php echo $opcion5['boton']?>
             </button>
@@ -269,15 +267,23 @@ $(document).ready(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
 <style>
-.bascule-container .content-front .options .option, .who-is-container .col, .address-container .col div, .contact-container .col, .bascule-container .content-behinde .text .title, .bascule-container .content-behinde .text .desc, .hero-banner .front-content, .hero-banner .hero-title{
+.bascule-container .content-front .options .option,
+.who-is-container .col,
+.address-container .col div,
+.contact-container .col,
+.bascule-container .content-behinde .text .title,
+.bascule-container .content-behinde .text .desc,
+.hero-banner .front-content,
+.hero-banner .hero-title {
     opacity: 0;
 }
+
 </style>
 
 <script>
 var $j = jQuery.noConflict();
 
-	jQuery(function($j) {
+jQuery(function($j) {
 
     $j('.bascule-container .content-front .options .option, .bascule-container .content-behinde .text .title, .bascule-container .content-behinde .text .desc').waypoint(function() {
         $j(this).toggleClass('fadeInUp animated');
@@ -286,7 +292,7 @@ var $j = jQuery.noConflict();
         triggerOnce: true
     });
 
-	$j('.who-is-container .col:nth-child(1), .contact-container .col:first-child, .address-container .col div, .hero-banner .front-content').waypoint(function() {
+    $j('.who-is-container .col:nth-child(1), .contact-container .col:first-child, .address-container .col div, .hero-banner .front-content').waypoint(function() {
         $j(this).toggleClass('fadeIn animated');
     }, {
         offset: '75%',
@@ -309,5 +315,4 @@ var $j = jQuery.noConflict();
 
 
 });
-
 </script>

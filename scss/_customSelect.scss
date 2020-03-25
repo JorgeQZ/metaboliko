@@ -64,6 +64,17 @@
   }
 }
 
+@keyframes LiOption {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @media screen and (min-width: 320px) {
   #custom-select-hero-select {
     display: inline-block;
@@ -74,8 +85,14 @@
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
+    background-color: transparent;
+    transition: all 0.2s ease-in;
+    &:hover,
+    &.active {
+      background-color: rgba(black, 0.6);
+    }
     &::before {
       content: "";
       background-image: url(../img/drop-down-arrow-white.png);
@@ -84,7 +101,7 @@
       height: 6px;
       position: absolute;
       right: 10px;
-      transition: all 0.1s;
+      transition: all 0.3s;
       top: 22px;
     }
     &.spinArrow {
@@ -103,6 +120,7 @@
       font-weight: bold;
       padding-right: 20px;
       width: 200px;
+      transition: 0.3s;
     }
     .UlOptions {
       display: none;
@@ -114,10 +132,30 @@
       width: calc(100% - 0px);
       left: 0;
       top: 100%;
-      background-color: rgba(black, 0.6);
+      background-color: rgba(black, 0.8);
       mix-blend-mode: overlay;
       z-index: 1;
+      &.active {
+        .LiOption {
+          opacity: 0;
+          transform: translateX(-10px);
+          animation-name: LiOption;
+          animation-duration: 0.3s; /* or: Xms */
+          animation-iteration-count: 1;
+          animation-direction: normal; /* or: normal */
+          animation-timing-function: ease-in; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+          animation-fill-mode: forwards; /* or: backwards, both, none */
+
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}n) {
+              animation-delay: #{$i * 0.2}s;
+            }
+          }
+        }
+      }
       .LiOption {
+        opacity: 0;
+        transform: translateX(-10px);
         height: 40px;
         margin: 5px;
         display: flex;
@@ -156,7 +194,7 @@
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
-    border: 2px solid white;
+
     color: white;
     &::before {
       content: "";
@@ -166,7 +204,7 @@
       height: 6px;
       position: absolute;
       right: 10px;
-      transition: all 0.1s;
+
       top: 22px;
     }
     &.spinArrow {
@@ -187,7 +225,6 @@
       width: 360px;
     }
     .UlOptions {
-      display: none;
       margin: 0;
       margin-top: 10px;
       padding: 0;
@@ -196,7 +233,7 @@
       width: calc(100% - 0px);
       left: 0;
       top: 100%;
-      background-color: rgba(black, 0.6);
+      background-color: rgba(black, 0.8);
       mix-blend-mode: overlay;
       .LiOption {
         height: 40px;
@@ -209,7 +246,6 @@
         font-size: 15px;
         line-height: 15px;
         border-bottom: 1px solid transparent;
-        transition: $time-transition;
         &:hover {
           border-bottom: 1px solid #fefdfd;
         }
