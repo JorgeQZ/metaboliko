@@ -244,14 +244,25 @@
             }
           }
         }
+
         .item {
           height: calc(50vh);
           background-position: center;
-          background-size: cover;
+          background-size: 140%;
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.3s ease;
+          &:hover {
+            background-size: 150%;
+
+            .overlay {
+              background-color: rgba(black, 0.7);
+            }
+          }
           .overlay {
+            transition: all 0.3s ease;
+
             position: absolute;
             top: 0;
             left: 0;
@@ -337,9 +348,18 @@
           display: flex;
           align-items: flex-end;
           justify-content: flex-start;
-          background-size: cover;
+          background-size: 150%;
           background-position: center;
           box-sizing: border-box;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-size: 160%;
+
+            .overlay {
+              background-color: rgba(black, 0.7);
+            }
+          }
           .overlay {
             position: absolute;
             top: 0;
@@ -348,6 +368,7 @@
             height: 100%;
             background-color: rgba(black, 0.6);
             mix-blend-mode: darken;
+            transition: all 0.3s ease;
           }
           .content {
             position: relative;
@@ -360,9 +381,9 @@
             }
             .vermas {
               position: relative;
-              width: 70px;
+              width: 80px;
               height: 19px;
-              padding: 0;
+              padding: 0 10px;
               display: flex;
               align-items: center;
               justify-content: flex-start;
@@ -389,7 +410,7 @@
                 background-image: url(../img/arrow.png);
                 background-size: cover;
                 position: absolute;
-                top: 3px;
+                top: 4px;
                 right: 5px;
                 transition: all 0.1s linear;
               }
@@ -424,10 +445,12 @@
   .blog-container {
     display: flex;
     height: calc(100vh - 155px - 68.2px - 30px);
+
     .col {
       width: 50%;
       .post-carousel {
         height: calc(100vh - 155px - 68.2px - 30px);
+
         position: relative;
         .owl-nav {
           button {
@@ -473,11 +496,16 @@
         }
         .item {
           height: calc(100vh - 155px - 68.2px - 30px);
+
           background-position: center;
-          background-size: cover;
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.4s ease;
+          background-size: 170%;
+          &:hover {
+            background-size: 180%;
+          }
           .overlay {
             position: absolute;
             top: 0;
@@ -543,9 +571,13 @@
           display: flex;
           align-items: flex-end;
           justify-content: flex-start;
-          background-size: cover;
+          background-repeat: no-repeat;
           background-position: center;
           box-sizing: border-box;
+          background-size: 160%;
+          &:hover {
+            background-size: 170%;
+          }
           .overlay {
             position: absolute;
             top: 0;

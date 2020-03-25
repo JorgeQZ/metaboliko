@@ -1060,7 +1060,7 @@
           &:before {
             content: "";
             position: absolute;
-            bottom: -10px;
+            top: -1px;
             left: -20px;
             width: 3px;
             height: 55px;
@@ -1194,7 +1194,7 @@
           }
           .shape-line {
             opacity: 0;
-            transform: translateX(-5px);
+            transform: translateX(-10px);
             position: inherit;
             width: 55px;
             height: 3px;
@@ -1206,7 +1206,7 @@
               content: "";
               position: absolute;
               bottom: -9px;
-              left: -19px;
+              left: -18px;
               width: 3px;
               height: 50px;
               background-color: #33a7c9;

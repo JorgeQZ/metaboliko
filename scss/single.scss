@@ -89,9 +89,11 @@ header {
         border: 1px solid white;
         color: white;
         font-size: 12px;
-        transition: all 0.2s;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 12px 2px transparent;
         &:hover {
-          background-color: #00a0a8;
+          background-color: #00aad0;
+          box-shadow: 0 0 12px 2px white;
         }
         span {
           position: relative;

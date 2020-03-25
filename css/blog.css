@@ -264,7 +264,7 @@
   .blog-container .col .post-carousel .item {
     height: calc(50vh);
     background-position: center;
-    background-size: cover;
+    background-size: 140%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -274,8 +274,18 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .blog-container .col .post-carousel .item:hover {
+    background-size: 150%;
+  }
+  .blog-container .col .post-carousel .item:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
   }
   .blog-container .col .post-carousel .item .overlay {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -372,10 +382,18 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    background-size: cover;
+    background-size: 150%;
     background-position: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .blog-container .col .grid .item:hover {
+    background-size: 160%;
+  }
+  .blog-container .col .grid .item:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
   }
   .blog-container .col .grid .item .overlay {
     position: absolute;
@@ -385,6 +403,8 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     mix-blend-mode: darken;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .blog-container .col .grid .item .content {
     position: relative;
@@ -398,9 +418,9 @@
   }
   .blog-container .col .grid .item .content .vermas {
     position: relative;
-    width: 70px;
+    width: 80px;
     height: 19px;
-    padding: 0;
+    padding: 0 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -437,7 +457,7 @@
     background-image: url(../img/arrow.png);
     background-size: cover;
     position: absolute;
-    top: 3px;
+    top: 4px;
     right: 5px;
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
@@ -513,7 +533,6 @@
   .blog-container .col .post-carousel .item {
     height: calc(100vh - 155px - 68.2px - 30px);
     background-position: center;
-    background-size: cover;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -523,6 +542,12 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    background-size: 170%;
+  }
+  .blog-container .col .post-carousel .item:hover {
+    background-size: 180%;
   }
   .blog-container .col .post-carousel .item .overlay {
     position: absolute;
@@ -600,10 +625,14 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    background-size: 160%;
+  }
+  .blog-container .col .grid .item:hover {
+    background-size: 170%;
   }
   .blog-container .col .grid .item .overlay {
     position: absolute;

@@ -232,8 +232,8 @@
             transform: translateX(-5px);
     -webkit-animation-name: LiOption;
             animation-name: LiOption;
-    -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
     /* or: Xms */
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
@@ -280,8 +280,8 @@
         -ms-flex-align: center;
             align-items: center;
     cursor: pointer;
-    -webkit-transition: 0.1s;
-    transition: 0.1s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
     padding: 10px;
     font-size: 15px;
     line-height: 15px;

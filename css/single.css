@@ -123,12 +123,16 @@ header {
   border: 1px solid white;
   color: white;
   font-size: 12px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 0 12px 2px transparent;
+          box-shadow: 0 0 12px 2px transparent;
 }
 
 .hero-banner .image_texto .col a:hover {
-  background-color: #00a0a8;
+  background-color: #00aad0;
+  -webkit-box-shadow: 0 0 12px 2px white;
+          box-shadow: 0 0 12px 2px white;
 }
 
 .hero-banner .image_texto .col a span {

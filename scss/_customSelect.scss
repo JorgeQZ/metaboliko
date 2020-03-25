@@ -140,7 +140,7 @@
           opacity: 0;
           transform: translateX(-5px);
           animation-name: LiOption;
-          animation-duration: 0.3s; /* or: Xms */
+          animation-duration: 0.4s; /* or: Xms */
           animation-iteration-count: 1;
           animation-direction: normal; /* or: normal */
           animation-timing-function: ease-in; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
@@ -161,7 +161,7 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        transition: 0.1s;
+        transition: 0.2s;
         padding: 10px;
         font-size: 15px;
         line-height: 15px;
