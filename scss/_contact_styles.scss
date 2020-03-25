@@ -103,12 +103,12 @@
               font-weight: bold;
               padding: 5px 25px;
               font-size: 25px;
-              transition: $time-transition;
+              transition: all 0.3s ease;
               box-shadow: 0 0 0 0 transparent;
               cursor: pointer;
               &:hover {
                 background: rgba(0, 170, 208, 1);
-                box-shadow: 0 0 6px 1px white;
+                box-shadow: 0 0 14px 3px white;
               }
             }
           }

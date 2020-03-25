@@ -552,8 +552,8 @@ span.wpcf7-not-valid-tip {
     background: #00cae2;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #00cae2), color-stop(60%, #00aad0), to(#00aad0));
     background: linear-gradient(0deg, #00cae2 4%, #00aad0 60%, #00aad0 100%);
-    -webkit-transition: all 250ms ease;
-    transition: all 250ms ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   header .menu-header-container.active {
     left: 0;
@@ -1027,16 +1027,16 @@ span.wpcf7-not-valid-tip {
     font-weight: bold;
     padding: 5px 25px;
     font-size: 25px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     -webkit-box-shadow: 0 0 0 0 transparent;
             box-shadow: 0 0 0 0 transparent;
     cursor: pointer;
   }
   .contact-container .col .form .form-control input[type="submit"]:hover {
     background: #00aad0;
-    -webkit-box-shadow: 0 0 6px 1px white;
-            box-shadow: 0 0 6px 1px white;
+    -webkit-box-shadow: 0 0 14px 3px white;
+            box-shadow: 0 0 14px 3px white;
   }
   .contact-container .col .form .form-control.full {
     width: 100%;

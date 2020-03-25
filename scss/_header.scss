@@ -69,7 +69,7 @@
       width: 100%;
       background: rgba(0, 202, 226, 1);
       background: linear-gradient(0deg, rgba(0, 202, 226, 1) 4%, rgba(0, 170, 208, 1) 60%, rgba(0, 170, 208, 1) 100%);
-      transition: all 250ms ease;
+      transition: all 0.5s ease;
       &.active {
         left: 0;
       }
