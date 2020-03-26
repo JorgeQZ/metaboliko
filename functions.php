@@ -57,7 +57,7 @@ function add_theme_scripts() {
         wp_enqueue_style( 'doctor', get_template_directory_uri() . '/css/doctor.css', array(), filemtime( get_stylesheet_directory() . '/css/doctor.css' ), 'all');
 
     }
-    wp_enqueue_script('custom', get_template_directory_uri().'/js/custom.js', array('jquery'),'1.1', false);
+    wp_enqueue_script('custom', get_template_directory_uri().'/js/custom.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/custom.js' ), false);
 
     if(is_page_template('page-testimonios.php')){
         wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array(), filemtime( get_stylesheet_directory() . '/css/front-page.css' ), 'all');
