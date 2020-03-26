@@ -87,6 +87,13 @@ span.wpcf7-not-valid-tip {
   }
 }
 
+// OWL
+.owl-carousel {
+  button {
+    outline: none;
+  }
+}
+
 @import "variables";
 @import "header";
 @import "address_styles";

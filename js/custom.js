@@ -11,9 +11,9 @@ $(document).ready(function () {
         $('.text-option#option' + option + ' .title').fadeIn();
         $('.text-option#option' + option + ' .desc').fadeIn();
 
-        $('html,body').delay(300).animate({
+        $('html,body').delay(900).animate({
             scrollTop: $("#bascula").offset().top - ($('header').height())
-        }, 'slow');
+        }, 1400);
     });
 
     $('button.option').click(function () {
