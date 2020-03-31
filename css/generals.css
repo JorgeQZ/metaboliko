@@ -792,10 +792,10 @@ span.wpcf7-not-valid-tip {
     background-size: cover;
   }
   .address-container .col:first-child {
-    background-image: url(../img/address-cdmx-bg.jpg);
+    background-image: url(../img/address-1-blue.jpg);
   }
   .address-container .col:last-child {
-    background-image: url(../img/address-mty-bg.jpg);
+    background-image: url(../img/address-2-blue.jpg);
   }
   .address-container .col .title {
     font-size: 50px;

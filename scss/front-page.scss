@@ -219,10 +219,10 @@
       background-position: center;
       background-size: cover;
       &:first-child {
-        background-image: url(../img/address-cdmx-bg.jpg);
+        background-image: url(../img/address-1-blue.jpg);
       }
       &:last-child {
-        background-image: url(../img/address-mty-bg.jpg);
+        background-image: url(../img/address-2-blue.jpg);
       }
       .title {
         font-size: 50px;
@@ -520,12 +520,7 @@
       padding: 1rem;
       background-position: center;
       background-size: cover;
-      &:first-child {
-        background-image: url(../img/address-cdmx-bg.jpg);
-      }
-      &:last-child {
-        background-image: url(../img/address-mty-bg.jpg);
-      }
+
       .title {
         font-size: 65px;
         line-height: 1;
@@ -764,12 +759,7 @@
       padding: 1rem;
       background-position: center;
       background-size: cover;
-      &:first-child {
-        background-image: url(../img/address-cdmx-bg.jpg);
-      }
-      &:last-child {
-        background-image: url(../img/address-mty-bg.jpg);
-      }
+
       .desc {
         display: flex;
         margin-top: 180px;
