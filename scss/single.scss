@@ -193,9 +193,14 @@ header {
           &.third {
             width: 30%;
             margin-right: 5%;
+            /*
             &:nth-of-type(3n) {
               margin-right: 0;
             }
+            */
+          }
+          &:nth-of-type(8n) {
+            margin-right: 0;
           }
         }
       }
@@ -368,5 +373,40 @@ header {
     }
   }
 }
+
+
+
+@media screen and (max-width: 767px) {
+
+  .hero-banner{
+    .image_texto{
+      .col {
+        p {
+          font-size: 16px;
+          line-height: 16px;
+        }
+        h1 {
+          font-size: 32px;
+          margin: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .hero-banner{
+    .content_text_contactform{
+      flex-direction: column;
+      .col{
+        width: 95%;
+      }
+      .contact-form{
+        width: 95%;
+      }
+    }
+  }
+
+}
+
 
 @import "variables";

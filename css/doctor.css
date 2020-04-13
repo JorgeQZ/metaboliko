@@ -1,6 +1,6 @@
 .content-dr {
   min-height: 80vh;
-  padding: 0 3rem;
+  padding: 100px 3rem;
   background-image: url(../img/content-drfr-bg.jpg);
   background-position: center;
   background-size: cover;
@@ -10,9 +10,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: white;
 }
 
@@ -34,6 +34,57 @@
   font-size: 28px;
   line-height: 1;
   font-weight: 100;
+}
+
+.content-dr .content-image .cont-img {
+  position: relative;
+}
+
+.content-dr .content-image .cont-img img {
+  height: 700px;
+  display: block;
+  position: relative;
+  z-index: 9;
+}
+
+.content-dr .content-image .cont-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: #00ffff;
+}
+
+.content-dr .content-image .cont-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: #1dc4be;
+}
+
+@media screen and (max-width: 1023px) {
+  .content-dr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content-dr .content {
+    width: 100%;
+  }
+  .content-dr .content-image {
+    width: 85%;
+    margin-top: 30px;
+  }
+  .content-dr .content-image .cont-img img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {

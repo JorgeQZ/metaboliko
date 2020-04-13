@@ -1063,6 +1063,10 @@
     -webkit-transform: translateX(10px);
             transform: translateX(10px);
   }
+  .bascule-container .content-front .options .option#option6 {
+    top: 400px;
+    left: 1%;
+  }
   .bascule-container .content-front .woman {
     bottom: -4%;
     width: 38%;
@@ -1171,6 +1175,10 @@
   .bascule-container .content-front .options .option#option5 {
     top: 400px;
     left: 53%;
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 485px;
+    left: 0%;
   }
   .bascule-container .content-front .woman {
     bottom: -4%;
@@ -1289,6 +1297,10 @@
   .bascule-container .content-front .options .option#option5 {
     top: 430px;
     left: 53%;
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 510px;
+    left: 1%;
   }
   .bascule-container .content-front .woman {
     bottom: -4%;
@@ -1540,6 +1552,10 @@
     left: calc(100% + 12px);
     -webkit-transform: rotateZ(45deg);
             transform: rotateZ(45deg);
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 580px;
+    left: 7%;
   }
   .bascule-container .content-front .options .option .shape-line {
     display: block;
@@ -1805,6 +1821,10 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  .bascule-container .content-front .options .option#option6 {
+    top: 675px;
+    left: 10%;
+  }
   .bascule-container .content-front .options .option .shape-line {
     opacity: 0;
     -webkit-transform: translateX(-10px);
@@ -1943,6 +1963,10 @@
     top: 280px;
     left: 40%;
   }
+  .bascule-container .content-front .options .option#option6 {
+    top: 425px;
+    left: 6%;
+  }
   .bascule-container .content-front .woman {
     bottom: -4%;
     width: 25%;
@@ -1992,6 +2016,10 @@
   .bascule-container .content-front .options .option#option5 {
     top: 500px;
     left: 44%;
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 700px;
+    left: 9%;
   }
   .bascule-container .content-front .woman {
     bottom: -4%;
@@ -2073,6 +2101,10 @@
   .bascule-container .content-front .options .option#option5 {
     top: 600px;
     left: 45%;
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 750px;
+    left: 6%;
   }
   .bascule-container .content-front .woman {
     bottom: -4%;

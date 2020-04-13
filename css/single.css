@@ -264,9 +264,14 @@ header {
 .hero-banner .content_text_contactform .contact-form .form .form-control.third {
   width: 30%;
   margin-right: 5%;
+  /*
+            &:nth-of-type(3n) {
+              margin-right: 0;
+            }
+            */
 }
 
-.hero-banner .content_text_contactform .contact-form .form .form-control.third:nth-of-type(3n) {
+.hero-banner .content_text_contactform .contact-form .form .form-control:nth-of-type(8n) {
   margin-right: 0;
 }
 
@@ -469,5 +474,29 @@ header {
     width: 55%;
     padding-right: 3rem;
     padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-banner .image_texto .col p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .hero-banner .image_texto .col h1 {
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 0;
+  }
+  .hero-banner .content_text_contactform {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-banner .content_text_contactform .col {
+    width: 95%;
+  }
+  .hero-banner .content_text_contactform .contact-form {
+    width: 95%;
   }
 }
