@@ -301,9 +301,9 @@
 }
 
 .contenedor-general-galeria .cont-galeria .cont-slide .cont-img {
-  width: 19%;
+  width: 23%;
   border: 3px solid #67ae3d;
-  margin: 7px 0;
+  margin: 15px 0;
 }
 
 .contenedor-general-galeria .cont-galeria .cont-slide .cont-img img {
@@ -416,7 +416,8 @@
     margin-bottom: 10px;
   }
   .contenedor-general-tenedor .contenedor-info {
-    padding: 150px 5% 50px;
+    overflow: hidden;
+    padding: 300px 5% 50px;
   }
   .contenedor-general-tenedor .contenedor-info .enc {
     margin-bottom: 20px;

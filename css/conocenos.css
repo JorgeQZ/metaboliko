@@ -43,9 +43,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 3px;
@@ -322,6 +322,10 @@
   }
   .contenedor-general-galeria .cont-galeria .owl-dots {
     margin-top: 5px !important;
+  }
+  .video-container .title {
+    font-size: 50px;
+    line-height: 50px;
   }
   .hero-banner {
     -webkit-box-pack: start;

@@ -859,6 +859,11 @@
   position: absolute;
 }
 
+.text-option {
+  position: relative;
+  z-index: 99;
+}
+
 .text-option .title {
   display: none;
   -webkit-transition: all 0.3s;
@@ -869,6 +874,14 @@
   display: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.text-option .desc a {
+  color: white;
+}
+
+.text-option .desc a:hover {
+  text-decoration: underline;
 }
 
 .text-option.active .title {
@@ -933,12 +946,14 @@
     width: 320px;
     margin: 0 auto;
     height: 100%;
+    z-index: inherit !important;
   }
   .bascule-container .content-front .options {
     position: relative;
     max-width: 1280px;
     height: 100%;
     z-index: 10;
+    z-index: inherit !important;
   }
   .bascule-container .content-front .options .option {
     padding: 3px;
@@ -955,6 +970,7 @@
     cursor: pointer;
     border-bottom: 3px solid #33a7c9;
     position: absolute;
+    z-index: 999;
   }
   .bascule-container .content-front .options .option p {
     padding: 0;
@@ -1891,7 +1907,7 @@
   .bascule-container .content-behinde .text .desc p {
     padding-top: 20px;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 20px;
   }
   .bascule-container .content-behinde .text .desc li {
     margin-bottom: 6px;
@@ -2067,7 +2083,7 @@
   .bascule-container .content-behinde .text .desc p {
     padding-top: 20px;
     font-size: 30px;
-    line-height: 32px;
+    line-height: 30px;
   }
   .bascule-container .content-behinde .text .desc p li {
     margin-bottom: 6px;

@@ -13,7 +13,7 @@
     <?php wp_body_open(); ?>
     <!-- whatsapp button -->
     <div class="button-whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=5218128627473&text=&source=&data=" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=5583664630&text=&source=&data=" target="_blank">
             <img src="<?php echo get_template_directory_uri().'/img/whatsapp-button.png'; ?>" alt="">
         </a>
     </div><!-- whatasapp button-->

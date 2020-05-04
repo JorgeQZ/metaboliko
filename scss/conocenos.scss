@@ -29,7 +29,7 @@
       margin-top: 30px;
       .cont-slide{
           display: flex;
-          justify-content: space-between;
+          justify-content: space-evenly;
           flex-wrap: wrap;
           padding: 0 3px;
           .cont-img{
@@ -290,6 +290,12 @@
       }
   }
 
+  .video-container{
+    .title{
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
 
   .hero-banner{
     justify-content: flex-start;

@@ -66,6 +66,8 @@
 }
 
 .text-option {
+  position: relative;
+  z-index: 99;
   .title {
     display: none;
     transition: all 0.3s;
@@ -73,6 +75,12 @@
   .desc {
     display: none;
     transition: all 0.3s;
+    a{
+      color: white;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
   &.active {
     .title {
@@ -174,11 +182,13 @@
       width: 320px;
       margin: 0 auto;
       height: 100%;
+      z-index: inherit !important;
       .options {
         position: relative;
         max-width: 1280px;
         height: 100%;
         z-index: 10;
+        z-index: inherit !important;
         .option {
           padding: 3px;
           padding-left: 5px;
@@ -194,6 +204,7 @@
           cursor: pointer;
           border-bottom: 3px solid #33a7c9;
           position: absolute;
+          z-index: 999;
           p {
             padding: 0;
             margin: 0;
@@ -1317,7 +1328,7 @@
           p {
             padding-top: 20px;
             font-size: 20px;
-            line-height: 22px;
+            line-height: 20px;
           }
           li {
             margin-bottom: 6px;
@@ -1548,7 +1559,7 @@
           p {
             padding-top: 20px;
             font-size: 30px;
-            line-height: 32px;
+            line-height: 30px;
             li {
               margin-bottom: 6px;
               span {

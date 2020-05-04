@@ -2,26 +2,45 @@
   mix-blend-mode: lighten;
 }
 
+.c-galeria {
+  display: none;
+}
+
+.c-galeria.active {
+  display: block;
+}
+
+.c-galeria-videos {
+  display: none;
+}
+
+.c-galeria-videos.active {
+  display: block;
+}
+
 .contenedor-general-cirugias {
   width: 100%;
-  height: 100vh;
+  padding: 100px 0;
   background-image: url(../img/fondo-testimonios2.jpg);
   background-size: cover;
   background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contenedor-general-cirugias .cont-cirugias {
-  width: 40%;
-  padding-right: 6%;
+  width: 90%;
+  margin: 0 auto;
+  padding-right: 0;
+  text-align: center;
 }
 
 .contenedor-general-cirugias .cont-cirugias p.enc {
@@ -31,11 +50,13 @@
   margin: 0;
   position: relative;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .contenedor-general-cirugias .cont-cirugias p.enc span {
   position: absolute;
-  left: -12px;
+  left: 0;
+  right: 0;
   top: -55px;
   font-size: 120px;
   color: transparent;
@@ -49,6 +70,47 @@
   font-size: 20px;
   line-height: 22px;
   margin: 0;
+}
+
+.contenedor-general-cirugias .cont-cirugias-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contenedor-general-cirugias .cont-cirugias-items .cont-new-item {
+  max-width: 270px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.contenedor-general-cirugias .cont-cirugias-items .cont-new-item .new-item {
+  width: 230px;
+  height: 230px;
+  background-color: red;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.contenedor-general-cirugias .cont-cirugias-items .cont-new-item p {
+  color: white;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 0;
+  text-align: center;
+}
+
+.contenedor-general-cirugias .cont-cirugias-items .cont-new-item:hover {
+  opacity: .7;
 }
 
 .contenedor-general-galeria {
@@ -236,13 +298,24 @@
 }
 
 .contenedor-general-video .contenedor-video .owl-dots .owl-dot span {
-  width: 75px;
+  /*width: 75px*/
+  width: 20px;
   height: 6px;
   background: white;
 }
 
 .contenedor-general-video .contenedor-video .owl-dots .owl-dot.active span {
   background: #67ae3d;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1349px) {
+  .contenedor-general-cirugias .cont-cirugias-items .cont-new-item {
+    max-width: 200px;
+  }
+  .contenedor-general-cirugias .cont-cirugias-items .cont-new-item .new-item {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -253,15 +326,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .contenedor-general-cirugias .cont-cirugias {
-    width: 37%;
-    padding-right: 2%;
-  }
   .contenedor-general-cirugias .cont-cirugias p.enc {
     font-size: 52px;
   }
   .contenedor-general-cirugias .cont-cirugias p.enc span {
-    top: -22px;
+    top: -35px;
     font-size: 74px;
   }
   .contenedor-general-galeria p.enc {
@@ -279,7 +348,7 @@
     width: 85%;
   }
   .contenedor-general-video .contenedor-video .owl-dots .owl-dot span {
-    width: 50px;
+    width: 10px;
     height: 4px;
   }
 }
@@ -290,12 +359,11 @@
     padding: 0 30px;
   }
   .contenedor-general-cirugias .cont-cirugias p.enc {
-    font-size: 52px;
-    margin-bottom: 25px;
+    font-size: 46px;
   }
   .contenedor-general-cirugias .cont-cirugias p.enc span {
-    top: -22px;
-    font-size: 74px;
+    top: -35px;
+    font-size: 54px;
   }
   .contenedor-general-galeria {
     padding: 30px 0;
@@ -335,7 +403,8 @@
     left: calc(50% - 15px);
   }
   .contenedor-general-video .contenedor-video .owl-dots .owl-dot span {
-    width: 50px;
-    height: 4px;
+    width: 8px;
+    height: 2px;
+    margin: 0 3px;
   }
 }
