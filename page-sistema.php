@@ -8,6 +8,25 @@
 $ID = get_the_ID();
 ?>
 
+
+<style>
+.contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .media .embed-container { 
+        position: relative; 
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+    } 
+
+.contenedor-general-tenedor .contenedor-general-videos .contenedor-video .cont-item .media .embed-container iframe { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
 <!-- Hero -->
 <?php get_template_part('template-parts/banner','hero') ?>
 <!-- Hero -->
@@ -69,10 +88,24 @@ $ID = get_the_ID();
 
                                 <div class="cont-item">
                                     <div class="customVideo media">
+                                    <?php
+                                    if(get_sub_field('video'))
+                                    {
+                                    ?>
                                         <video>
                                             <source src="<?php echo get_sub_field('video'); ?>" preload>
                                             Your browser does not support the video tag.
-                                        </video>                                    
+                                        </video>
+                                    <?php
+                                    }else
+                                    {
+                                    ?>
+                                        <div class="embed-container">
+                                            <?php echo get_sub_field('video_youtube'); ?>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>                                    
                                     </div>
                                     <div class="info">
                                         <p>

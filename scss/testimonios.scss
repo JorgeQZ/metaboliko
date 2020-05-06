@@ -4,18 +4,34 @@
     }
 }
 
+.c-galeria{
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+
+.c-galeria-videos{
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+
 .contenedor-general-cirugias{
     width: 100%;
-    height: 100vh;
+    padding: 100px 0;
     background-image: url(../img/fondo-testimonios2.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     .cont-cirugias{
-        width: 40%;
-        padding-right: 6%;
+        width: 90%;
+        margin: 0 auto;
+        padding-right: 0;
+        text-align: center;
         p.enc{
             color: white;
             font-weight: bold;
@@ -23,9 +39,11 @@
             margin: 0;
             position: relative;
             margin-bottom: 15px;
+            width: 100%;
             span{
                 position: absolute;
-                left: -12px;
+                left: 0;
+                right: 0;
                 top: -55px;
                 font-size: 120px;
                 color: transparent;
@@ -39,6 +57,36 @@
             font-size: 20px;
             line-height: 22px;
             margin: 0;
+        }
+    }
+    .cont-cirugias-items{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .cont-new-item{
+            max-width: 270px;
+            cursor: pointer;
+            transition: all .3s;
+            .new-item{
+                width: 230px;
+                height: 230px;
+                background-color: red;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: 20px;
+                border-radius: 30px;
+            }
+            p{
+                color: white;
+                font-size: 20px;
+                line-height: 22px;
+                margin: 0;
+                text-align: center;
+            }
+            &:hover{
+                opacity: .7;
+            }
         }
     }
 }
@@ -194,7 +242,8 @@
             .owl-dot{
                 outline: none;
                 span{
-                    width: 75px;
+                    /*width: 75px*/
+                    width: 20px;
                     height: 6px;
                     background: white;
                 }
@@ -203,6 +252,21 @@
                     span{
                         background: #67ae3d;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1349px){
+
+    .contenedor-general-cirugias{
+        .cont-cirugias-items{
+            .cont-new-item{
+                max-width: 200px;
+                .new-item{
+                    width: 160px;
+                    height: 160px;
                 }
             }
         }
@@ -221,6 +285,7 @@
             }
         }
     }
+    
 
 }
 
@@ -229,12 +294,12 @@
 
     .contenedor-general-cirugias{
         .cont-cirugias{
-            width: 37%;
-            padding-right: 2%;
+            //width: 37%;
+            //padding-right: 2%;
             p.enc{
                 font-size: 52px; 
                 span{
-                    top: -22px;
+                    top: -35px;
                     font-size: 74px;
                 }
             }
@@ -265,7 +330,7 @@
             .owl-dots{
                 .owl-dot{
                     span{
-                     width: 50px;
+                     width: 10px;
                      height: 4px;
                     }
                 }
@@ -283,11 +348,10 @@
             width: auto;
             padding: 0 30px;
             p.enc{
-                font-size: 52px; 
-                margin-bottom: 25px;
+                font-size: 46px; 
                 span{
-                    top: -22px;
-                    font-size: 74px;
+                    top: -35px;
+                    font-size: 54px;
                 }
             }
         }
@@ -334,8 +398,9 @@
             .owl-dots{
                 .owl-dot{
                     span{
-                     width: 50px;
-                     height: 4px;
+                        width: 8px;
+                        height: 2px;
+                        margin: 0 3px;
                     }
                 }
             }

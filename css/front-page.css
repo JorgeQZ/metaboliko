@@ -847,6 +847,11 @@
   position: absolute;
 }
 
+.text-option {
+  position: relative;
+  z-index: 99;
+}
+
 .text-option .title {
   display: none;
   -webkit-transition: all 0.3s;
@@ -857,6 +862,14 @@
   display: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.text-option .desc a {
+  color: white;
+}
+
+.text-option .desc a:hover {
+  text-decoration: underline;
 }
 
 .text-option.active .title {
@@ -921,12 +934,14 @@
     width: 320px;
     margin: 0 auto;
     height: 100%;
+    z-index: inherit !important;
   }
   .bascule-container .content-front .options {
     position: relative;
     max-width: 1280px;
     height: 100%;
     z-index: 10;
+    z-index: inherit !important;
   }
   .bascule-container .content-front .options .option {
     padding: 3px;
@@ -943,6 +958,7 @@
     cursor: pointer;
     border-bottom: 3px solid #33a7c9;
     position: absolute;
+    z-index: 999;
   }
   .bascule-container .content-front .options .option p {
     padding: 0;
@@ -1050,6 +1066,10 @@
     left: calc(100% - 30px);
     -webkit-transform: translateX(10px);
             transform: translateX(10px);
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 400px;
+    left: 1%;
   }
   .bascule-container .content-front .woman {
     bottom: -4%;
@@ -1159,6 +1179,10 @@
   .bascule-container .content-front .options .option#option5 {
     top: 400px;
     left: 53%;
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 485px;
+    left: 0%;
   }
   .bascule-container .content-front .woman {
     bottom: -4%;
@@ -1277,6 +1301,10 @@
   .bascule-container .content-front .options .option#option5 {
     top: 430px;
     left: 53%;
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 510px;
+    left: 1%;
   }
   .bascule-container .content-front .woman {
     bottom: -4%;
@@ -1528,6 +1556,10 @@
     left: calc(100% + 12px);
     -webkit-transform: rotateZ(45deg);
             transform: rotateZ(45deg);
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 580px;
+    left: 7%;
   }
   .bascule-container .content-front .options .option .shape-line {
     display: block;
@@ -1793,6 +1825,10 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+  .bascule-container .content-front .options .option#option6 {
+    top: 675px;
+    left: 10%;
+  }
   .bascule-container .content-front .options .option .shape-line {
     opacity: 0;
     -webkit-transform: translateX(-10px);
@@ -1859,7 +1895,7 @@
   .bascule-container .content-behinde .text .desc p {
     padding-top: 20px;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 20px;
   }
   .bascule-container .content-behinde .text .desc li {
     margin-bottom: 6px;
@@ -1931,6 +1967,10 @@
     top: 280px;
     left: 40%;
   }
+  .bascule-container .content-front .options .option#option6 {
+    top: 425px;
+    left: 6%;
+  }
   .bascule-container .content-front .woman {
     bottom: -4%;
     width: 25%;
@@ -1981,6 +2021,10 @@
     top: 500px;
     left: 44%;
   }
+  .bascule-container .content-front .options .option#option6 {
+    top: 700px;
+    left: 9%;
+  }
   .bascule-container .content-front .woman {
     bottom: -4%;
     width: 33%;
@@ -2027,7 +2071,7 @@
   .bascule-container .content-behinde .text .desc p {
     padding-top: 20px;
     font-size: 30px;
-    line-height: 32px;
+    line-height: 30px;
   }
   .bascule-container .content-behinde .text .desc p li {
     margin-bottom: 6px;
@@ -2061,6 +2105,10 @@
   .bascule-container .content-front .options .option#option5 {
     top: 600px;
     left: 45%;
+  }
+  .bascule-container .content-front .options .option#option6 {
+    top: 750px;
+    left: 6%;
   }
   .bascule-container .content-front .woman {
     bottom: -4%;

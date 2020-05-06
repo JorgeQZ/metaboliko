@@ -67,12 +67,18 @@ $(document).ready(function() {
 
     function PauseVideos() {
         var videos = $('.customVideo video');
+        var videosYoutube = $('.customVideo .embed-container iframe');
 
         videos.each(function(element, value) {
             // value.currentTime = 0;
 
             value.pause();
 
+        });
+
+        $('.customVideo .embed-container iframe').each(function(index) {
+            $(this).attr('src', $(this).attr('src'));
+            return false;
         });
 
         $('.play , .overlay').show();

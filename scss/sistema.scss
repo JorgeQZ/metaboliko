@@ -255,9 +255,11 @@
             flex-wrap: wrap;
             padding: 0 3px;
             .cont-img{
-                width: 19%;
+                //width: 19%;
+                width: 23%;
                 border: 3px solid #67ae3d;
-                margin: 7px 0;
+                //margin: 7px 0;
+                margin: 15px 0;
                 img{
                     width: 100%;
                     display: block;
@@ -407,7 +409,8 @@
         }
 
         .contenedor-info{
-            padding: 150px 5% 50px;
+            overflow: hidden;
+            padding: 300px 5% 50px;
             .enc{
                 margin-bottom: 20px;
                 p{

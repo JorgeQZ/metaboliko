@@ -271,6 +271,74 @@
 
 
 
+.contenedor-general-galeria{
+    width: 85%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p.enc{
+        color: #67ae3d;
+        font-weight: bold;
+        font-size: 66px;
+        margin: 0 auto;
+        position: relative;
+        display: table;
+        span{
+            position: absolute;
+            left: -42%;
+            top: -55px;
+            font-size: 120px;
+            color: transparent;
+            -webkit-text-stroke-width: .5px;
+            -webkit-text-stroke-color: #67ae3d;
+            opacity: .5;
+        }
+    }
+    .cont-galeria{
+        margin-top: 30px;
+        .cont-slide{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 3px;
+            .cont-img{
+                width: 23%;
+                border: 3px solid #67ae3d;
+                margin: 15px 0;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+
+        .owl-dots{
+            margin-top: 25px !important; 
+            .owl-dot{
+                outline: none;
+                span{
+                    width: 6px;
+                    height: 6px;
+                    background: transparent;
+                    border: 1px solid #67ae3d;
+                }
+
+                &.active{
+                    span{
+                        background: #67ae3d;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
 
@@ -307,6 +375,17 @@
     .contenedor-general-video{ 
         .contenedor-video{
             width: 85%;
+        }
+    }
+
+    .contenedor-general-galeria{
+        p.enc{
+            font-size: 52px; 
+            span{
+                top: -22px;
+                left: -22%;
+                font-size: 74px;
+            }
         }
     }
 
@@ -376,6 +455,32 @@
                         left: calc(50% - 10px);
                     }
                 }
+            }
+        }
+    }
+
+
+    .contenedor-general-galeria{
+        padding: 30px 0; 
+        p.enc{
+            font-size: 52px; 
+            span{
+                top: -22px;
+                left: -22%;
+                font-size: 74px;
+            }
+        }
+        .cont-galeria{
+            margin-top: 10px;
+            .cont-slide{
+                justify-content: space-evenly;
+                .cont-img{
+                    width: 31%;
+                    margin: 5px 0;
+                }
+            }
+            .owl-dots{
+                margin-top: 5px !important;
             }
         }
     }

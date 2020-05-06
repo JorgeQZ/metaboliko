@@ -264,9 +264,18 @@ header {
 .hero-banner .content_text_contactform .contact-form .form .form-control.third {
   width: 30%;
   margin-right: 5%;
+  /*
+            &:nth-of-type(3n) {
+              margin-right: 0;
+            }
+            */
 }
 
-.hero-banner .content_text_contactform .contact-form .form .form-control.third:nth-of-type(3n) {
+.hero-banner .content_text_contactform .contact-form .form .form-control:nth-of-type(6n) {
+  margin-right: 0;
+}
+
+.hero-banner .content_text_contactform .contact-form .form .form-control:nth-of-type(9n) {
   margin-right: 0;
 }
 
@@ -444,6 +453,32 @@ header {
   padding-bottom: 4rem;
 }
 
+.single-wrapper .titulo {
+  color: #67ae3d;
+  font-weight: bold;
+  font-size: 66px;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.single-wrapper .titulo span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -35px;
+  font-size: 77px;
+  color: transparent;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #67ae3d;
+}
+
 @media screen and (min-width: 1024px) {
   .hero-banner .image_texto {
     padding: 0 4rem;
@@ -469,5 +504,55 @@ header {
     width: 55%;
     padding-right: 3rem;
     padding-left: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .single-wrapper .titulo {
+    font-size: 52px;
+  }
+  .single-wrapper .titulo span {
+    font-size: 73px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-banner .image_texto .col p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .hero-banner .image_texto .col h1 {
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 0;
+  }
+  .hero-banner .content_text_contactform {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-banner .content_text_contactform .col {
+    width: 95%;
+  }
+  .hero-banner .content_text_contactform .contact-form {
+    width: 95%;
+  }
+  .content_text_contactform .contact-form .form .form-control.full {
+    width: 100%;
+  }
+  .content_text_contactform .contact-form .form .form-control.half {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+  .content_text_contactform .contact-form .form .form-control.third {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+  .single-wrapper .titulo {
+    font-size: 46px;
+  }
+  .single-wrapper .titulo span {
+    font-size: 54px;
   }
 }
