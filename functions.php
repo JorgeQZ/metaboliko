@@ -1,8 +1,7 @@
 <?php
 
 include_once ('widgets/icons-social-media.php');
-include_once ('widgets/contact.php');
-
+include_once ('widgets/icons-social-media-header.php');
 add_image_size( 'footer-logo', 250, 36, true );
 
 function add_theme_scripts() {
@@ -52,7 +51,7 @@ function add_theme_scripts() {
         wp_enqueue_script('owl.carousel', get_template_directory_uri().'/js/owl.carousel.js', array('jquery'),'1.1', true);
         wp_enqueue_script('video', get_template_directory_uri().'/js/video.js', array('jquery'), filemtime( get_stylesheet_directory() . '/js/video.js' ), true);
     }
-     // Conocenos
+     // Doctor
     if (is_page_template('page-doctor.php') ) {
         wp_enqueue_style( 'doctor', get_template_directory_uri() . '/css/doctor.css', array(), filemtime( get_stylesheet_directory() . '/css/doctor.css' ), 'all');
 
@@ -86,6 +85,15 @@ function add_theme_scripts() {
         wp_enqueue_script('video', get_template_directory_uri().'/js/video.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/video.js' ), true);
     }
 
+    if(is_page_template('page-rutinas.php')){
+        wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array(), filemtime( get_stylesheet_directory() . '/css/front-page.css' ), 'all');
+        wp_enqueue_style( 'rutinas', get_template_directory_uri() . '/css/rutinas.css', array(), filemtime( get_stylesheet_directory() . '/css/rutinas.css' ), 'all');
+        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
+        wp_enqueue_script('video', get_template_directory_uri().'/js/video.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/video.js' ), true);
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
@@ -98,6 +106,26 @@ add_action( 'init', 'mtblko_menu' );
 
 
 function wpb_widgets_init() {
+
+
+    register_sidebar( array(
+        'name' =>__( 'Hero Social Icons', 'wpb'),
+        'id' => 'hsi',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ) );
+
+
+    register_sidebar( array(
+        'name' =>__( 'Botón Whatsapp', 'wpb'),
+        'id' => 'bw',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ) );
 
     register_sidebar( array(
         'name' => __( 'Contacto Columna 1', 'wpb' ),
@@ -154,23 +182,6 @@ function wpb_widgets_init() {
     ) );
 
 
-    register_sidebar( array(
-        'name' =>__( 'Footer Columna 5', 'wpb'),
-        'id' => 'fcolumn-5',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
 
-
-    register_sidebar( array(
-        'name' =>__( 'Footer Column 5', 'wpb'),
-        'id' => 'fcolumn-5',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
 }
 add_action( 'widgets_init', 'wpb_widgets_init' );

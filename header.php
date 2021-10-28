@@ -13,11 +13,15 @@
     <?php wp_body_open(); ?>
     <!-- whatsapp button -->
     <div class="button-whatsapp">
+        <?php  if ( is_active_sidebar( 'bw' ) ) : ?>
+        <?php dynamic_sidebar( 'bw' ); ?>
+        <?php else: ?>
         <a href="https://api.whatsapp.com/send?phone=5583664630&text=&source=&data=" target="_blank">
             <img src="<?php echo get_template_directory_uri().'/img/whatsapp-button.png'; ?>" alt="">
         </a>
+        <?php endif; ?>
     </div><!-- whatasapp button-->
-    
+
     <header class="<?php if ( is_user_logged_in() ){ echo 'mt';} ?>">
         <a href="#" class="brand-logo">
             <img src="<?php echo get_template_directory_uri().'/img/logo-header.png'; ?>" alt="">
