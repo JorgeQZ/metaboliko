@@ -526,11 +526,23 @@
   background-size: cover;
   min-height: 400px;
   .title {
-    margin: 20px auto;
+    margin: 0px auto;
     font-size: 40px;
     line-height: 1;
     text-transform: uppercase;
-    padding: 30px;
+    padding: 0 30px;
+    padding-top: 30px;
+    color: white;
+    text-align: center;
+  }
+
+  .title_tax {
+    margin: 0px auto;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 0 30px;
+    padding-bottom: 30px;
     color: white;
     text-align: center;
   }
@@ -547,10 +559,6 @@
     //columna
     &_column {
       flex: 1 0 33%;
-      background: #000;
-      &:nth-child(odd) {
-        background-color: red;
-      }
 
       //titulo de columna
       &_title {
@@ -569,16 +577,17 @@
       //contenido de columna
       &_content {
         min-height: 30px;
-        background-color: green;
 
         //items
         &__item {
           padding: 20px;
           &__video {
-            iframe {
+            text-align: center;
+            yo tengo iframe {
               max-width: 100%;
               max-height: 200px;
               border: 2px solid white;
+              margin: 0 auto;
             }
           }
 

@@ -2,6 +2,7 @@
 
 include_once ('widgets/icons-social-media.php');
 include_once ('widgets/icons-social-media-header.php');
+include_once ('include/custom_post_types.php');
 add_image_size( 'footer-logo', 250, 36, true );
 
 function add_theme_scripts() {
@@ -86,12 +87,11 @@ function add_theme_scripts() {
     }
 
     if(is_page_template('page-rutinas.php')){
-        wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array(), filemtime( get_stylesheet_directory() . '/css/front-page.css' ), 'all');
+
         wp_enqueue_style( 'rutinas', get_template_directory_uri() . '/css/rutinas.css', array(), filemtime( get_stylesheet_directory() . '/css/rutinas.css' ), 'all');
         wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
         wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
         wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
-        wp_enqueue_script('video', get_template_directory_uri().'/js/video.js', array('jquery'),filemtime( get_stylesheet_directory() . '/js/video.js' ), true);
     }
 
 }

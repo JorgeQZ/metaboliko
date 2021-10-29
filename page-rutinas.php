@@ -2,7 +2,11 @@
 /**
  * Template Name: Rutinas
  */
-get_header(); ?>
+get_header();
+
+$terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
+
+?>
 
 <!-- Hero Banner -->
 <!-- Hero -->
@@ -98,8 +102,6 @@ get_header(); ?>
                     </div>
                     <p><strong>espalda</strong></p>
                 </button>
-
-
             </div>
         </div>
     </div>
@@ -110,42 +112,76 @@ get_header(); ?>
 </div>
 
 <div class="grid_videos">
-    <div class="title">ejercicios para <br><strong><span id="ejercicio_tipo">dummy</span></strong> </div>
-    <div class="grid_container_columns">
-        <div class="grid_column">
-            <div class="grid_column_title">
-                ligas
-            </div>
-            <div class="grid_column_content">
-                <div class="grid_column_content__item">
-                    <div class="grid_column_content__item__video">
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uddGAk12NQA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="title">ejercicios para <br><strong></div>
+
+    <!-- Slider de videos de rutinas -->
+    <div class="owl-carousel owl-theme">
+        <!-- Item -->
+        <?php
+        foreach($terms as $term):
+            $current_parent_id = $term->term_taxonomy_id;
+            $current_parent_name = $term->taxonomy;
+            $current_child = get_term_children($current_parent_id, $current_parent_name);
+
+        ?>
+        <div class="item">
+            <div class="title_tax"><?php echo $term->name?></div>
+            <!-- Grid Container -->
+            <div class="grid_container_columns">
+                <?php foreach($current_child as $child_id):
+                    $args_current_child = array(
+                        'posts_per_page' => 3,
+                        'post_type' => 'rutinas_videos',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'categorias_rutinas',
+                                'field' => 'term_id',
+                                'terms' => $child_id
+                            )
+                        )
+                    );
+
+                    $child_content = get_term($child_id);
+                    $posts_array = get_posts($args_current_child);
+                    ?>
+                <div class="grid_column">
+                    <div class="grid_column_title">
+                        <?php echo $child_content->name; ?>
                     </div>
-                    <div class="grid_column_content__item__name">
-                        ejercicio #1
+                    <div class="grid_column_content">
+                        <?php
+                        if($posts_array):
+                            foreach($posts_array as $post):
+                        ?>
+                        <div class="grid_column_content__item">
+                            <div class="grid_column_content__item__video">
+                                <?php echo get_field('video', $post->ID); ?>
+                            </div>
+                            <div class="grid_column_content__item__name">
+                                <?php echo $post->post_title; ?>
+                            </div>
+                        </div>
+                        <?php
+                            wp_reset_postdata();
+                            endforeach;
+                        endif;
+                        ?>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="grid_column">
-            <div class="grid_column_title">
-                peso libre
-            </div>
-            <div class="grid_column_content">
-                <div class="grid_column_content__item"></div>
+                <?php
+                wp_reset_postdata();
+                endforeach;
+                ?>
+            </div><!-- Grid Container -->
+        </div><!-- item -->
 
-            </div>
-        </div>
-        <div class="grid_column">
-            <div class="grid_column_title">
-                aparatos
-            </div>
-            <div class="grid_column_content">
-                <div class="grid_column_content__item"></div>
+        <?php
+        wp_reset_postdata();
+        endforeach;
+        ?>
+    </div><!-- Slider de videos de rutinas -->
 
-            </div>
-        </div>
-    </div>
+
 </div>
 <?php get_footer(); ?>
 
@@ -202,4 +238,12 @@ jQuery(function($j) {
 
 
 });
+
+
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    items: 1
+})
 </script>
