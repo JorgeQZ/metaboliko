@@ -1,7 +1,23 @@
 <?php $img_featured = get_the_post_thumbnail_url();?>
 <?php $post_type = get_post_type(); ?>
 
+<?php
+
+if($post_type == 'rutinas_videos'):
+    $img_featured = get_template_directory_uri().'/img/banner-rutinas.jpg';
+endif;
+?>
+
 <div class="hero-banner" style="background-image: url(<?php echo $img_featured; ?>">
+
+    <?php
+    if($post_type == 'rutinas_videos'): ?>
+    <!-- Titulo -->
+    <div class="overlay"></div>
+    <div class="title">
+        <?php echo get_queried_object()->name ?>
+    </div><!-- Titulo -->
+    <?php endif;?>
 
     <?php if($post_type == 'post'): ?>
     <!-- Titulo -->

@@ -648,3 +648,18 @@
   font-weight: bold;
   text-transform: capitalize;
 }
+
+.grid_videos .category_link {
+  max-width: 70px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.grid_videos .category_link img {
+  width: 35px !important;
+  height: auto;
+}

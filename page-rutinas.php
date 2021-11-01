@@ -173,6 +173,11 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
                 endforeach;
                 ?>
             </div><!-- Grid Container -->
+
+            <!-- Link -->
+            <a href="<?php echo get_term_link($term->term_id);?>" class="category_link">
+                <img src="<?php echo get_template_directory_uri().'/img/arrow-down.png'; ?>" alt="">
+            </a>
         </div><!-- item -->
 
         <?php

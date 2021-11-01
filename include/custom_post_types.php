@@ -22,7 +22,7 @@
             'labels' => $labels,
             'supports'            => $supports,
             'description'         => 'Videos de Rutinas de Metaboliko',
-            'hierarchical'        => false,
+            'hierarchical'        => true,
             'public'              => true,
             'show_ui'             => true,
             'show_in_menu'        => true,
@@ -34,7 +34,9 @@
             'has_archive'         => true,
             'exclude_from_search' => false,
             'publicly_queryable'  => true,
-            'capability_type'     => 'post'
+            'capability_type'     => 'post',
+            'rewrite'             => array('slug' => 'rutinas_videos', 'with_front' => false),
+            'taxonomies' => array('categorias_rutinas')
         )
     );
 }
@@ -47,18 +49,22 @@ function meta_rutinas_tax(){
         'rutinas_videos',
         array(
             'hierarchical' => true,
-            'label' => 'Categorías de Rutinas',
+            'labels' => array(
+                'name' => __('Categorías de Rutinas', 'text-domain')
+            ),
             'query_var' => true,
             'show_ui' => true,
             'show_admin_column' => true,
             'show_in_rest' => true,
             'has_archive' => true,
             'rewrite' => array(
-                'slug' => 'rutinas_videos',
+                'slug' => 'rutinas',
+                'with_front' => true
             )
         )
     );
 }
 add_action( 'init', 'meta_rutinas_tax');
+flush_rewrite_rules();
 
 ?>

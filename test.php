@@ -16,10 +16,13 @@ echo '<pre>';
 print_r($terms);
 echo '</pre>';
 
+
+
 foreach($terms as $term){
     $current_parent_id = $term->term_taxonomy_id;
     $current_parent_name = $term->taxonomy;
     $current_child = get_term_children($current_parent_id, $current_parent_name);
+    echo get_term_link($term->term_id);
 
     echo '<pre>';
     print_r($current_child);

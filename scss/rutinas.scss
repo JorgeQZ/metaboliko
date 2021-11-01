@@ -583,7 +583,7 @@
           padding: 20px;
           &__video {
             text-align: center;
-            yo tengo iframe {
+            iframe {
               max-width: 100%;
               max-height: 200px;
               border: 2px solid white;
@@ -599,6 +599,18 @@
           }
         }
       }
+    }
+  }
+
+  .category_link {
+    max-width: 70px;
+    width: fit-content;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    img {
+      width: 35px !important;
+      height: auto;
     }
   }
 }

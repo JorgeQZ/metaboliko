@@ -1,5 +1,6 @@
 <?php
 get_header();
+
 get_template_part('template-parts/banner', 'hero');
 ?>
 <div class="single-wrapper">
