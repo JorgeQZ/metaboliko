@@ -144,64 +144,64 @@
   transition: all 0.3s ease-in;
 }
 
-.bodies_container .bodies_square .options .option#biceps {
+.bodies_container .bodies_square .options .option#biceps_ {
   top: 120px;
   left: -18%;
 }
 
-.bodies_container .bodies_square .options .option#biceps:before {
+.bodies_container .bodies_square .options .option#biceps_:before {
   top: -4px;
   left: -13px;
   width: 3px;
   height: 38px;
 }
 
-.bodies_container .bodies_square .options .option#biceps p {
+.bodies_container .bodies_square .options .option#biceps_ p {
   width: 300px;
 }
 
-.bodies_container .bodies_square .options .option#biceps .shape-line-bottom {
+.bodies_container .bodies_square .options .option#biceps_ .shape-line-bottom {
   height: 28px;
 }
 
-.bodies_container .bodies_square .options .option#biceps .shape-line-bottom img {
+.bodies_container .bodies_square .options .option#biceps_ .shape-line-bottom img {
   width: 19px;
   -webkit-transform: rotateZ(38deg);
           transform: rotateZ(38deg);
 }
 
-.bodies_container .bodies_square .options .option#piernas {
+.bodies_container .bodies_square .options .option#piernas_ {
   top: 270px;
   left: -22%;
 }
 
-.bodies_container .bodies_square .options .option#piernas:before {
+.bodies_container .bodies_square .options .option#piernas_:before {
   top: -4px;
   left: -13px;
   width: 3px;
   height: 38px;
 }
 
-.bodies_container .bodies_square .options .option#piernas p {
+.bodies_container .bodies_square .options .option#piernas_ p {
   width: 300px;
 }
 
-.bodies_container .bodies_square .options .option#piernas .shape-line-bottom {
+.bodies_container .bodies_square .options .option#piernas_ .shape-line-bottom {
   height: 28px;
 }
 
-.bodies_container .bodies_square .options .option#piernas .shape-line-bottom img {
+.bodies_container .bodies_square .options .option#piernas_ .shape-line-bottom img {
   width: 19px;
   -webkit-transform: rotateZ(38deg);
           transform: rotateZ(38deg);
 }
 
-.bodies_container .bodies_square .options .option#hombros {
+.bodies_container .bodies_square .options .option#hombros_ {
   top: 12px;
   left: 67%;
 }
 
-.bodies_container .bodies_square .options .option#hombros:before {
+.bodies_container .bodies_square .options .option#hombros_:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -210,13 +210,13 @@
   height: 0;
 }
 
-.bodies_container .bodies_square .options .option#hombros p {
+.bodies_container .bodies_square .options .option#hombros_ p {
   width: 200px;
   text-align: right;
   padding-right: 65px;
 }
 
-.bodies_container .bodies_square .options .option#hombros .shape-line-bottom {
+.bodies_container .bodies_square .options .option#hombros_ .shape-line-bottom {
   top: calc(100% - 36px);
   -webkit-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
@@ -224,7 +224,7 @@
   height: 45px;
 }
 
-.bodies_container .bodies_square .options .option#hombros .shape-line-img {
+.bodies_container .bodies_square .options .option#hombros_ .shape-line-img {
   position: absolute;
   bottom: -20px;
   left: -8px;
@@ -235,7 +235,7 @@
   background-color: #33a7c9;
 }
 
-.bodies_container .bodies_square .options .option#hombros .shape-line-img img {
+.bodies_container .bodies_square .options .option#hombros_ .shape-line-img img {
   top: calc(100% - 5px);
   right: -9px;
   position: absolute;
@@ -244,13 +244,13 @@
           transform: rotateZ(47deg) translate(-4px, -7px) scale(0.8);
 }
 
-.bodies_container .bodies_square .options .option#hombros .shape-line {
+.bodies_container .bodies_square .options .option#hombros_ .shape-line {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
   left: calc(100% - 50px);
 }
 
-.bodies_container .bodies_square .options .option#hombros .shape-line:before {
+.bodies_container .bodies_square .options .option#hombros_ .shape-line:before {
   height: 40px;
   bottom: -7px;
   left: calc(100% + 12px);
@@ -258,17 +258,17 @@
           transform: rotateZ(45deg);
 }
 
-.bodies_container .bodies_square .options .option#hombros:hover .shape-line {
+.bodies_container .bodies_square .options .option#hombros_:hover .shape-line {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.bodies_container .bodies_square .options .option#gluteos {
+.bodies_container .bodies_square .options .option#gluteos_ {
   top: 240px;
   left: 75%;
 }
 
-.bodies_container .bodies_square .options .option#gluteos:before {
+.bodies_container .bodies_square .options .option#gluteos_:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -277,13 +277,13 @@
   height: 0;
 }
 
-.bodies_container .bodies_square .options .option#gluteos p {
+.bodies_container .bodies_square .options .option#gluteos_ p {
   width: 200px;
   text-align: right;
   padding-right: 65px;
 }
 
-.bodies_container .bodies_square .options .option#gluteos .shape-line-bottom {
+.bodies_container .bodies_square .options .option#gluteos_ .shape-line-bottom {
   top: calc(100% - 36px);
   -webkit-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
@@ -291,7 +291,7 @@
   height: 45px;
 }
 
-.bodies_container .bodies_square .options .option#gluteos .shape-line-img {
+.bodies_container .bodies_square .options .option#gluteos_ .shape-line-img {
   position: absolute;
   bottom: -20px;
   left: -8px;
@@ -302,7 +302,7 @@
   background-color: #33a7c9;
 }
 
-.bodies_container .bodies_square .options .option#gluteos .shape-line-img img {
+.bodies_container .bodies_square .options .option#gluteos_ .shape-line-img img {
   top: calc(100% - 5px);
   right: -9px;
   position: absolute;
@@ -311,13 +311,13 @@
           transform: rotateZ(47deg) translate(-4px, -7px) scale(0.8);
 }
 
-.bodies_container .bodies_square .options .option#gluteos .shape-line {
+.bodies_container .bodies_square .options .option#gluteos_ .shape-line {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
   left: calc(100% - 50px);
 }
 
-.bodies_container .bodies_square .options .option#gluteos .shape-line:before {
+.bodies_container .bodies_square .options .option#gluteos_ .shape-line:before {
   height: 40px;
   bottom: -7px;
   left: calc(100% + 12px);
@@ -325,43 +325,43 @@
           transform: rotateZ(45deg);
 }
 
-.bodies_container .bodies_square .options .option#gluteos:hover .shape-line {
+.bodies_container .bodies_square .options .option#gluteos_:hover .shape-line {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.bodies_container .bodies_square .options .option#trapecio {
+.bodies_container .bodies_square .options .option#trapecio_ {
   top: 10px;
   left: 12%;
 }
 
-.bodies_container .bodies_square .options .option#trapecio:before {
+.bodies_container .bodies_square .options .option#trapecio_:before {
   top: -4px;
   left: -13px;
   width: 3px;
   height: 38px;
 }
 
-.bodies_container .bodies_square .options .option#trapecio p {
+.bodies_container .bodies_square .options .option#trapecio_ p {
   width: 300px;
 }
 
-.bodies_container .bodies_square .options .option#trapecio .shape-line-bottom {
+.bodies_container .bodies_square .options .option#trapecio_ .shape-line-bottom {
   height: 28px;
 }
 
-.bodies_container .bodies_square .options .option#trapecio .shape-line-bottom img {
+.bodies_container .bodies_square .options .option#trapecio_ .shape-line-bottom img {
   width: 19px;
   -webkit-transform: rotateZ(38deg);
           transform: rotateZ(38deg);
 }
 
-.bodies_container .bodies_square .options .option#pecho {
+.bodies_container .bodies_square .options .option#pecho_ {
   top: 100px;
   left: 90%;
 }
 
-.bodies_container .bodies_square .options .option#pecho:before {
+.bodies_container .bodies_square .options .option#pecho_:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -370,12 +370,12 @@
   height: 0;
 }
 
-.bodies_container .bodies_square .options .option#pecho p {
+.bodies_container .bodies_square .options .option#pecho_ p {
   width: 80px;
   text-align: right;
 }
 
-.bodies_container .bodies_square .options .option#pecho .shape-line-bottom {
+.bodies_container .bodies_square .options .option#pecho_ .shape-line-bottom {
   top: calc(100% - 36px);
   -webkit-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
@@ -383,7 +383,7 @@
   height: 45px;
 }
 
-.bodies_container .bodies_square .options .option#pecho .shape-line-img {
+.bodies_container .bodies_square .options .option#pecho_ .shape-line-img {
   position: absolute;
   bottom: -35px;
   left: -14px;
@@ -394,7 +394,7 @@
   background-color: #33a7c9;
 }
 
-.bodies_container .bodies_square .options .option#pecho .shape-line-img img {
+.bodies_container .bodies_square .options .option#pecho_ .shape-line-img img {
   top: calc(100% - 5px);
   right: -9px;
   position: absolute;
@@ -403,13 +403,13 @@
           transform: rotateZ(47deg) translate(-4px, -7px) scale(0.8);
 }
 
-.bodies_container .bodies_square .options .option#pecho .shape-line {
+.bodies_container .bodies_square .options .option#pecho_ .shape-line {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
   left: calc(100% - 50px);
 }
 
-.bodies_container .bodies_square .options .option#pecho .shape-line:before {
+.bodies_container .bodies_square .options .option#pecho_ .shape-line:before {
   height: 40px;
   bottom: -7px;
   left: calc(100% + 12px);
@@ -417,17 +417,17 @@
           transform: rotateZ(45deg);
 }
 
-.bodies_container .bodies_square .options .option#pecho:hover .shape-line {
+.bodies_container .bodies_square .options .option#pecho_:hover .shape-line {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.bodies_container .bodies_square .options .option#espalda {
+.bodies_container .bodies_square .options .option#espalda_ {
   top: 220px;
   left: 8%;
 }
 
-.bodies_container .bodies_square .options .option#espalda:before {
+.bodies_container .bodies_square .options .option#espalda_:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -436,12 +436,12 @@
   height: 0;
 }
 
-.bodies_container .bodies_square .options .option#espalda p {
+.bodies_container .bodies_square .options .option#espalda_ p {
   width: 80px;
   text-align: right;
 }
 
-.bodies_container .bodies_square .options .option#espalda .shape-line-bottom {
+.bodies_container .bodies_square .options .option#espalda_ .shape-line-bottom {
   top: calc(100% - 6px);
   -webkit-transform: rotateZ(47deg);
   transform: rotateZ(47deg);
@@ -449,7 +449,7 @@
   height: 45px;
 }
 
-.bodies_container .bodies_square .options .option#espalda .shape-line-img {
+.bodies_container .bodies_square .options .option#espalda_ .shape-line-img {
   position: absolute;
   bottom: -9px;
   left: 113%;
@@ -460,7 +460,7 @@
   background-color: #33a7c9;
 }
 
-.bodies_container .bodies_square .options .option#espalda .shape-line-img img {
+.bodies_container .bodies_square .options .option#espalda_ .shape-line-img img {
   top: calc(100% - 5px);
   right: -9px;
   position: absolute;
@@ -469,13 +469,13 @@
           transform: rotateZ(47deg) translate(-4px, -7px) scale(0.8);
 }
 
-.bodies_container .bodies_square .options .option#espalda .shape-line {
+.bodies_container .bodies_square .options .option#espalda_ .shape-line {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
   left: 3px;
 }
 
-.bodies_container .bodies_square .options .option#espalda .shape-line:before {
+.bodies_container .bodies_square .options .option#espalda_ .shape-line:before {
   height: 40px;
   bottom: -35px;
   left: -15px;
@@ -483,32 +483,32 @@
           transform: rotateZ(47deg);
 }
 
-.bodies_container .bodies_square .options .option#espalda:hover .shape-line {
+.bodies_container .bodies_square .options .option#espalda_:hover .shape-line {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.bodies_container .bodies_square .options .option#triceps {
+.bodies_container .bodies_square .options .option#triceps_ {
   top: 90px;
   left: -5%;
 }
 
-.bodies_container .bodies_square .options .option#triceps:before {
+.bodies_container .bodies_square .options .option#triceps_:before {
   top: -4px;
   left: -13px;
   width: 3px;
   height: 38px;
 }
 
-.bodies_container .bodies_square .options .option#triceps p {
+.bodies_container .bodies_square .options .option#triceps_ p {
   width: 80px;
 }
 
-.bodies_container .bodies_square .options .option#triceps .shape-line-bottom {
+.bodies_container .bodies_square .options .option#triceps_ .shape-line-bottom {
   height: 28px;
 }
 
-.bodies_container .bodies_square .options .option#triceps .shape-line-bottom img {
+.bodies_container .bodies_square .options .option#triceps_ .shape-line-bottom img {
   width: 19px;
   -webkit-transform: rotateZ(38deg);
           transform: rotateZ(38deg);
@@ -560,6 +560,7 @@
   background-position: center top;
   background-size: cover;
   min-height: 400px;
+  padding-bottom: 80px;
 }
 
 .grid_videos .title {
@@ -567,10 +568,46 @@
   font-size: 40px;
   line-height: 1;
   text-transform: uppercase;
-  padding: 0 30px;
+  padding: 0 10px;
   padding-top: 30px;
   color: white;
   text-align: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.grid_videos .title .button-left {
+  position: absolute;
+  top: 35px;
+  right: 100%;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.grid_videos .title .button-left img {
+  width: 100%;
+  height: auto;
+}
+
+.grid_videos .title .button-right {
+  position: absolute;
+  top: 35px;
+  left: 100%;
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.grid_videos .title .button-right img {
+  width: 100%;
+  height: auto;
 }
 
 .grid_videos .title_tax {
@@ -606,6 +643,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 0 33%;
           flex: 1 0 33%;
+  min-width: 320px;
 }
 
 .grid_videos .grid_column_title {
@@ -662,4 +700,87 @@
 .grid_videos .category_link img {
   width: 35px !important;
   height: auto;
+}
+
+@media screen and (max-width: 440px) {
+  .bodies_container .shape-title {
+    width: 100%;
+    max-width: 450px;
+  }
+  .bodies_container .bodies_square {
+    padding: 0;
+    padding-top: 150px;
+  }
+  .bodies_container .bodies_square .body_1 {
+    margin: 0 auto;
+    width: 320px;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .bodies_container .bodies_square .body_1 img {
+    margin: 0 auto;
+    width: 280px;
+  }
+  .bodies_container .bodies_square .body_1 .options .option {
+    -webkit-transform: scale(0.6) !important;
+            transform: scale(0.6) !important;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  .bodies_container .bodies_square .body_1 .options .option#biceps_ {
+    top: 95px !important;
+    left: -8% !important;
+  }
+  .bodies_container .bodies_square .body_1 .options .option#piernas_ {
+    top: 270px !important;
+    left: -5% !important;
+  }
+  .bodies_container .bodies_square .body_1 .options .option#hombros_ {
+    top: 0px !important;
+    left: 50% !important;
+  }
+  .bodies_container .bodies_square .body_1 .options .option#gluteos_ {
+    top: 180px !important;
+    left: 52% !important;
+  }
+  .bodies_container .bodies_square .body_2 {
+    width: 320px;
+    margin: 0 auto;
+    -webkit-transform: translate3d(-20px, -140px, 0);
+            transform: translate3d(-20px, -140px, 0);
+  }
+  .bodies_container .bodies_square .body_2 img {
+    margin: 0 auto;
+    width: 280px;
+  }
+  .bodies_container .bodies_square .body_2 .options .option {
+    -webkit-transform: scale(0.6) !important;
+            transform: scale(0.6) !important;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  .bodies_container .bodies_square .body_2 .options .option#pecho_ {
+    left: 75% !important;
+  }
+  .bodies_container .bodies_square .body_2 .options .option#espalda_ {
+    top: 176px;
+    left: 12%;
+  }
+  .bodies_container .bodies_square .body_2 .options .option#triceps_ {
+    top: 70px;
+    left: 3%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .bodies_container .bodies_square .body_1 {
+    margin-left: 120px !important;
+  }
+  .bodies_container .bodies_square .body_2 {
+    margin-right: 120px !important;
+    -webkit-transform: translate3d(-80px, -180px, 0) !important;
+            transform: translate3d(-80px, -180px, 0) !important;
+  }
 }

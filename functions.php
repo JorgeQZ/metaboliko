@@ -14,13 +14,8 @@ function add_theme_scripts() {
 
     wp_enqueue_script('customSelect', get_template_directory_uri().'/js/customSelect.js', array('jquery'), filemtime( get_stylesheet_directory() . '/js/customSelect.js' ), false);
 
-    wp_enqueue_style( 'subrutinas', get_template_directory_uri() . '/css/subrutinas.css', array(), filemtime( get_template_directory_uri().'/css/subrutinas.css' ), 'all');
 
 
-    if (get_post_type() === 'rutinas_videos'){
-        wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', array(), filemtime( get_stylesheet_directory() . '/css/single.css' ), 'all');
-
-    }
 
 
     if(is_front_page()){
@@ -101,6 +96,22 @@ function add_theme_scripts() {
         wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
         wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
         wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
+
+
+    }
+
+
+    if (get_post_type() === 'rutinas_videos'){
+
+        wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', array(), filemtime( get_stylesheet_directory() . '/css/single.css' ), 'all');
+        wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
+        wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);
+
+
+
+        wp_enqueue_style( 'subrutinas', get_template_directory_uri() . '/css/subrutinas.css', array(), filemtime( get_template_directory_uri().'/css/subrutinas.css' ), 'all');
+
     }
 
 }

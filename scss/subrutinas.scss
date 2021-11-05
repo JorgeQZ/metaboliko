@@ -1,94 +1,105 @@
 .grid_subtax {
-  background-image: url(../img/grid-videos.jpg);
-  background-position: center top;
-  background-size: cover;
-  min-height: 400px;
+    background-image: url(../img/grid-videos.jpg);
+    background-position: center top;
+    background-size: cover;
+    min-height: 400px;
 
-  .title {
-    margin: 0px auto;
-    font-size: 40px;
-    line-height: 1;
-    text-transform: uppercase;
-    padding: 0 30px;
-    padding-top: 30px;
-    color: white;
-    text-align: center;
-  }
-
-  .title_tax {
-    margin: 0px auto;
-    font-size: 40px;
-    line-height: 1;
-    text-transform: uppercase;
-    padding: 0 30px;
-    padding-bottom: 30px;
-    color: white;
-    text-align: center;
-  }
-  .grid {
-    &_container_columns {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      flex-direction: row;
-    }
-
-    //columna
-    &_column {
-      flex: 1 0 33%;
-
-      //titulo de columna
-      &_title {
-        margin: 0 auto;
-        width: fit-content;
-        min-width: 90px;
-        text-align: center;
-        background-color: #fff;
-        padding: 5px 15px;
-        color: #259fc2;
-        border-radius: 20px;
-        font-weight: bold;
+    .title {
+        margin: 0px auto;
+        font-size: 40px;
+        line-height: 1;
         text-transform: uppercase;
-      }
+        padding: 0 30px;
+        padding-top: 30px;
+        color: white;
+        text-align: center;
+    }
 
-      //contenido de columna
-      &_content {
-        min-height: 30px;
+    .title_tax {
+        margin: 0px auto;
+        font-size: 40px;
+        line-height: 1;
+        text-transform: uppercase;
+        padding: 0 30px;
+        padding-bottom: 30px;
+        color: white;
+        text-align: center;
+    }
 
-        //items
-        &__item {
-          padding: 20px;
-          &__video {
-            text-align: center;
-            iframe {
-              max-width: 100%;
-              max-height: 200px;
-              border: 2px solid white;
-              margin: 0 auto;
+    .grid {
+        &_container_columns {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px;
+
+            .owl-dots {
+                position: absolute;
+                top: -60px;
+                display: block;
+                width: 100%;
+                text-align: center;
+
+                .owl-dot {
+                    &.active {
+                        span {
+                            background: #fff;
+                        }
+                    }
+
+                    span {
+                        border: 1px solid white;
+                        background: none;
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
             }
-          }
-
-          &__name {
-            text-align: center;
-            color: white;
-            font-weight: bold;
-            text-transform: capitalize;
-          }
         }
-      }
-    }
-  }
 
-  .category_link {
-    max-width: 70px;
-    width: fit-content;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    img {
-      width: 35px !important;
-      height: auto;
+        //columna
+        &_column {
+            //titulo de columna
+            &_title {
+                margin: 0 auto;
+                width: fit-content;
+                min-width: 90px;
+                text-align: center;
+                background-color: #fff;
+                padding: 5px 15px;
+                color: #259fc2;
+                border-radius: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            //contenido de columna
+            &_content {
+                min-height: 30px;
+
+                //items
+                &__item {
+                    padding: 20px;
+
+                    &__video {
+                        text-align: center;
+
+                        iframe {
+                            max-width: 100%;
+                            max-height: 200px;
+                            border: 2px solid white;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    &__name {
+                        text-align: center;
+                        color: white;
+                        font-weight: bold;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
     }
-  }
 }
