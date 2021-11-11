@@ -92,7 +92,7 @@ function add_theme_scripts() {
 
     if(is_page_template('page-rutinas.php')){
 
-        wp_enqueue_style( 'rutinas', get_template_directory_uri() . '/css/rutinas.css', array(), filemtime( get_stylesheet_directory() . '/css/rutinas.css' ), 'all');
+        wp_enqueue_style( 'rutinas', get_template_directory_uri() . '/css/rutinas.css', array(), null, 'all');
         wp_enqueue_style( 'owl.carousel.min', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
         wp_enqueue_style( 'owl.theme.default.min', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.1', 'all');
         wp_enqueue_script('owl.carousel.min', get_template_directory_uri().'/js/owl.carousel.min.js', array('jquery'),'1.1', true);

@@ -34,7 +34,7 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
                     <p><strong>Biceps</strong></p>
                 </a>
 
-                <a class="option option-rutina fadeInUp animated" id="piernas_">
+                <a class="option option-rutina fadeInUp animated" id="piernas_" href="#piernas">
                     <div class="shape-line-bottom">
                         <img src="https://www.clinicametaboliko.com/wp-content/themes/metaboliko/img/green-arc.png" alt="">
                     </div>
@@ -42,7 +42,7 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
                     <p><strong>Piernas</strong></p>
                 </a>
 
-                <a class="option option-rutina fadeInUp animated" id="hombros_">
+                <a class="option option-rutina fadeInUp animated" id="hombros_" href="#hombros">
                     <div class="shape-line-bottom"></div>
                     <div class="shape-line"></div>
                     <div class="shape-line-img">
@@ -51,7 +51,7 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
                     <p><strong>Hombros</strong></p>
                 </a>
 
-                <a class="option option-rutina fadeInUp animated" id="gluteos_">
+                <a class="option option-rutina fadeInUp animated" id="gluteos_" href="#gluteos">
                     <div class="shape-line-bottom"></div>
                     <div class="shape-line"></div>
                     <div class="shape-line-img">
@@ -68,7 +68,7 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
             <img src="<?php echo get_template_directory_uri().'/img/cuerpo_2.png' ?>" alt="">
             <div class="options">
 
-                <a class="option option-rutina fadeInUp animated" id="trapecio_">
+                <a class="option option-rutina fadeInUp animated" id="trapecio_" href="#trapecio">
                     <div class="shape-line-bottom">
                         <img src="https://www.clinicametaboliko.com/wp-content/themes/metaboliko/img/green-arc.png" alt="">
                     </div>
@@ -84,7 +84,7 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
                     <p><strong>triceps</strong></p>
                 </a>
 
-                <a class="option option-rutina fadeInUp animated" id="pecho_">
+                <a class="option option-rutina fadeInUp animated" id="pecho_" href="#pecho">
                     <div class="shape-line-bottom"></div>
                     <div class="shape-line"></div>
                     <div class="shape-line-img">
@@ -94,7 +94,7 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
                 </a>
 
 
-                <a class="option option-rutina fadeInUp animated" id="espalda_">
+                <a class="option option-rutina fadeInUp animated" id="espalda_" href="#espalda">
                     <div class="shape-line-bottom"></div>
                     <div class="shape-line"></div>
                     <div class="shape-line-img">
@@ -143,8 +143,15 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
                     if($aux_ <= 2):
 
                         $args_current_child = array(
-                            'posts_per_page' => 3,
+                            'posts_per_page' => 1,
                             'post_type' => 'rutinas_videos',
+                            'orderby'   => 'title',
+                            'post_status' => true,
+                            'order' => 'ASC',
+                            'no_found_rows'          => true,
+                            'update_post_term_cache' => false,
+                            'update_post_meta_cache' => false,
+                            'cache_results'          => false,
                             'tax_query' => array(
                                 array(
                                     'taxonomy' => 'categorias_rutinas',
@@ -175,7 +182,9 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
                             </div>
                         </div>
                         <?php
-                                wp_reset_postdata();
+
+
+
                                 endforeach;
                             endif;
                             ?>
@@ -214,13 +223,15 @@ $terms = get_terms(array('taxonomy' => 'categorias_rutinas','parent' => 0));
 <script>
 $(document).ready(function() {
 
-    $('.option-rutina').on('click', function(event) {
-        event.stopPropagation();
+    $('.option-rutina').click(function(e) {
+        e.stopPropagation();
         var position = $('#ejercicios').offset().top - 50;
 
         $("body, html").animate({
             scrollTop: position
         } /* speed */ );
+
+
     });
 
 

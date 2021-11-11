@@ -99,3 +99,9 @@
   font-weight: bold;
   text-transform: capitalize;
 }
+
+@media screen and (max-width: 440px) {
+  .grid_subtax .title, .grid_subtax .title_tax {
+    font-size: 26px;
+  }
+}
